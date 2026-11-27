@@ -21,6 +21,23 @@ Open question 10 (full-size, compact or travel) is still open — see
 None yet. See [`candidates/items/stroller.yaml`](../../candidates/items/stroller.yaml)
 and the generated [`docs/COMPARISON.md`](../../docs/COMPARISON.md).
 
+## What to judge
+
+A recommendation covers every row below, or lists the rows it skipped
+(AGENTS.md rules 8 and 9). This list is a starting point. It is not yet
+based on reviews.
+
+- **What it is:** weight as used, folded size, child limit (about 50 lb,
+  0003), newborn mode without the car seat, maker-listed adapter for the
+  chosen car seat.
+- **Getting it right:** how securely the car seat locks on, and how you can
+  tell it is locked. Brake reliability. Stability with the car seat on,
+  including how high the carrier sits (open question 28).
+- **Daily friction:** fold and unfold (one hand? does it stand when
+  folded?), push and steering on rough ground, canopy, basket access with
+  the car seat on, carrying it folded through an airport.
+- **Sources:** see "Usability research" in [`AGENTS.md`](../../AGENTS.md).
+
 ## What fits what
 
 A stroller can be checked against the car's trunk, the narrowest doorway,

@@ -212,6 +212,9 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   reconsideration from the "Baby Safety Alliance" (2026-10-23) was logged in
   NHTSA docket NHTSA-2025-0046 on 2026-11-24. Its content could not be
   fetched. Check the docket and the Federal Register around 2026-12-05.
+  Checked 2026-11-27 (web search, Federal Register): no notice moves the
+  date; the [2026-09-09 final rule](https://www.federalregister.gov/documents/2026/09/09/2026-18380/federal-motor-vehicle-safety-standard-no-213a-child-restraint-systems-side-impact-protection-federal)
+  still stands. Check again just before buying.
 
 - [ ] **25. How do we treat "tested according to FMVSS 213a" and
   "complies with new FMVSS213 side impact" wording?** Britax Willow S,
@@ -259,6 +262,14 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   [note](notes/2026-11-27-infant-car-seat-market-survey.md)). Look up
   Delta's and American's published seat widths (14 CFR 121.311(k)) for the
   aircraft we usually fly, especially regional jets, once a seat is chosen.
+  Mostly answered 2026-11-27
+  ([note](notes/2026-11-27-airline-seat-width-vs-infant-carriers.md)): the
+  narrowest Main seats on Delta's and American's A319/A320/A321 and 737s
+  (16.2-16.6 in) are narrower than the KeyFit 30, Mesa V3 and Primo Viaggio carriers. Regional
+  jets and the A220 are 17.3-18.6 in. The FAA (AC 120-87C 10.f) says the
+  airline must move a ticketed car seat that does not fit to another seat in
+  the same class. Still open: which rows are narrow, and whether the
+  carrier's widest point sits at armrest height.
 
 - [ ] **30. Model Y fit for anything but the KeyFit 30.** The only
   independent infant seat test in a pre-refresh Model Y is Cars.com's
@@ -266,6 +277,16 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   rear footwell suits a load leg (the 2022.40 Tesla manual says nothing
   about support legs); and whether a rotating base has room to swing the
   carrier side-on. A test install at a store, or owner reports, would do.
+  Progress 2026-11-27
+  ([note](notes/2026-11-27-model-y-infant-seat-fit-and-load-leg.md)): no
+  independent test of the Primo Viaggio or the Mesa in a Model Y; one owner
+  report for a Mesa. Tesla's 2022.16 Japan-edition manual says "All
+  passenger seats Model Y support the use of a child restraint system with
+  a safety leg". Tesla's service manual shows no floor compartment in the
+  second-row footwell. Load leg settled 2026-11-27 (Nick): the Model Y
+  floor is a solid plate over the battery structure, with no hollow
+  compartment, so a load leg has a solid floor to stand on. Still open: fit
+  of each seat, and a test install in our car.
 
 - [ ] **31. Is Joie actually in stock in the US, and what is "Baby Safety
   Alliance certified"?** Joie's Rue, Mint Latch and Rue LX Spin pages carry
@@ -301,3 +322,19 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   an expiry that covers the years it is meant for. Research when the infant
   seat is close to outgrown (item 27), not now.
 
+## Raised by the usability review (2026-11-27)
+
+- [ ] **36. Re-check the Primo Viaggio Nido usability findings at their
+  sources.** On 2026-11-27 Nick shared a summary written by another agent.
+  It reports a recline indicator that cannot be trusted, poor insert fit,
+  a lock-off that does not hold, and a click-in indicator that can show
+  green when the carrier is not locked. It also reports a stiff buckle and
+  an as-used carrier weight of 10.6–11 lb, against the maker's 8.2 lb. Its
+  sources are BabyGearLab (2023, Nido 4-35), CSFTL and Consumer Reports.
+  None of it has been re-read yet. Re-read each source, note which version
+  it tested, and write a research note. No seat is shortlisted yet. Any
+  seat considered needs the same usability pass (AGENTS.md rule 8).
+
+- [ ] **37. Does the Romer Juni pass decision 0001?** The same summary
+  ranks it above the Nido. It was never in the market survey. Check its
+  213a claim, its stroller range and its Model Y fit.

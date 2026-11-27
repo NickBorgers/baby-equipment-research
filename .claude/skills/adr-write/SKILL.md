@@ -34,14 +34,21 @@ travel system. Skip it for reversible details; those go in the candidate's
    ---
    ```
 
-4. **Write the body.** It has these sections: Context, Decision, Rationale,
+4. **If the ADR selects a product, check the evidence first.** Go through
+   the "What to judge" list in the category README. Each row needs a
+   research note behind it, or a line in the ADR's Open questions naming it
+   as a gap that Nick accepted. Usability counts: a pick made on specs alone
+   is not ready for an ADR (AGENTS.md rules 8 and 9). If a row is missing,
+   research it or ask Nick before writing the ADR.
+
+5. **Write the body.** It has these sections: Context, Decision, Rationale,
    Alternatives considered, Consequences, Open questions. People often skip
    two of these, and they are the two most useful later:
    - **Alternatives considered**: say why each one lost.
    - **Consequences**: what this commits us to. Include what it rules out
      in other categories.
 
-5. **Point the candidates at it.** Set `decision: "0001"` on each affected
+6. **Point the candidates at it.** Set `decision: "0001"` on each affected
    candidate in `candidates/items/*.yaml`. Then run `make docs` and
    `make check`.
 
