@@ -230,6 +230,12 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
 - [ ] **26. NHTSA ease-of-use ratings and car seat expiry norms.** Split
   from item 14. nhtsa.gov blocked automated fetches, so it may need a
   browser.
+  **Ease-of-use part answered 2026-11-27:** the program is current and
+  readable through `api.nhtsa.gov/childSeats?dataSet=ratings` with a
+  browser User-Agent. KeyFit 30 ClearTex 3 stars, Rue 4, Mint 4, Mesa V2 5;
+  Mesa V3, Aria V2, KeyFit Max, Primo Viaggio and Juni not rated in the
+  feed. See the [ratings note](notes/2026-11-27-nhtsa-ease-of-use-ratings.md).
+  Expiry norms remain open.
 
 ## Raised by decision 0002 (2026-11-27)
 
@@ -293,6 +299,12 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   a "coming soon" notify form that may or may not be shown. The Rue LX Spin
   page names the Baby Safety Alliance as a certifier; that is the group
   whose 213a petition is pending (item 24).
+  **Partly answered 2026-11-27:** the Rue is in stock at Babylist (six
+  colors). See the [Rue note](notes/2026-11-27-joie-rue-usability.md).
+  The Mint Latch is "In Stock" at Target ($299.99; $379.99 with Base AR).
+  See the [Mint Latch note](notes/2026-11-27-joie-mint-latch-usability.md).
+  The Baby Safety Alliance question remains open.
+  joiebaby.com now returns 403 to scripts.
 
 - [ ] **32. Which Maxi-Cosi infant seats claim 213a?** Maxi-Cosi says 213a
   seats carry a "new SIP logo on packaging and product pages" but its
@@ -324,7 +336,7 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
 
 ## Raised by the usability review (2026-11-27)
 
-- [ ] **36. Re-check the Primo Viaggio Nido usability findings at their
+- [x] **36. Re-check the Primo Viaggio Nido usability findings at their
   sources.** On 2026-11-27 Nick shared a summary written by another agent.
   It reports a recline indicator that cannot be trusted, poor insert fit,
   a lock-off that does not hold, and a click-in indicator that can show
@@ -334,7 +346,18 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   None of it has been re-read yet. Re-read each source, note which version
   it tested, and write a research note. No seat is shortlisted yet. Any
   seat considered needs the same usability pass (AGENTS.md rule 8).
+  **Answered 2026-11-27:** see the
+  [Primo Viaggio note](notes/2026-11-27-peg-perego-primo-viaggio-usability.md).
+  Every review tested the 4-35 Nido; none tested the current 4-30. Click-in
+  false green, insert fit, stiff buckle and the 10-11 lb carrier are
+  confirmed for older versions. The lock-off finding is disputed. "Recline
+  indicator cannot be trusted" is not supported as worded. Usability notes
+  for the other seats are under `research/notes/` dated 2026-11-27.
 
-- [ ] **37. Does the Romer Juni pass decision 0001?** The same summary
+- [x] **37. Does the Romer Juni pass decision 0001?** The same summary
   ranks it above the Nido. It was never in the market survey. Check its
   213a claim, its stroller range and its Model Y fit.
+  **Answered 2026-11-27: no.** Its page and 01.26 manual claim only
+  general FMVSS conformance. See the
+  [Juni note](notes/2026-11-27-romer-juni-213a-gate.md). Re-check if a
+  manual revision or label after 2026-12-05 adds a 213a claim.
