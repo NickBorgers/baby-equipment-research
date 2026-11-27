@@ -28,6 +28,21 @@ the Arm's Reach Versatile Co-Sleeper (not yet evaluated). The ledge geometry
 lives in `household.yaml` (`home.bed_ledge_*`, `home.bed_frame_floor_gap_in`).
 Open question 19 tracks it.
 
+## What to judge
+
+A recommendation covers every row below, or lists the rows it skipped
+(AGENTS.md rules 8 and 9). This list is a starting point. It is not yet
+based on reviews.
+
+- **What it is:** footprint, height range, child limit, the safety
+  standard it meets, ledge fit against our bed (open question 19).
+- **Getting it right:** whether it stays flush against the mattress with
+  no gap, how easy the height and attachment are to set, how you can tell
+  they are set correctly, and the mattress fit at the edges.
+- **Daily friction:** lifting the baby in and out at night, lowering a
+  side, cleaning the cover and mattress, moving it around the room.
+- **Sources:** see "Usability research" in [`AGENTS.md`](../../AGENTS.md).
+
 ## Safety notes for whoever picks this up
 
 Safe-sleep claims need primary sources: CPSC, the bassinet standard, AAP

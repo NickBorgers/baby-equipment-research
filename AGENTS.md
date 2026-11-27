@@ -14,6 +14,21 @@ from.
 `candidates/items/*.yaml` should have a note under `research/notes/` saying
 where it came from, with a URL and the date read. No note, no number.
 
+Model memory is not a source. Nick trusts an agent's reasoning, not what a
+language model remembers about products, prices, standards or companies.
+Every fact must come from a source read during the work. Memory may
+suggest where to look. It never fills a gap. These rules also apply:
+
+- A search snippet is not a read. Open the page, or label the fact
+  "snippet only" with low confidence.
+- A summary from another agent or a chat is retail/anecdotal. Re-read
+  each fact at its source before it goes in a note.
+- When you turn a `researcher` report into a note, add no fact that the
+  report does not source.
+
+Use the `researcher` agent (`.claude/agents/researcher.md`) for lookups.
+It carries these rules.
+
 **2. Unknown is `null`, never a pass.** A `null` means "not researched yet".
 The fit check reports it as *insufficient data*, never as *fits*. Never fill a
 `null` with a plausible guess to make a check pass — that is exactly the
@@ -43,6 +58,72 @@ was made deliberately, after comparing real alternatives. Arguing with one
 needs a real reason (new evidence such as a recall or a new model year, not a
 stylistic preference) and gets raised with Nick rather than reversed
 unilaterally.
+
+**8. Judge how a product is used, not only what it is.** Specs, safety
+claims and compatibility say what a product is. They do not say whether it
+is easy to use correctly every day. Before you recommend or select a
+product, research usability for every candidate you put forward and for
+the ones it beats. Use the "What to judge" list in its category README and
+the method under "Usability research" below. This applies to any
+recommendation, including one made in chat or in a summary, not only to an
+ADR. A shortlist built from specs alone is a shortlist, not a
+recommendation.
+
+**9. Every recommendation lists what was not researched.** End each
+recommendation with a short list of:
+
+- the "What to judge" rows it did not cover, and
+- any evidence that came from a different model year or variant than the
+  one you would buy.
+
+Name each gap, even when it seems minor. Nick decides whether a gap
+matters. An unstated gap reads as "checked".
+
+## Usability research
+
+Usability evidence comes from people who used the product by hand. These
+rules say how to find it and weigh it.
+
+- **Misuse risk is a safety issue.** A feature that is hard to set
+  correctly can cancel its own crash benefit. Examples: a recline
+  indicator that cannot be trusted, or a "locked" indicator that shows
+  locked when the part is not. Start such a con with "Misuse risk:". A
+  review can support a misuse-risk con. It cannot support a standard,
+  recall, expiry or safe-sleep claim (see "Safety claims need a primary
+  source" below).
+- **Use the right sources, in this order:**
+  1. NHTSA ease-of-use ratings, for car seats. Not yet verified as
+     available or readable; see open question 26.
+  2. Hands-on reviews by child passenger safety technicians (CPSTs). The
+     best ones test with real babies or weighted dolls at several ages.
+  3. Lab reviews with a published scoring method. Each lab scores
+     differently, so never compare scores across labs.
+  4. Owner reports and forums.
+
+  Retailer write-ups are not hands-on reviews, even when they sound like
+  them. Confidence levels are under "Reviews are medium confidence at best"
+  below.
+- **Match the review to the version you would buy.** Reviews often test an
+  older model year or variant. Record which version each review tested. A
+  finding from a different version is low confidence until a newer review
+  repeats it. Look for retests.
+- **Follow shared parts across variants.** Variants often share a base,
+  frame or insert. A problem in a shared part carries over. To answer "does
+  variant X fix it?", go part by part, and say which parts are shared.
+- **Check where each feature works.** A feature may work in one mode only,
+  for example in the stroller but not in the car. Say where it works.
+- **Record numbers as the product is used.** Makers often quote weight
+  without the canopy or inserts. Record the measured, as-used figure with
+  its source. Never let the maker's lighter figure decide a comparison.
+- **Write down where the maker disagrees with its manual.** A maker may
+  tell a reviewer something its manual does not say. The manual is what a
+  tired parent reads.
+- **Alternatives a review suggests must pass the hard gates first.** A
+  review's "better" picks are not candidates until they pass the accepted
+  ADRs. For example, the Nuna PIPA RX has no 213a claim, so it fails 0001
+  ([survey](research/notes/2026-11-27-infant-car-seat-market-survey.md)).
+  If a suggested product was never surveyed, add it to
+  `research/open-questions.md` to check against the gates.
 
 ## Rules specific to baby gear
 

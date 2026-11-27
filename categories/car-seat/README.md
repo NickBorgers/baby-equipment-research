@@ -19,8 +19,50 @@ birth.
 
 ## Candidates
 
-None yet. See [`candidates/items/car-seat.yaml`](../../candidates/items/car-seat.yaml)
+None yet. Seats that pass 0001 are listed in the
+[market survey](../../research/notes/2026-11-27-infant-car-seat-market-survey.md).
+See [`candidates/items/car-seat.yaml`](../../candidates/items/car-seat.yaml)
 and the generated [`docs/COMPARISON.md`](../../docs/COMPARISON.md).
+
+## What to judge
+
+A recommendation covers every row below, or lists the rows it skipped
+(AGENTS.md rules 8 and 9). The usability rows come from a summary of
+hands-on Primo Viaggio Nido reviews that Nick shared on 2026-11-27. It has
+not been re-read at its sources yet (open question 36).
+
+**What the seat is** (specs and manuals):
+
+- 213a claim (0001), child limits, expiry.
+- Carrier weight **as used**, with canopy and inserts. The maker's figure
+  often leaves these out.
+- Carrier width (airline seats), aircraft install, baseless install.
+- Model Y fit and front legroom.
+- Strollers it clicks onto, and which adapters they need.
+
+**Getting it right every time** (safety-relevant usability):
+
+- **Recline.** Can you reach the recline the manual requires in our car
+  without a pool noodle? Can you trust the indicator? Why recline matters
+  for a newborn needs a primary source (manual or AAP) before it is cited.
+- **Insert and harness fit across ages.** At newborn size, 4 months and 7
+  months: where the crotch buckle sits, whether the head slumps, whether
+  the insert digs in. Does the manual say clearly when to change inserts?
+- **Base install hardware.** Does the lock-off stay locked? Is there a
+  tensioner? Is the load leg easy to adjust, with a "set correctly"
+  indicator?
+- **Click-in indicator.** Can it show "locked" when the carrier is not?
+- **Baseless install stability.** It matters for taxis and travel.
+
+**Daily friction:**
+
+- Buckle and chest clip effort. Harness adjustment.
+- Carrying the carrier: handle, weight, length.
+- Click on and off the base and the stroller.
+- Canopy, fabric feel, cleaning.
+- Durability of small parts, such as covers, doors and storage clips.
+
+**Sources:** see "Usability research" in [`AGENTS.md`](../../AGENTS.md).
 
 ## What fits what
 

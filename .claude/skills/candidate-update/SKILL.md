@@ -54,9 +54,12 @@ The statuses run `candidate` → `shortlisted` → `selected` → `ordered` →
 `owned`. There is also `rejected`.
 
 - `candidate`: on the list, not researched in depth.
-- `shortlisted`: researched and still in the running.
-- `selected`: decided. This usually means there is an ADR, so use the
-  `adr-write` skill alongside this one.
+- `shortlisted`: passes the hard gates (the accepted ADRs), and its specs
+  are researched. Usability may not be judged yet, so a shortlisted item
+  is not a recommendation (AGENTS.md rule 8).
+- `selected`: decided. Before setting it, run the "What to judge" check in
+  `adr-write` step 4, with or without an ADR. It usually has an ADR, so use
+  the `adr-write` skill alongside this one.
 - `rejected`: kept on the record so nobody researches it again. Say why in
   `notes`. Rejected items are left out of the cost rollup and the fit checks.
 

@@ -341,3 +341,12 @@ item with:
 - Does Peg Perego state 213a anywhere besides the manual's declaration
   (product page, box), and do units in stores carry the 2025 manual?
 - Model Y fit for everything except the KeyFit 30.
+
+## Addendum (2026-11-27, later session)
+
+- **Chicco KeyFit 30 expiry basis.** The
+  [KeyFit 30 manual, 03-2020](https://www.chiccousa.com/on/demandware.static/-/Sites-chicco_catalog/default/dwce771062/images/products/Manuals/car-seats/Chicco-KeyFit-30-Car-Seat-Product-Manual-03-2020.pdf)
+  p.8, re-read 2026-11-27: "DO NOT use this Child Restraint if it is more
+  than 6 years old. Check manufacturer's label on underside of Child
+  Restraint for the "Do Not Use After" date." So the 6 years run from
+  manufacture. Confidence: high.

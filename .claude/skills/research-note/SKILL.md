@@ -65,3 +65,5 @@ the candidates with no note behind it is a claim nobody can check later.
   recalls, expiry and safe-sleep claims need a primary source.
 - Do not treat a manufacturer's spec and a reviewer's measurement as the
   same kind of number. Folded sizes and weights often differ between them.
+- Do not cite a review without saying which version it tested and when.
+  For usability notes, follow "Usability research" in `AGENTS.md`.
