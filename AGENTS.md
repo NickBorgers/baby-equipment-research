@@ -59,9 +59,12 @@ unilaterally.
 - **Reviews are medium confidence at best.** Independent lab testing is
   medium. User reviews and forums are low unless several agree.
 - **Household facts are the household's to supply.** Car models, trunk and
-  doorway measurements, bedroom space, budget and due date belong to Nick.
+  doorway measurements, bedroom space and budget belong to Nick.
   Ask; do not assume. They live in `household/household.yaml`, and every
   `null` there has an entry in the backlog.
+- **Keep private details out of the repo.** The due date and similar
+  personal facts are not recorded anywhere here, by Nick's choice. They are
+  not needed; do not ask for them or add fields for them.
 - **Compatibility comes from the manufacturer.** Car seat ↔ stroller
   compatibility and adapters go in a stroller's `compat` block only when a
   manufacturer's chart or manual says so. "Not listed" means unknown, not
@@ -92,6 +95,11 @@ not have to be remembered.
   high chair, monitor) can be added: add the category and its `spec_fields`
   in `candidates/schema.yaml`, a `candidates/items/<category>.yaml`, and a
   `categories/<category>/README.md`.
+- **Car seats must be certified to FMVSS 213a** (side impact) — see
+  [0001](decisions/0001-car-seat-must-meet-fmvss-213a.md). If that leaves
+  nothing suitable, raise it with Nick; do not relax it quietly.
+- **We buy for a 2022 Model Y, and we fly.** A 2026 Model Y L may come
+  later but does not drive choices now.
 - **The car seat decision comes first.** Whether to use an infant seat as a
   travel system (open question 9) decides whether stroller ↔ car seat
   compatibility matters at all.

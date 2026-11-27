@@ -25,7 +25,7 @@ ROLLUP_STATUSES = ("selected", "ordered", "owned")
 #: The spec fields shown in each category's comparison table, in order.
 SUMMARY_SPECS = {
     "stroller": ("weight_lb", "folded_in", "max_child_lb"),
-    "car-seat": ("weight_lb", "child_weight_lb", "expiry_years"),
+    "car-seat": ("weight_lb", "child_weight_lb", "expiry_years", "faa_approved"),
     "bassinet": ("footprint_in", "fits_bed_height_in", "max_child_lb"),
 }
 
@@ -243,6 +243,21 @@ def validate_compat(items: list[dict], schema: dict) -> list[str]:
     return errors
 
 
+#: Decision 0001: car seats must be certified to this. Shown as its own column.
+SIDE_IMPACT_STANDARD = "FMVSS 213a"
+
+
+def meets_213a(item: dict) -> bool:
+    """True if FMVSS 213a is recorded in the item's safety.standards.
+
+    False means "not recorded", which is not the same as "fails" — the table
+    shows it as `?`.
+    """
+    standards = (item.get("safety") or {}).get("standards") or []
+    wanted = SIDE_IMPACT_STANDARD.replace(" ", "").lower()
+    return any(str(s).replace(" ", "").lower() == wanted for s in standards)
+
+
 def _format_spec(value, kind: str = "") -> str:
     if value is None:
         return "?"
@@ -266,7 +281,8 @@ def render_comparison(items: list[dict], schema: dict, decisions: dict) -> str:
         f"{len(items)} candidates. {len(committed)} are decided "
         f"(selected, ordered or owned); {len(unpriced)} still have no price.",
         "",
-        "`?` means not researched yet. See `research/open-questions.md`.",
+        "`?` means not researched yet. See `research/open-questions.md`. "
+        "The car seat `213a` column is decision 0001's side-impact requirement.",
         "",
     ]
 
@@ -278,7 +294,17 @@ def render_comparison(items: list[dict], schema: dict, decisions: dict) -> str:
             continue
         spec_names = SUMMARY_SPECS.get(category, ())
         kinds = schema["spec_fields"].get(category, {})
-        header = ["Candidate", "Status", "Price", *spec_names, "Pros", "Cons", "ADR"]
+        side_impact = category == "car-seat"
+        header = [
+            "Candidate",
+            "Status",
+            "Price",
+            *(["213a"] if side_impact else []),
+            *spec_names,
+            "Pros",
+            "Cons",
+            "ADR",
+        ]
         out += ["| " + " | ".join(header) + " |", "| " + " | ".join("---" for _ in header) + " |"]
         for item in sorted(group, key=lambda i: (i.get("status") == "rejected", i["id"])):
             price = item.get("price_usd")
@@ -293,6 +319,7 @@ def render_comparison(items: list[dict], schema: dict, decisions: dict) -> str:
                 f"`{item['id']}` — {item['name']}",
                 str(item.get("status")),
                 price_text,
+                *((["yes" if meets_213a(item) else "?"]) if side_impact else []),
                 *(_format_spec(specs.get(name), kinds.get(name, "")) for name in spec_names),
                 str(len(item.get("pros") or [])),
                 str(len(item.get("cons") or [])),

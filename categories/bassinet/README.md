@@ -20,6 +20,10 @@ A bassinet is checked against the floor space beside the bed and, for
 bedside models, against the mattress-top height. See
 [`docs/FIT.md`](../../docs/FIT.md).
 
+Our bed is a queen on an upholstered frame with a ledge around the mattress
+edge. That ledge may stop a bedside bassinet from sitting flush, which is a
+safety issue, not only a fit issue. Open question 19 tracks it.
+
 ## Safety notes for whoever picks this up
 
 Safe-sleep claims need primary sources: CPSC, the bassinet standard, AAP
@@ -28,4 +32,4 @@ is not evidence.
 
 ## Open questions
 
-See `research/open-questions.md` items 6, 7, 11, 12, 15 and 17.
+See `research/open-questions.md` items 6, 7, 11, 12, 15, 17 and 19.

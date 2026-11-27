@@ -8,7 +8,7 @@ and a **standalone sleep bassinet**.
 **Status: scaffolded, not researched.** No candidates are recorded yet. The
 backlog in [`research/open-questions.md`](research/open-questions.md) lists
 what to find out first: the household facts (cars, trunk, doorways, bedroom
-space, budget, due date), the shape decisions (above all, infant car seat +
+space, budget), the shape decisions (above all, infant car seat +
 travel system vs. a convertible seat from birth), and the safety standards
 to source.
 

@@ -5,7 +5,7 @@
 
 0 candidates. 0 are decided (selected, ordered or owned); 0 still have no price.
 
-`?` means not researched yet. See `research/open-questions.md`.
+`?` means not researched yet. See `research/open-questions.md`. The car seat `213a` column is decision 0001's side-impact requirement.
 
 ## stroller
 

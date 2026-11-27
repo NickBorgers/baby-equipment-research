@@ -59,7 +59,7 @@ the candidates with no note behind it is a claim nobody can check later.
 - Do not write a note with no sources. That is an opinion. Opinions belong
   in an ADR's rationale, labeled as opinions.
 - Do not answer a question Nick should answer. Car models, measurements,
-  budget, due date and how the gear will be used are his to supply. Ask;
+  budget and how the gear will be used are his to supply. Ask;
   do not assume.
 - Do not record a safety claim from a retailer or a review alone. Standards,
   recalls, expiry and safe-sleep claims need a primary source.

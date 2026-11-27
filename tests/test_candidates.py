@@ -242,6 +242,24 @@ def test_adapter_needs_a_name(schema):
     assert _has(_errors(schema, seat, stroller), "adapter name")
 
 
+def test_meets_213a_only_when_recorded():
+    assert candidates.meets_213a({"safety": {"standards": ["FMVSS 213", "FMVSS 213a"]}})
+    assert candidates.meets_213a({"safety": {"standards": ["fmvss213a"]}})
+    assert not candidates.meets_213a({"safety": {"standards": ["FMVSS 213"]}})
+    assert not candidates.meets_213a({})
+
+
+def test_car_seat_table_has_a_213a_column(schema):
+    seats = [
+        _item(id="a", category="car-seat", safety={"standards": ["FMVSS 213a"]}),
+        _item(id="b", category="car-seat"),
+    ]
+    text = candidates.render_comparison(seats, schema, {})
+    assert "| Candidate | Status | Price | 213a |" in text
+    assert "| `a` — Sample | candidate | ? | yes |" in text
+    assert "| `b` — Sample | candidate | ? | ? |" in text  # not recorded is ?, not "no"
+
+
 # --- rendering --------------------------------------------------------------
 
 

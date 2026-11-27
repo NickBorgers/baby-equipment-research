@@ -72,6 +72,9 @@ The statuses run `candidate` → `shortlisted` → `selected` → `ordered` →
   `incompatible` only when a source says no adapter exists. Every id in
   `compat` must be a car-seat candidate in this repo. Add the seat first.
 - **Every recall needs a URL and a date.** The validator enforces this.
+- **FMVSS 213a goes in `safety.standards` only from a primary source.**
+  Decision 0001 requires it for car seats. The comparison table shows `yes`
+  when it is recorded and `?` otherwise.
 - **A claim needs a note.** Use the `research-note` skill first, then bring
   the claim here. Each pro and con should trace to a note.
 - **Say which model year.** Put it in `name` when it matters.

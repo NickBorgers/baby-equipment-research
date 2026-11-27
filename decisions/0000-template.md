@@ -12,7 +12,7 @@ candidates: []
 ## Context
 
 What situation forces a choice? Include the constraints that are real: the
-car, the house, how the gear will be used, the budget, the due date.
+car, the house, how the gear will be used, the budget.
 
 ## Decision
 

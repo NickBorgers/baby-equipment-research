@@ -153,6 +153,25 @@ def test_bed_height_bedside():
     assert fit.bassinet_bed_height(low, home).outcome == fit.NO_FIT
 
 
+def test_overhead_bin():
+    travel = {"flies": True, "overhead_bin_in": [22, 14, 9]}
+    assert fit.overhead_bin(stroller(folded_in=[21, 13, 8]), travel).outcome == fit.FITS
+    assert fit.overhead_bin(stroller(folded_in=[26, 18, 10]), travel).outcome == fit.NO_FIT
+    assert fit.overhead_bin(stroller(), travel).outcome == fit.UNKNOWN
+
+
+def test_overhead_bin_skipped_only_when_known_not_flying():
+    section = "Stroller in an overhead bin"
+    assert fit.run([stroller()], {"travel": {"flies": False}})[section] == []
+    assert len(fit.run([stroller()], {"travel": {"flies": True}})[section]) == 1
+    assert len(fit.run([stroller()], {})[section]) == 1  # unknown still asks
+
+
+def test_future_vehicles_are_not_checked():
+    household = {"future_vehicles": [{"name": "Later car", "trunk_in": [1, 1, 1]}]}
+    assert fit.run([stroller()], household)["Stroller in the trunk"] == []
+
+
 # --- running and rendering --------------------------------------------------
 
 
@@ -169,6 +188,7 @@ def test_render_with_nothing_does_not_crash():
     assert "0 checks" in text
     assert "No vehicles" in text
     assert "Nothing to check yet." in text
+    assert "No checks ran yet" in text  # zero checks must not read as "nothing blocks"
 
 
 def test_render_lists_blockers_and_never_claims_a_fit_on_unknowns():

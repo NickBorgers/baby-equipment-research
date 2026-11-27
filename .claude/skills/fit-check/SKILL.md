@@ -28,12 +28,18 @@ An unknown **never** counts as a fit.
 | Trunk | folded stroller vs. trunk, rotation allowed | stroller `specs.folded_in`, `vehicles[].trunk_in` |
 | Doorway | open stroller width vs. narrowest door | stroller `specs.open_width_in`, `home.narrowest_doorway_in` |
 | Storage | folded stroller vs. storage spot | stroller `specs.folded_in`, `home.stroller_storage_in` |
+| Overhead bin | folded stroller vs. strictest airline bin (only when `travel.flies` is not false) | stroller `specs.folded_in`, `travel.overhead_bin_in` |
 | Back seat | car seat width vs. rear seat width | car seat `specs.base_width_in`, `vehicles[].rear_seat_width_in` |
 | Bassinet floor | footprint vs. bedside floor space | bassinet `specs.footprint_in`, `home.bedside_space_in` |
 | Bed height | bed height within the maker's range (bedside models only) | bassinet `specs.bedside_attach`, `specs.fits_bed_height_in`, `home.bed_top_height_in` |
 
 The candidate inputs live in `candidates/items/*.yaml`. The household inputs
-live in `household/household.yaml`. Rejected candidates are skipped.
+live in `household/household.yaml`. Rejected candidates are skipped, and so
+are `future_vehicles`.
+
+An "overhead bin: does not fit" is not a dealbreaker by itself: airlines
+commonly let you gate-check a stroller (confirm per airline, open question
+22). It is one trade-off among others.
 
 ## Reading the results
 

@@ -7,8 +7,6 @@
 
 An unknown never counts as a fit. See `tools/fit.py` for the method and the `fit-check` skill for how to read this.
 
-No vehicles in `household/household.yaml` yet, so no trunk or back-seat checks run.
-
 ## Travel system (car seat on stroller)
 
 Nothing to check yet.
@@ -25,6 +23,10 @@ Nothing to check yet.
 
 Nothing to check yet.
 
+## Stroller in an overhead bin
+
+Nothing to check yet.
+
 ## Car seat in the back seat
 
 Nothing to check yet.
@@ -35,4 +37,4 @@ Nothing to check yet.
 
 ## What blocks a real answer
 
-Nothing — every check that runs has its inputs.
+No checks ran yet — there are no candidates to check.

@@ -14,7 +14,8 @@ how a stroller gets bought that does not go in the car.
 
 Inputs come from `specs` and `compat` on the candidates in
 `candidates/items/*.yaml`, and from `vehicles` and `home` in
-`household/household.yaml`. `rejected` candidates are skipped.
+`household/household.yaml`. `rejected` candidates and `future_vehicles` are
+skipped.
 """
 
 from __future__ import annotations
@@ -157,6 +158,21 @@ def storage(stroller: dict, home: dict) -> Check:
     )
 
 
+def overhead_bin(stroller: dict, travel: dict) -> Check:
+    folded = _specs(stroller).get("folded_in")
+    space = travel.get("overhead_bin_in")
+    return Check(
+        stroller["id"],
+        "airline overhead bin",
+        fits_within(folded, space),
+        "folded size vs. strictest bin limit; gate check is the fallback",
+        _missing([
+            (f"{stroller['id']} specs.folded_in", folded),
+            ("household travel.overhead_bin_in", space),
+        ]),
+    )
+
+
 def bassinet_floor(bassinet: dict, home: dict) -> Check:
     footprint = _specs(bassinet).get("footprint_in")
     space = home.get("bedside_space_in")
@@ -228,6 +244,8 @@ def run(items: list[dict], household: dict) -> dict[str, list[Check]]:
     bassinets = _live(items, "bassinet")
     vehicles = household.get("vehicles") or []
     home = household.get("home") or {}
+    travel = household.get("travel") or {}
+    flies = travel.get("flies") is not False  # unknown still asks the question
 
     bed_checks = [bassinet_bed_height(b, home) for b in bassinets]
     return {
@@ -237,6 +255,9 @@ def run(items: list[dict], household: dict) -> dict[str, list[Check]]:
         "Stroller in the trunk": [trunk(s, v) for s in strollers for v in vehicles],
         "Stroller through the door": [doorway(s, home) for s in strollers],
         "Stroller in its storage spot": [storage(s, home) for s in strollers],
+        "Stroller in an overhead bin": [overhead_bin(s, travel) for s in strollers]
+        if flies
+        else [],
         "Car seat in the back seat": [car_seat_width(c, v) for c in seats for v in vehicles],
         "Bassinet beside the bed": [bassinet_floor(b, home) for b in bassinets]
         + [check for check in bed_checks if check is not None],
@@ -275,7 +296,9 @@ def render(items: list[dict], household: dict) -> str:
 
     blockers = sorted({label for check in every for label in check.missing})
     out += ["## What blocks a real answer", ""]
-    if blockers:
+    if not every:
+        out += ["No checks ran yet — there are no candidates to check."]
+    elif blockers:
         out += [f"- {label}" for label in blockers]
     else:
         out += ["Nothing — every check that runs has its inputs."]

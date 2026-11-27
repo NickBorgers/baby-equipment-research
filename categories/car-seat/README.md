@@ -6,9 +6,12 @@ birth.
 
 ## Decisions
 
-None yet. Open question 9 (infant seat + travel system, or convertible
-from birth) comes first — see
-[`research/open-questions.md`](../../research/open-questions.md).
+- [0001](../../decisions/0001-car-seat-must-meet-fmvss-213a.md) —
+  **accepted.** The seat must be certified to FMVSS 213a, the federal
+  side-impact test. The specific unit bought must be too.
+
+Open question 9 (infant seat + travel system, or convertible from birth)
+comes next — see [`research/open-questions.md`](../../research/open-questions.md).
 
 ## Candidates
 
@@ -30,4 +33,5 @@ a crash — so used seats need a known history (open question 12).
 
 ## Open questions
 
-See `research/open-questions.md` items 2, 4, 9, 12, 13, 14, 17 and 18.
+See `research/open-questions.md` items 3, 4, 9, 12, 13, 14, 17, 18, 21 (FAA approval) and 23 (213a availability).
+It will be used on planes (item 20).

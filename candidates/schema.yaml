@@ -72,6 +72,7 @@ spec_fields:
     child_height_in_max: number
     base_width_in: number     # widest point of the installed base or seat
     expiry_years: number      # from date of manufacture
+    faa_approved: bool        # labeled for use in aircraft; see open question 21
   bassinet:
     footprint_in: dims2       # floor footprint, any order
     fits_bed_height_in: range # mattress-top heights the maker says it fits (bedside models)

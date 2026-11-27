@@ -5,16 +5,28 @@
 # here has a matching entry in research/open-questions.md under "Household
 # facts". These are the household's facts to supply — agents must not guess
 # them. Dimensions are inches.
+#
+# PRIVATE FACTS STAY OUT. This file is committed to git. The due date and
+# other personal details are deliberately NOT recorded here or anywhere in
+# the repo — Nick's choice, 2026-11-27. Do not add a field for them.
 
-due_date: null            # YYYY-MM-DD
+vehicles:
+  - name: 2022 Tesla Model Y
+    model_year: 2022
+    trunk_in: null               # [l, w, h] usable rear cargo space; see open question 3
+    frunk_in: null               # [l, w, h] front trunk — a second place a stroller might go
+    rear_seat_width_in: null     # see open question 4
+    notes: >-
+      The car we are buying for (Nick, 2026-11-27). Trunk and rear-seat
+      sizes not measured yet.
 
-vehicles: []
-# One entry per car the baby will ride in. Shape:
-#   - name: "Family SUV"
-#     trunk_in: [l, w, h]          # usable cargo space, any order; null until measured
-#     rear_seat_width_in: null     # the seating position(s) a car seat would use
-#     notes: >-
-#       Anything odd: wheel-well intrusion, a sloped hatch, LATCH positions.
+# Cars that may come later. NOT checked by tools/fit.py — we are buying for
+# `vehicles` above. Kept so a later purchase can be re-checked quickly.
+future_vehicles:
+  - name: 2026 Tesla Model Y L
+    notes: >-
+      Might be bought later, in addition to the 2022 Model Y (Nick,
+      2026-11-27). Do not let it drive choices now.
 
 home:
   narrowest_doorway_in: null     # the narrowest door a stroller must pass, open
@@ -22,6 +34,10 @@ home:
   stroller_storage_in: null      # [l, w, h] of where the folded stroller will live
   bedside_space_in: null         # [l, w] floor space next to the adult bed
   bed_top_height_in: null        # mattress top height, for bedside bassinets
+  bed_notes: >-
+    Queen mattress. The bed frame is upholstered (covered in fabric) and has
+    a ledge that runs around the edge of the mattress (Nick, 2026-11-27).
+    That ledge matters for bedside bassinets — see open question 19.
 
 budget_usd:
   stroller: null
@@ -29,6 +45,13 @@ budget_usd:
   bassinet: null
 
 lifestyle:
-  notes: null
-  # Urban walking, suburban car trips, jogging, air travel, gravel paths — this
-  # shapes which stroller trade-offs matter. Free text until it is known.
+  notes: >-
+    The stroller will be used for travel right away, from the start,
+    including flying. It will not be used for running or jogging (Nick,
+    2026-11-27).
+
+travel:
+  flies: true                    # Nick, 2026-11-27
+  airlines: [Delta, American Airlines]   # most often (Nick, 2026-11-27)
+  overhead_bin_in: null          # [l, w, h] strictest carry-on/bin limit among those
+                                 # airlines; a fact to research once `airlines` is known
