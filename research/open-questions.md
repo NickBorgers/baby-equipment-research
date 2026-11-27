@@ -21,15 +21,22 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   checked. (`household.yaml` `vehicles`)
 
 - [ ] **3. 2022 Model Y trunk (and frunk) dimensions** — usable length ×
-  width × height, noting the hatch slope and wheel wells. Blocks the
-  "stroller in the trunk" check. Ideally tape-measured on our car.
-  Otherwise, published measurements for a 2022 (pre-refresh) Model Y are
-  researchable — record their source, at medium confidence at best.
+  width × height, noting the hatch slope and wheel wells. **Stand-in
+  recorded 2026-11-27:** trunk [40, 35.75, 19], frunk [27.6, 13.8, 11],
+  the smallest of several independent measurements of 2020-21 cars, which
+  disagree by 2-3 in
+  ([note](notes/2026-11-27-model-y-2022-cargo-and-rear-seat.md)). Tesla
+  publishes volumes only. Still wanted: a tape measure on our car (floor
+  length, width between the wheel wells, height to the cargo cover, the
+  hatch opening, and the sub-trunk well).
   (`vehicles[].trunk_in`, `vehicles[].frunk_in`)
 
-- [ ] **4. Rear-seat width for car seat positions** — and which positions
-  have LATCH anchors. Blocks the car seat width screen.
-  (`vehicles[].rear_seat_width_in`)
+- [ ] **4. Rear-seat width for car seat positions.** LATCH answered
+  2026-11-27: lower anchors on the second-row outboard seats only; the
+  center seat is seat-belt install only (Tesla manual). Width: Tesla gives
+  none per position. One 2020 measurement says 18 in outboard, which is too
+  thin to use. Tape-measure the outboard seat. Blocks the car seat width
+  screen. (`vehicles[].rear_seat_width_in`)
 
 - [ ] **5. Narrowest doorway, stairs, and stroller storage spot** — does the
   stroller need carrying up steps, and where will it live folded?
@@ -79,14 +86,14 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
 
 ## Safety standards and how to check them (source before relying on them)
 
-- [ ] **14. Car seats: FMVSS 213, and the status of the side-impact rule.**
-  Confirm from NHTSA what FMVSS 213 requires and the current status and
-  compliance date of NHTSA's side-impact requirement for car seats (FMVSS
-  213a). From memory, not yet sourced: the final rule came out in 2023 with
-  a compliance date in December 2026. If so, that is within weeks of now.
-  Also find what a 213a-certified seat's label or manual says, NHTSA's
-  ease-of-use ratings, and car seat expiry norms. **Needed by
-  [0001](../decisions/0001-car-seat-must-meet-fmvss-213a.md).**
+- [x] **14. FMVSS 213a status.** Answered 2026-11-27
+  ([note](notes/2026-11-27-fmvss-213a-status-and-infant-seats.md)). The
+  compliance date is **2026-12-05**, delayed from 2025 by a final rule of
+  2026-09-09. It applies by date of manufacture: seats made earlier can still
+  be sold. No label wording specific to 213a exists. A seat made on or after
+  2026-12-05 must comply; an earlier one needs the maker's explicit claim.
+  Split off as still open: item 24 (pending petition) and NHTSA ease-of-use
+  ratings and car seat expiry norms (item 26).
 
 - [ ] **15. Bassinets: the CPSC bassinet standard.** Confirm from CPSC what
   the mandatory bassinet/cradle standard is (16 CFR 1218, which incorporates
@@ -125,12 +132,21 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
 
 ## Raised by flying and FMVSS 213a (2026-11-27)
 
-- [ ] **21. FAA approval for car seats.** Confirm from the FAA what label
-  wording makes a car seat approved for aircraft, and whether infant seats
-  without their base can be used on board. Also: does the seat fit a
-  typical economy seat width? Fills the car seat's `specs.faa_approved`.
+- [x] **21. FAA approval for car seats.** Answered 2026-11-27
+  ([note](notes/2026-11-27-faa-car-seat-use-on-aircraft.md)). The label
+  is the red "This Restraint is Certified for Use in Motor Vehicles and
+  Aircraft". A carrier with a belt path can go without its base (FAA InFO
+  15013), but the manual decides: UPPAbaby Mesa V3 says never use the base on
+  aircraft. FAA guide: ≤16 in wide fits "most" seats. Airlines must allow a
+  ticketed child in an approved seat. New specs: `aircraft_install`,
+  `carrier_width_in`.
 
-- [ ] **22. Airline bin size and stroller policy.** Which airlines:
+- [ ] **22. Airline bin size and stroller policy.** Mostly answered
+  2026-11-27 ([note](notes/2026-11-27-delta-american-stroller-car-seat-policy.md)):
+  both are 22 × 14 × 9 in (Delta confirmed; aa.com could not be fetched).
+  Both check strollers and car seats free; Delta confirmed gate check. Still
+  open: whether American's 20 lb stroller limit is still live (a 2025 blog
+  says it was removed) — read aa.com in a browser. Which airlines:
   answered 2026-11-27 (Nick) — **Delta and American Airlines**, most often.
   Still to research: each airline's carry-on/overhead bin size and stroller policy
   (some reportedly allow a compact folded stroller in the bin; gate check is
@@ -139,11 +155,34 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   bin check needs.
 
 - [ ] **23. Which infant car seats are certified to FMVSS 213a now, and
-  how do we verify a specific unit?** Required by
+  how do we verify a specific unit?** First pass done 2026-11-27
+  ([note](notes/2026-11-27-fmvss-213a-status-and-infant-seats.md)):
+  explicit claims from UPPAbaby Mesa V3 and Aria V2, Chicco KeyFit 30 and
+  KeyFit Max, and Doona +; Joie Mint Latch/Rue pending confirmation. None
+  found for Nuna PIPA, Maxi-Cosi, KeyFit 35 or Clek Liingo. Verify a unit
+  by its "Manufactured in" date (on or after 2026-12-05 means certified)
+  or by the maker's confirmation. Original question: Required by
   [0001](../decisions/0001-car-seat-must-meet-fmvss-213a.md). Check each
   manufacturer's own statements and manuals, and NHTSA. Find out how the
   manufacture date and certification label show on the box and the seat,
   so a store unit made before the rule is not bought by mistake. Nick
   expects certified seats may be scarce at first; if none fit, raise it
   with him rather than relaxing 0001.
+
+## Raised by the 2026-11-27 research round
+
+- [ ] **24. Will the 213a date move again?** A petition for
+  reconsideration from the "Baby Safety Alliance" (2026-10-23) was logged in
+  NHTSA docket NHTSA-2025-0046 on 2026-11-24. Its content could not be
+  fetched. Check the docket and the Federal Register around 2026-12-05.
+
+- [ ] **25. How do we treat "tested according to FMVSS 213a" and
+  "complies with new FMVSS213 side impact" wording?** Britax Willow S,
+  Graco SnugRide and Cybex Aton G2 use it instead of "certified to 213a".
+  Decision 0001 needs a ruling from Nick, or a confirmation from each maker.
+  After 2026-12-05 this goes away for units made after that date.
+
+- [ ] **26. NHTSA ease-of-use ratings and car seat expiry norms.** Split
+  from item 14. nhtsa.gov blocked automated fetches, so it may need a
+  browser.
 

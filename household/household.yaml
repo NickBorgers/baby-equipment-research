@@ -13,12 +13,17 @@
 vehicles:
   - name: 2022 Tesla Model Y
     model_year: 2022
-    trunk_in: null               # [l, w, h] usable rear cargo space; see open question 3
-    frunk_in: null               # [l, w, h] front trunk — a second place a stroller might go
-    rear_seat_width_in: null     # see open question 4
+    trunk_in: [40, 35.75, 19]    # CONSERVATIVE stand-in from others' measurements, not ours
+    frunk_in: [27.6, 13.8, 11]   # same; see the research note below
+    rear_seat_width_in: null     # one 18 in figure exists (low confidence); see open question 4
     notes: >-
-      The car we are buying for (Nick, 2026-11-27). Trunk and rear-seat
-      sizes not measured yet.
+      The car we are buying for (Nick, 2026-11-27). trunk_in and frunk_in
+      are the smallest figures reported by independent measurers of 2020-21
+      Model Ys (same body), not a tape measure of our car — see
+      research/notes/2026-11-27-model-y-2022-cargo-and-rear-seat.md.
+      Replace them once measured. Lower LATCH anchors are on the second-row
+      outboard seats only; the center seat is seat-belt install only (Tesla
+      manual 2022.40).
 
 # Cars that may come later. NOT checked by tools/fit.py — we are buying for
 # `vehicles` above. Kept so a later purchase can be re-checked quickly.
@@ -53,5 +58,6 @@ lifestyle:
 travel:
   flies: true                    # Nick, 2026-11-27
   airlines: [Delta, American Airlines]   # most often (Nick, 2026-11-27)
-  overhead_bin_in: null          # [l, w, h] strictest carry-on/bin limit among those
-                                 # airlines; a fact to research once `airlines` is known
+  overhead_bin_in: [22, 14, 9]   # carry-on size limit, same on both airlines (Delta
+                                 # confirmed, AA unverified) — see research/notes/
+                                 # 2026-11-27-delta-american-stroller-car-seat-policy.md
