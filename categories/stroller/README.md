@@ -5,8 +5,11 @@ car seat.
 
 ## Decisions
 
-None yet. Open questions 9 (travel system or not) and 10 (full-size,
-compact or travel) shape this category — see
+- [0002](../../decisions/0002-infant-car-seat-that-clicks-onto-the-stroller.md) —
+  **accepted.** The stroller must accept the chosen infant car seat, per a
+  manufacturer's chart or manual. The car seat is chosen first.
+
+Open question 10 (full-size, compact or travel) is still open — see
 [`research/open-questions.md`](../../research/open-questions.md).
 
 ## Candidates
@@ -25,5 +28,5 @@ skill.
 
 ## Open questions
 
-See `research/open-questions.md` items 3, 5, 9, 10, 12, 13, 16, 18 and 22.
+See `research/open-questions.md` items 3, 5, 10, 12, 13, 16, 18, 22 and 28.
 Known use: travel from the start, including flying; no jogging (items 8 and 20).

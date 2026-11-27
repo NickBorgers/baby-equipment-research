@@ -64,8 +64,12 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
 
 ## Shape decisions (each likely becomes an ADR)
 
-- [ ] **9. Infant car seat + travel system, or a convertible seat from
-  birth?** An infant (bucket) seat clicks out of its base and onto a
+- [x] **9. Infant car seat + travel system, or a convertible seat from
+  birth?** Decided 2026-11-27 (Nick):
+  **an infant seat that clicks onto a compatible stroller**, then a
+  convertible once it is outgrown — see
+  [0002](../decisions/0002-infant-car-seat-that-clicks-onto-the-stroller.md).
+  Nick accepted the cost of the second seat. The original question: An infant (bucket) seat clicks out of its base and onto a
   compatible stroller, but is outgrown at about 9-18 months. A convertible
   seat stays in the car and lasts years, but the baby has to be moved in and
   out every trip. This decision comes first: it decides whether the car
@@ -196,4 +200,20 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
 - [ ] **26. NHTSA ease-of-use ratings and car seat expiry norms.** Split
   from item 14. nhtsa.gov blocked automated fetches, so it may need a
   browser.
+
+## Raised by decision 0002 (2026-11-27)
+
+- [ ] **27. When are infant seats typically outgrown, and by what limit?**
+  Usually height or head room runs out before the 30 lb weight limit. The
+  "9-18 months" estimate used in discussion is unsourced. Find the
+  manufacturers' rules (e.g. head within 1 in of the shell top) for each
+  shortlisted seat. This tells us when the convertible is needed.
+
+- [ ] **28. How high does the carrier sit on each stroller, and how stable
+  is it?** Nick, 2026-11-27: on the UPPAbaby Minu V3 the carrier sits high,
+  which raises the center of gravity. For each seat and stroller pairing,
+  find the carrier's height from the ground and any handlebar load limit
+  from the manual. Also find how ASTM F833 (16 CFR 1227) tests stability
+  with a car seat attached: the 2026-11-27 attempt to read the standard
+  failed (the iteh.ai sample returned 404).
 

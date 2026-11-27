@@ -10,8 +10,9 @@ birth.
   **accepted.** The seat must be certified to FMVSS 213a, the federal
   side-impact test. The specific unit bought must be too.
 
-Open question 9 (infant seat + travel system, or convertible from birth)
-comes next — see [`research/open-questions.md`](../../research/open-questions.md).
+- [0002](../../decisions/0002-infant-car-seat-that-clicks-onto-the-stroller.md) —
+  **accepted.** Start with an infant seat that clicks onto a compatible
+  stroller. A convertible follows once it is outgrown.
 
 ## Candidates
 
@@ -33,5 +34,5 @@ a crash — so used seats need a known history (open question 12).
 
 ## Open questions
 
-See `research/open-questions.md` items 3, 4, 9, 12, 13, 14, 17, 18, 21 (FAA approval) and 23 (213a availability).
+See `research/open-questions.md` items 3, 4, 12, 13, 14, 17, 18, 21 (FAA approval) 23 (213a availability), 27 (when outgrown) and 28 (ride height on the stroller).
 It will be used on planes (item 20).

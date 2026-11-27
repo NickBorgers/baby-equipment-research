@@ -100,9 +100,12 @@ not have to be remembered.
   nothing suitable, raise it with Nick; do not relax it quietly.
 - **We buy for a 2022 Model Y, and we fly.** A 2026 Model Y L may come
   later but does not drive choices now.
-- **The car seat decision comes first.** Whether to use an infant seat as a
-  travel system (open question 9) decides whether stroller ↔ car seat
-  compatibility matters at all.
+- **Infant seat first, then the stroller that takes it** — see
+  [0002](decisions/0002-infant-car-seat-that-clicks-onto-the-stroller.md).
+  Pick the car seat before the stroller. A stroller must accept the chosen
+  seat according to a manufacturer's chart. Products Nick mentions as
+  examples (e.g. UPPAbaby Minu V3 + Aria V2) are reference points, not
+  preferences: shortlist from the criteria, not from them.
 - This repo was bootstrapped on 2026-11-27 from the structure of Nick's
   `interior-led-lighting` design repo. It starts empty: no candidates have
   been researched yet.
