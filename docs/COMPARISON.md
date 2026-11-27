@@ -1,0 +1,24 @@
+<!-- GENERATED FILE — do not edit by hand.
+     Edit the YAML under candidates/ and household/, then run `make docs`. -->
+
+# Candidate comparison
+
+0 candidates. 0 are decided (selected, ordered or owned); 0 still have no price.
+
+`?` means not researched yet. See `research/open-questions.md`.
+
+## stroller
+
+No candidates yet.
+
+## car-seat
+
+No candidates yet.
+
+## bassinet
+
+No candidates yet.
+
+## Cost of decided items
+
+Known so far: **$0.00** across 0 priced, decided items.

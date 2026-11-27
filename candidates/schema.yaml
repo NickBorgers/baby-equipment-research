@@ -1,0 +1,95 @@
+# Schema for candidates/items/*.yaml. Single source of truth: tools/candidates.py
+# validates against this file, and the candidate-update skill describes it to
+# agents.
+#
+# Each file under candidates/items/ is a YAML list of products with these fields.
+
+required_fields:
+  - id
+  - name
+  - category
+  - status
+
+optional_fields:
+  - brand
+  - price_usd
+  - vendor_url
+  - decision
+  - specs
+  - safety
+  - compat
+  - pros
+  - cons
+  - notes
+
+field_types:
+  id: str            # kebab-case, unique across every file in candidates/items/
+  name: str          # product name including model year if it matters
+  category: str      # must be one of `categories` below
+  status: str        # must be one of `statuses` below
+  brand: str_or_null
+  price_usd: number_or_null       # null = not researched yet
+  vendor_url: str_or_null
+  decision: str_or_null           # ADR id, e.g. "0002"; file must exist
+  specs: mapping_or_null          # fields per category, see `spec_fields`
+  safety: mapping_or_null         # see `safety_fields`
+  compat: mapping_or_null         # strollers only, see `compat_fields`
+  pros: list_of_str               # each should trace to a research note
+  cons: list_of_str
+  notes: str
+
+categories:
+  - stroller     # the stroller itself (a travel-system frame counts)
+  - car-seat     # infant (rear-facing bucket) or convertible car seat
+  - bassinet     # standalone sleep bassinet — NOT a stroller bassinet attachment
+
+statuses:
+  - candidate    # under consideration, not researched in depth
+  - shortlisted  # researched, still in the running
+  - selected     # decision made; usually has an ADR
+  - ordered
+  - owned
+  - rejected     # kept for the record; excluded from rollups and fit checks
+
+# Per-category `specs` fields. Any field may be null, meaning "not researched
+# yet". Nulls make the matching fit check read "insufficient data", never
+# "fits". Dimensions are inches, weights pounds.
+#
+# Kinds: number, bool, str, dims2 ([a, b] numbers), dims3 ([a, b, c] numbers),
+# range ([min, max] numbers, min <= max).
+spec_fields:
+  stroller:
+    weight_lb: number
+    folded_in: dims3          # folded size, any order — the fit check sorts them
+    open_width_in: number     # unfolded width, for doorways
+    seat_recline: str         # e.g. "full flat", "near flat", "3 positions"
+    max_child_lb: number
+    one_hand_fold: bool
+    wheels: str               # e.g. "foam-filled", "air", "rubber"
+  car-seat:
+    weight_lb: number         # the carrier alone, without the base
+    child_weight_lb: range
+    child_height_in_max: number
+    base_width_in: number     # widest point of the installed base or seat
+    expiry_years: number      # from date of manufacture
+  bassinet:
+    footprint_in: dims2       # floor footprint, any order
+    fits_bed_height_in: range # mattress-top heights the maker says it fits (bedside models)
+    max_child_lb: number
+    bedside_attach: bool      # attaches to / sits flush against the adult bed
+
+# The optional `safety` block. Every claim here needs a primary source
+# (NHTSA, CPSC, the manufacturer) in a research note.
+safety_fields:
+  standards: list_of_str      # e.g. "FMVSS 213", "ASTM F833", "16 CFR 1218"
+  recalls: list_of_mapping    # each: {date: YYYY-MM-DD, url: str, summary: str}
+  checked_on: str_or_null     # YYYY-MM-DD the recall databases were last searched
+
+# The optional `compat` block, strollers only. It records which car seats
+# click onto this stroller. Ids must be car-seat candidates in this repo.
+# A car seat listed in neither field is "unknown", not "incompatible" —
+# unless it is listed in `incompatible`.
+compat_fields:
+  accepts_car_seats: list_of_str    # click on directly, no adapter
+  needs_adapter: mapping            # {car-seat-id: "adapter product name"}
+  incompatible: list_of_str         # confirmed: no adapter exists

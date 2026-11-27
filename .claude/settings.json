@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(make:*)",
+      "Bash(pytest:*)",
+      "Bash(python tools/candidates.py:*)",
+      "Bash(python tools/fit.py:*)",
+      "Bash(ruff check:*)"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+# Facts about the household that decide what fits: the cars, the house, the
+# bedroom, the budget. tools/fit.py reads `vehicles` and `home`.
+#
+# `null` means "not measured yet", never "zero" and never "fine". Every null
+# here has a matching entry in research/open-questions.md under "Household
+# facts". These are the household's facts to supply — agents must not guess
+# them. Dimensions are inches.
+
+due_date: null            # YYYY-MM-DD
+
+vehicles: []
+# One entry per car the baby will ride in. Shape:
+#   - name: "Family SUV"
+#     trunk_in: [l, w, h]          # usable cargo space, any order; null until measured
+#     rear_seat_width_in: null     # the seating position(s) a car seat would use
+#     notes: >-
+#       Anything odd: wheel-well intrusion, a sloped hatch, LATCH positions.
+
+home:
+  narrowest_doorway_in: null     # the narrowest door a stroller must pass, open
+  stairs_to_entry: null          # bool: must the stroller be carried up steps?
+  stroller_storage_in: null      # [l, w, h] of where the folded stroller will live
+  bedside_space_in: null         # [l, w] floor space next to the adult bed
+  bed_top_height_in: null        # mattress top height, for bedside bassinets
+
+budget_usd:
+  stroller: null
+  car-seat: null
+  bassinet: null
+
+lifestyle:
+  notes: null
+  # Urban walking, suburban car trips, jogging, air travel, gravel paths — this
+  # shapes which stroller trade-offs matter. Free text until it is known.

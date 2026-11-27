@@ -1,0 +1,30 @@
+# Figures that were computed once and are no longer current.
+#
+# `make check` fails if one of these appears in a hand-written file — the
+# README, AGENTS.md, an ADR, a category page or household.yaml — unless the
+# line carries `figure-check: ignore`.
+#
+# WHY THIS FILE EXISTS. Computed numbers get copied into prose: a total
+# price, a stroller's folded size, a trunk measurement. Then a candidate
+# changes (a new model year, a price drop, a remeasured trunk) and every copy
+# is quietly wrong, with no way for a reader to tell whether the reasoning
+# around a stale number is stale too.
+#
+# WHEN YOU CHANGE A FIGURE: add the old value here, then run `make check`. It
+# will point at every stale copy.
+#
+# Quoting an old figure on purpose — as history, or to explain what changed —
+# is fine. Mark the line with `figure-check: ignore`.
+#
+# `research/notes/` and `candidates/items/*.yaml` notes are never checked.
+# Those are dated, append-only logs and should keep the numbers they were
+# written with.
+#
+# Entry shape:
+#   - value: "1,234"
+#     unit: "$"
+#     replaced_by: "what is current now, or where to find it"
+#     what: >-
+#       what the old figure was and why it moved.
+
+superseded: []
