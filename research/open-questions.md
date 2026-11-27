@@ -112,11 +112,26 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
 
 - [ ] **17. How to check recalls.** Record the exact NHTSA (car seat) and
   CPSC (stroller, bassinet) recall search process, so each candidate's
-  `safety.checked_on` means the same thing.
+  `safety.checked_on` means the same thing. Progress 2026-11-27
+  ([note](notes/2026-11-27-infant-car-seat-market-survey.md)): nhtsa.gov
+  and api.nhtsa.gov block scripts, but NHTSA's static recall flat file
+  (`static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip`, child-restraint
+  records have type `C`) downloads and can be searched by make and model.
+  Still open: the CPSC side, and whether a flat-file search is accepted as
+  equal to the official per-model lookup.
 
 - [ ] **18. Travel-system compatibility sources.** Find where each
   manufacturer publishes its car seat compatibility and adapter charts, so
   `compat` entries come from primary sources rather than retailer listings.
+  Progress 2026-11-27
+  ([note](notes/2026-11-27-infant-car-seat-market-survey.md)): UPPAbaby
+  lists strollers in each seat's manual; Chicco says "all Chicco strollers
+  (except the Liteway and Urbino)"; Joie publishes chart v6 on
+  dl.joiebaby.com; Britax an Adobe InDesign chart (06.2026); Peg Perego a
+  universal adapter list (July 2026) covering about 15 stroller brands.
+  Third-party charts seen: Thule (lists no Mesa V3 or KeyFit Max),
+  Mockingbird, Bugaboo (Chicco KeyFit), Silver Cross. UPPAbaby's support
+  site returned 403.
 
 ## Raised by household facts (2026-11-27)
 
@@ -173,7 +188,14 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   how do we verify a specific unit?** First pass done 2026-11-27
   ([note](notes/2026-11-27-fmvss-213a-status-and-infant-seats.md)):
   explicit claims from UPPAbaby Mesa V3 and Aria V2, Chicco KeyFit 30 and
-  KeyFit Max, and Doona +; Joie Mint Latch/Rue pending confirmation. None
+  KeyFit Max, and Doona +; Joie Mint Latch/Rue pending confirmation.
+  Second pass 2026-11-27
+  ([note](notes/2026-11-27-infant-car-seat-market-survey.md)): Joie
+  confirmed on joiebaby.com (brand page: "All Joie car seats meet the new
+  213a and 213b safety standards, with the exception of chili spin 360");
+  Doona X confirmed in its manual; **Peg Perego Primo Viaggio** (all four
+  variants) declares FMVSS 571-213a in its 2025 US manuals. Doona+'s claim
+  is on its website only, not in its manual. None
   found for Nuna PIPA, Maxi-Cosi, KeyFit 35 or Clek Liingo. Verify a unit
   by its "Manufactured in" date (on or after 2026-12-05 means certified)
   or by the maker's confirmation. Original question: Required by
@@ -196,6 +218,11 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   Graco SnugRide and Cybex Aton G2 use it instead of "certified to 213a".
   Decision 0001 needs a ruling from Nick, or a confirmation from each maker.
   After 2026-12-05 this goes away for units made after that date.
+  Two more cases found 2026-11-27: Cybex's Aton G2 Swivel and Cloud G Pro
+  manuals claim **213b** (which requires 213a, by inference) while the
+  pages avoid "213a"; Joie's Rue LX Spin page says "Tested to ... FMVSS
+  213a" while Joie's brand page says all its seats "meet" 213a
+  ([rotation note](notes/2026-11-27-rotating-infant-car-seats.md)).
 
 - [ ] **26. NHTSA ease-of-use ratings and car seat expiry norms.** Split
   from item 14. nhtsa.gov blocked automated fetches, so it may need a
@@ -208,6 +235,13 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   "9-18 months" estimate used in discussion is unsourced. Find the
   manufacturers' rules (e.g. head within 1 in of the shell top) for each
   shortlisted seat. This tells us when the convertible is needed.
+  Progress 2026-11-27
+  ([note](notes/2026-11-27-infant-car-seat-market-survey.md)): every seat
+  read uses a 1 in head-room rule (head at least 1 in below the top of
+  the shell or headrest) plus a height cap: 30 in for Aria V2, KeyFit 30
+  and Joie; 32 in for Mesa V3, KeyFit Max, Doona, Peg Perego and Cybex.
+  Still open: at what age that typically happens (needs growth data, not
+  manuals).
 
 - [ ] **28. How high does the carrier sit on each stroller, and how stable
   is it?** Nick, 2026-11-27: on the UPPAbaby Minu V3 the carrier sits high,
@@ -216,4 +250,54 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   from the manual. Also find how ASTM F833 (16 CFR 1227) tests stability
   with a car seat attached: the 2026-11-27 attempt to read the standard
   failed (the iteh.ai sample returned 404).
+
+## Raised by the infant car seat survey (2026-11-27)
+
+- [ ] **29. Will a 17-17.75 in carrier fit our airline seats?** Every
+  qualifying infant carrier is wider than the FAA's 16 in guide (narrowest:
+  Chicco KeyFit 30, 16.75 in;
+  [note](notes/2026-11-27-infant-car-seat-market-survey.md)). Look up
+  Delta's and American's published seat widths (14 CFR 121.311(k)) for the
+  aircraft we usually fly, especially regional jets, once a seat is chosen.
+
+- [ ] **30. Model Y fit for anything but the KeyFit 30.** The only
+  independent infant seat test in a pre-refresh Model Y is Cars.com's
+  KeyFit 30 (grade A). Unknown: fit of each shortlisted seat; whether the
+  rear footwell suits a load leg (the 2022.40 Tesla manual says nothing
+  about support legs); and whether a rotating base has room to swing the
+  carrier side-on. A test install at a store, or owner reports, would do.
+
+- [ ] **31. Is Joie actually in stock in the US, and what is "Baby Safety
+  Alliance certified"?** Joie's Rue, Mint Latch and Rue LX Spin pages carry
+  a "coming soon" notify form that may or may not be shown. The Rue LX Spin
+  page names the Baby Safety Alliance as a certifier; that is the group
+  whose 213a petition is pending (item 24).
+
+- [ ] **32. Which Maxi-Cosi infant seats claim 213a?** Maxi-Cosi says 213a
+  seats carry a "new SIP logo on packaging and product pages" but its
+  product pages blocked scripted reads (429/403). Read them in a browser
+  (Peri 180, Ambra, Mico Pro/Pro+).
+
+- [ ] **33. Rotating seats: missing specs.** Not blocking since
+  [0003](../decisions/0003-no-rotation-now-buy-for-the-long-run.md)
+  (no rotating infant seat); kept for reference. Cybex Aton G2 Swivel base
+  weight and size (Cybex does not publish them); Graco SnugRide Turn &
+  Slide aircraft rule, 213a wording and how to tell the post-recall design
+  from recalled units (campaign 26C003000), since gracobaby.com blocked
+  scripts ([note](notes/2026-11-27-rotating-infant-car-seats.md)).
+
+## Raised by decision 0003 (2026-11-27)
+
+- [ ] **34. Is there a US base that carries both an infant seat and a
+  next-stage seat?** In Europe some brands sell one base for both their
+  infant carrier and their toddler seat. If a US system exists that meets
+  0001 and rotates in the next stage, it would save buying a second base.
+  Not researched; low priority.
+
+- [ ] **35. Which rotating seats for the next stage meet 213a and fit the
+  Model Y?** Required by
+  [0003](../decisions/0003-no-rotation-now-buy-for-the-long-run.md):
+  rotating convertible or all-in-one, preferably running to booster, with
+  an expiry that covers the years it is meant for. Research when the infant
+  seat is close to outgrown (item 27), not now.
 

@@ -13,6 +13,9 @@ birth.
 - [0002](../../decisions/0002-infant-car-seat-that-clicks-onto-the-stroller.md) —
   **accepted.** Start with an infant seat that clicks onto a compatible
   stroller. A convertible follows once it is outgrown.
+- [0003](../../decisions/0003-no-rotation-now-buy-for-the-long-run.md) —
+  **accepted.** The infant seat does not rotate. The follow-on seat must
+  rotate, and should be the last seat if possible.
 
 ## Candidates
 

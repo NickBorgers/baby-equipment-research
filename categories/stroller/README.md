@@ -8,6 +8,10 @@ car seat.
 - [0002](../../decisions/0002-infant-car-seat-that-clicks-onto-the-stroller.md) —
   **accepted.** The stroller must accept the chosen infant car seat, per a
   manufacturer's chart or manual. The car seat is chosen first.
+- [0003](../../decisions/0003-no-rotation-now-buy-for-the-long-run.md) —
+  **accepted.** The stroller outlasts the infant seat: newborn-capable on
+  its own, rated to about 50 lb, and takes the infant seat by adapter.
+  Frame strollers are out.
 
 Open question 10 (full-size, compact or travel) is still open — see
 [`research/open-questions.md`](../../research/open-questions.md).
