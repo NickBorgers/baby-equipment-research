@@ -44,11 +44,14 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   `home.stroller_storage_in`)
 
 - [ ] **6. Bedside floor space and mattress-top height** — for the
-  bassinet. Known 2026-11-27: a queen mattress on an upholstered frame with
-  a ledge around the mattress edge (see item 19). Still needed: the floor
-  space beside the bed, the mattress-top height, and the ledge's width and
-  height. (`home.bedside_space_in`, `home.bed_top_height_in`,
-  `home.bed_notes`)
+  bassinet. Known 2026-11-27: a queen mattress on an upholstered platform
+  frame that sticks out past the mattress, forming a ledge (see item 19).
+  Still needed, by tape measure: the floor space beside the bed, the
+  mattress-top height, how far the ledge sticks out, how far below the
+  mattress top it sits, its height from the floor, and the clear gap under
+  the frame. (`home.bedside_space_in`, `home.bed_top_height_in`,
+  `home.bed_ledge_out_in`, `home.bed_ledge_drop_in`,
+  `home.bed_ledge_top_height_in`, `home.bed_frame_floor_gap_in`)
 
 - [ ] **7. Budget for each category** — or a total. (`budget_usd`)
 
@@ -114,10 +117,18 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
 ## Raised by household facts (2026-11-27)
 
 - [ ] **19. Can a bedside bassinet sit safely against our bed?** The frame
-  is upholstered and has a ledge around the mattress edge. Bedside sleepers
-  are meant to sit flush against the mattress, with no gap a baby could
-  slip into, and many have feet that slide under the bed frame. A ledge
-  may hold the bassinet away from the mattress, or block those feet. Find
+  is an upholstered platform that sticks out past the mattress, forming a
+  ledge. Bedside sleepers are meant to sit flush against the mattress, with
+  no gap a baby could slip into, and many have feet that slide under the bed
+  frame. The ledge may hold the bassinet away from the mattress, or block
+  those feet. **Look for designs made for platform beds or ledges.** Nick's
+  example lead (2026-11-27, not yet evaluated): the
+  [Arm's Reach Versatile Co-Sleeper](https://www.armsreach.com/products/versatile-co-sleeper),
+  which specifically accommodates a platform ledge. For each bedside
+  candidate, record what ledge geometry the maker says it accommodates
+  (how far out, how far down, any under-bed clearance needed). Then compare
+  it with the `home.bed_ledge_*` measurements; a fit check can be added once
+  makers' specs show what to compare. Find
   out from manufacturers' manuals and the CPSC bassinet/bedside sleeper
   standard (item 15) what each candidate requires, and measure the ledge
   (item 6). If no bedside model fits safely, that points to a freestanding

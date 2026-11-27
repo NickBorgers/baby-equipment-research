@@ -38,11 +38,25 @@ home:
   stairs_to_entry: null          # bool: must the stroller be carried up steps?
   stroller_storage_in: null      # [l, w, h] of where the folded stroller will live
   bedside_space_in: null         # [l, w] floor space next to the adult bed
-  bed_top_height_in: null        # mattress top height, for bedside bassinets
+  bed_top_height_in: null        # floor to mattress top, for bedside bassinets
+  # The bed frame is an upholstered PLATFORM that sticks out past the
+  # mattress, forming a ledge around it. A bedside bassinet therefore cannot
+  # simply butt up against the mattress side. The geometry, all null until
+  # measured (open question 6):
+  bed_ledge_out_in: null           # how far the frame sticks out horizontally past the mattress side
+  bed_ledge_drop_in: null          # vertical drop from mattress top down to the top of the ledge
+  bed_ledge_top_height_in: null    # floor to the top of the ledge
+  bed_frame_floor_gap_in: null     # clear height under the frame (0 if it goes to the floor),
+                                   # for bassinet legs/feet that slide under the bed
   bed_notes: >-
-    Queen mattress. The bed frame is upholstered (covered in fabric) and has
-    a ledge that runs around the edge of the mattress (Nick, 2026-11-27).
-    That ledge matters for bedside bassinets — see open question 19.
+    Queen mattress on an upholstered (fabric-covered) platform frame that
+    sticks out past the mattress, making a ledge around its edge (Nick,
+    2026-11-27). A bedside bassinet must sit flush with the mattress despite
+    that ledge — e.g. by reaching over it or being designed for platform
+    beds. Nick flagged the Arm's Reach Versatile Co-Sleeper
+    (https://www.armsreach.com/products/versatile-co-sleeper) as an example
+    of a design that specifically accommodates a platform ledge — a lead,
+    not yet evaluated. See open question 19.
 
 budget_usd:
   stroller: null
