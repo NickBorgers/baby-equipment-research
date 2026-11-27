@@ -361,3 +361,15 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   general FMVSS conformance. See the
   [Juni note](notes/2026-11-27-romer-juni-213a-gate.md). Re-check if a
   manual revision or label after 2026-12-05 adds a 213a claim.
+
+## Raised by the infant seat shortlist (2026-11-27)
+
+- [ ] **38. Which shortlisted infant seat do we buy?** Nick picks one of
+  `uppababy-aria-v2`, `uppababy-mesa-v3` or `chicco-keyfit-30-cleartex`
+  (see `docs/COMPARISON.md` and the usability notes of 2026-11-27). The
+  agent leaned toward the Aria V2 for travel: the lightest carrier and a
+  stable baseless install. The Mesa V3 offers a fallback baseless routing
+  and a 32 in limit. The KeyFit 30 is cheapest and Model Y tested. Then
+  write the ADR with the `adr-write` skill; its step 4 checks every "What
+  to judge" row. Include carrier height on the stroller (item 28). After
+  that, start the stroller search under 0003.
