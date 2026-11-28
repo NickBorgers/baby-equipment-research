@@ -100,6 +100,9 @@ wins. Canada still sells a 4-35 Nido.
 - 2025 Nido manual p.27 still says to "set the angle corresponding to the
   weight of your child." The 4-30 base's zones are in an image and were
   not read.
+  Corrected 2026-11-28: the manual does not print the zones at all; they
+  are on a label on the base. See the
+  [4-30 follow-up](2026-11-28-primo-viaggio-nido-4-30-fixes.md).
 - Reachability: CSFTL (2017 Honda Civic) "could not get the recline bubble
   much past the borderline between the two lower ranges". A pool noodle
   gained "a minuscule amount". CR con: "Insufficient recline adjustment for

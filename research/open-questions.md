@@ -403,6 +403,14 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   methods, and whether "buckle after wrapping" is allowed. See the
   [install note](notes/2026-11-28-uppababy-aria-v2-carrier-only-install.md).
 
+- [ ] **41. Has the 4-30 Primo Viaggio Nido fixed the 4-35's problems?**
+  Checked 2026-11-28
+  ([note](notes/2026-11-28-primo-viaggio-nido-4-30-fixes.md)): no hands-on
+  test of the 4-30 exists, and the manuals describe the same base as 2020.
+  The manual still does not say to pull up on the handle, and still allows
+  no towel or noodle under the base. Stays off the shortlist. Still open:
+  the recline zones printed on the 4-30 base, and a hands-on review.
+
 - [ ] **40. Recheck for a CPST hands-on Aria V2 review.** Safe in the Seat
   listed it as "Review Coming Soon" on 2026-11-24. Most V2 fit evidence is
   incentivized panel reviews. See the
