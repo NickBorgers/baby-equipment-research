@@ -307,6 +307,10 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   on LATCH (Nick, 2026-11-28), so belt lock-off findings do not apply in
   this car. What matters: LATCH tightness, load leg, recline and front
   legroom.
+  US manual checked 2026-11-28
+  ([note](notes/2026-11-28-model-y-2020-2024-manual-support-leg.md)): the
+  2020-2024 US manual says nothing about support legs; the wording is in
+  the 2025+ manual.
 
 - [ ] **31. Is Joie actually in stock in the US, and what is "Baby Safety
   Alliance certified"?** Joie's Rue, Mint Latch and Rue LX Spin pages carry
