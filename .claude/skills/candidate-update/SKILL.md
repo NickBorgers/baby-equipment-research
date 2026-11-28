@@ -1,6 +1,6 @@
 ---
 name: candidate-update
-description: Add, change or retire a product in the baby-equipment project's candidates — candidates/items/*.yaml — following the schema and the status lifecycle, then regenerate docs and validate. Use whenever a product, price, spec, pro/con, safety fact, recall or car seat compatibility changes, and whenever docs/COMPARISON.md or docs/FIT.md looks out of date.
+description: Add, change or retire a product in the baby-equipment project's candidates — candidates/items/*.yaml — following the schema and the status lifecycle, then regenerate docs (including its product page) and validate. Use whenever a product, price, spec, pro/con, safety fact, recall or car seat compatibility changes, and whenever docs/COMPARISON.md, docs/FIT.md or a page in docs/products/ looks out of date.
 ---
 
 # Changing the candidates
@@ -25,6 +25,8 @@ summary.
   name: Example Stroller (2026)
   category: stroller
   status: candidate             # see the lifecycle below
+  summary: >-                   # optional; 2-4 plain sentences, top of the product page
+    Leave this out until the research supports a summary.
   brand: Example
   price_usd: null               # null = not researched yet
   vendor_url: null
@@ -46,6 +48,8 @@ summary.
   cons: []
   notes: >-
     What a future reader needs to know, especially what is still unknown.
+  research_notes:               # filenames in research/notes/; each must exist
+    - 2026-11-27-example-stroller-specs.md
 ```
 
 ## Status lifecycle
@@ -80,16 +84,27 @@ The statuses run `candidate` → `shortlisted` → `selected` → `ordered` →
   when it is recorded and `?` otherwise.
 - **A claim needs a note.** Use the `research-note` skill first, then bring
   the claim here. Each pro and con should trace to a note.
+- **List the notes in `research_notes`.** Give the filename only, not the
+  path. Every note behind the item goes there, not only the newest. The
+  product page links them. Validation fails if a file does not exist.
+- **A summary is optional.** Write 2-4 plain sentences only from what the
+  notes say. With no `summary`, the page shows none. Do not invent one.
+- **Start a con with "Misuse risk:"** when it is one. The product page lists
+  those cons first.
 - **Say which model year.** Put it in `name` when it matters.
 
 ## Finish the job
 
 ```sh
-make docs     # regenerate docs/COMPARISON.md and docs/FIT.md
+make docs     # regenerate docs/: COMPARISON.md, FIT.md, products/
 make check    # validate, confirm docs are current, run tests
 ```
 
-Commit the YAML and the regenerated `docs/` together.
+Open `docs/products/<id>.md` and read it once. It is what Nick reads first.
+Check that it shows the change and links the right notes.
+
+Commit the YAML and the regenerated `docs/` together. When you retire an id,
+`make docs` deletes its old page.
 
 ## When validation fails
 
@@ -102,4 +117,7 @@ The error names the file and the item id. Common errors:
   first, or fix the id.
 - *needs a url*: a recall without a source.
 - *decision NNNN is superseded-by-...*: repoint the item at the replacement.
+- *research_notes names `x`, not in research/notes/*: fix the filename, or
+  write the note first.
+- *should be the filename only*: drop the `research/notes/` prefix.
 - *generated docs are out of date*: run `make docs`.

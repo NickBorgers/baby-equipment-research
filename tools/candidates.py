@@ -5,6 +5,10 @@
 
 `make check` runs the second form, so a change to the YAML that was never
 regenerated cannot slip past review.
+
+It writes docs/COMPARISON.md, docs/FIT.md, one page per candidate under
+docs/products/, and docs/products/README.md as their index. A page left in
+docs/products/ for a candidate that no longer exists counts as stale.
 """
 
 from __future__ import annotations
@@ -38,8 +42,16 @@ def _is_str_list(value) -> bool:
     return isinstance(value, list) and all(isinstance(v, str) for v in value)
 
 
-def validate(items: list[dict], schema: dict, decisions: dict) -> list[str]:
-    """Return a list of human-readable problems. Empty list means valid."""
+def validate(
+    items: list[dict], schema: dict, decisions: dict, notes: set[str] | None = None
+) -> list[str]:
+    """Return a list of human-readable problems. Empty list means valid.
+
+    `notes` is the set of research note filenames that `research_notes` may
+    name. None means read them from research/notes/.
+    """
+    if notes is None:
+        notes = repo.list_notes()
     errors: list[str] = []
     seen: dict[str, str] = {}  # id -> the file that first declared it
 
@@ -85,11 +97,36 @@ def validate(items: list[dict], schema: dict, decisions: dict) -> list[str]:
             if value is not None and not _is_str_list(value):
                 errors.append(f"{where}: {field} must be a list of text")
 
+        summary = item.get("summary")
+        if summary is not None and not (isinstance(summary, str) and summary.strip()):
+            errors.append(f"{where}: summary must be text, or be omitted")
+
+        errors.extend(validate_research_notes(item, where, notes))
         errors.extend(validate_decision(item, where, decisions))
         errors.extend(validate_specs(item, where, schema))
         errors.extend(validate_safety(item, where, schema))
 
     errors.extend(validate_compat(items, schema))
+    return errors
+
+
+def validate_research_notes(item: dict, where: str, notes: set[str]) -> list[str]:
+    listed = item.get("research_notes")
+    if listed is None:
+        return []
+    if not _is_str_list(listed):
+        return [f"{where}: research_notes must be a list of note filenames"]
+    errors = []
+    for name in listed:
+        if "/" in name:
+            errors.append(
+                f"{where}: research_notes entry `{name}` should be the filename only, "
+                "e.g. 2026-11-27-topic.md"
+            )
+        elif name not in notes:
+            errors.append(f"{where}: research_notes names `{name}`, not in research/notes/")
+    for name in sorted({n for n in listed if listed.count(n) > 1}):
+        errors.append(f"{where}: research_notes lists `{name}` more than once")
     return errors
 
 
@@ -284,6 +321,9 @@ def render_comparison(items: list[dict], schema: dict, decisions: dict) -> str:
         "`?` means not researched yet. See `research/open-questions.md`. "
         "The car seat `213a` column is decision 0001's side-impact requirement.",
         "",
+        "Each candidate links to its own page. All pages are listed in "
+        "[products/README.md](products/README.md).",
+        "",
     ]
 
     for category in schema["categories"]:
@@ -316,7 +356,7 @@ def render_comparison(items: list[dict], schema: dict, decisions: dict) -> str:
             else:
                 adr_text = "—"
             row = [
-                f"`{item['id']}` — {item['name']}",
+                f"[`{item['id']}`](products/{item['id']}.md) — {item['name']}",
                 str(item.get("status")),
                 price_text,
                 *((["yes" if meets_213a(item) else "?"]) if side_impact else []),
@@ -343,15 +383,273 @@ def render_comparison(items: list[dict], schema: dict, decisions: dict) -> str:
     return "\n".join(out)
 
 
+# --- product pages ----------------------------------------------------------
+#
+# One page per candidate under docs/products/, plus an index. Every line on a
+# page comes from the item's YAML, the fit checks, or the ADR files. Nothing
+# is written for a field that is absent: no summary means no summary section.
+
+MISUSE_PREFIX = "Misuse risk:"
+
+#: Unit words that may appear inside a spec field name, and how to show them.
+UNITS = {"lb": "lb", "in": "in", "years": "years"}
+
+#: Words in spec field names that are acronyms.
+ACRONYMS = {"faa": "FAA"}
+
+
+def _spec_label(field: str) -> tuple[str, str]:
+    """Split a spec field name into a readable label and its unit.
+
+    "folded_in" -> ("Folded", "in"); "child_height_in_max" -> ("Child height max", "in").
+    """
+    parts = field.split("_")
+    unit = next((UNITS[p] for p in parts if p in UNITS), "")
+    words = [ACRONYMS.get(p, p) for p in parts if p not in UNITS]
+    label = " ".join(words)
+    return label[:1].upper() + label[1:], unit
+
+
+def _cell(text) -> str:
+    """Make text safe inside a Markdown table cell."""
+    return str(text).replace("|", "\\|").replace("\n", " ")
+
+
+def _product_link(item_id: str, known: set[str]) -> str:
+    return f"[`{item_id}`]({item_id}.md)" if item_id in known else f"`{item_id}`"
+
+
+def _ordered_cons(cons: list[str]) -> list[str]:
+    """Misuse-risk cons first, prefix in bold. Other cons keep their order."""
+    misuse = [c for c in cons if c.startswith(MISUSE_PREFIX)]
+    other = [c for c in cons if not c.startswith(MISUSE_PREFIX)]
+    return [f"**{MISUSE_PREFIX}**{c[len(MISUSE_PREFIX):]}" for c in misuse] + other
+
+
+def _render_compat(item: dict, items: list[dict], known: set[str]) -> list[str]:
+    """Which car seats a stroller takes, or which strollers take a car seat."""
+    lines: list[str] = []
+    if item.get("category") == "stroller":
+        compat = item.get("compat") or {}
+        direct = compat.get("accepts_car_seats") or []
+        never = compat.get("incompatible") or []
+        if direct:
+            links = ", ".join(_product_link(s, known) for s in direct)
+            lines.append(f"- **Takes directly:** {links}")
+        for seat, adapter in (compat.get("needs_adapter") or {}).items():
+            lines.append(f"- **Takes with adapter:** {_product_link(seat, known)} ({adapter})")
+        if never:
+            links = ", ".join(_product_link(s, known) for s in never)
+            lines.append(f"- **Confirmed incompatible:** {links}")
+        if not lines:
+            lines.append("- No car seat compatibility recorded yet.")
+    elif item.get("category") == "car-seat":
+        for stroller in items:
+            if stroller.get("category") != "stroller":
+                continue
+            compat = stroller.get("compat") or {}
+            link = _product_link(stroller["id"], known)
+            adapters = compat.get("needs_adapter") or {}
+            if item["id"] in (compat.get("accepts_car_seats") or []):
+                lines.append(f"- **Clicks onto** {link} directly.")
+            elif item["id"] in adapters:
+                lines.append(f"- **Clicks onto** {link} with {adapters[item['id']]}.")
+            elif item["id"] in (compat.get("incompatible") or []):
+                lines.append(f"- **Does not fit** {link}: no adapter exists.")
+        if not lines:
+            lines.append("- No stroller lists this seat in its compat yet.")
+    return [*lines, ""] if lines else []
+
+
+def render_product(
+    item: dict, items: list[dict], schema: dict, decisions: dict, household: dict
+) -> str:
+    """The Markdown page for one candidate."""
+    item_id = item["id"]
+    known = {i["id"] for i in items}
+    category = item.get("category")
+    specs = item.get("specs") or {}
+    kinds = schema["spec_fields"].get(category, {})
+    safety = item.get("safety") or {}
+    unknowns: list[str] = []
+
+    out = [repo.GENERATED_BANNER, "", f"# {item['name']}", ""]
+
+    price = item.get("price_usd")
+    out += [
+        f"- **Id:** `{item_id}`",
+        f"- **Category:** {category}",
+        f"- **Status:** {item.get('status')}",
+        "- **Price:** " + ("not researched yet" if price is None else f"${price:,.2f}"),
+    ]
+    if price is None:
+        unknowns.append("Price.")
+    if item.get("brand"):
+        out.append(f"- **Brand:** {item['brand']}")
+    if item.get("vendor_url"):
+        out.append(f"- **Maker's page:** <{item['vendor_url']}>")
+    adr = item.get("decision")
+    if adr and adr in decisions:
+        title = decisions[adr]["front_matter"].get("title", "")
+        label = f"ADR {adr}: {title}" if title else f"ADR {adr}"
+        out.append(f"- **Decision:** [{label}](../../decisions/{decisions[adr]['path'].name})")
+    else:
+        out.append("- **Decision:** none yet")
+    out.append("")
+
+    if item.get("summary"):
+        out += ["## Summary", "", item["summary"].strip(), ""]
+
+    out += ["## Key specs", ""]
+    if kinds:
+        out += ["| Spec | Value |", "| --- | --- |"]
+        for field, kind in kinds.items():
+            label, unit = _spec_label(field)
+            value = specs.get(field)
+            if value is None:
+                text = "?"
+                unknowns.append(f"Spec `{field}`.")
+            else:
+                text = _format_spec(value, kind)
+                if unit and not isinstance(value, bool):
+                    text = f"{text} {unit}"
+            out.append(f"| {_cell(label)} | {_cell(text)} |")
+        out += ["", "`?` means not researched yet.", ""]
+    else:
+        out += ["No spec fields are defined for this category.", ""]
+
+    out += ["## Safety", ""]
+    standards = safety.get("standards") or []
+    out.append("- **Standards:** " + (", ".join(standards) if standards else "none recorded yet"))
+    if not standards:
+        unknowns.append("Safety standards.")
+    if category == "car-seat":
+        side = "recorded" if meets_213a(item) else "not recorded"
+        out.append(f"- **{SIDE_IMPACT_STANDARD} (decision 0001):** {side}")
+        if not meets_213a(item):
+            unknowns.append(f"{SIDE_IMPACT_STANDARD} certification.")
+    checked_on = safety.get("checked_on")
+    recalls = safety.get("recalls") or []
+    out.append(f"- **Recall search last run:** {checked_on or 'never'}")
+    if not checked_on:
+        unknowns.append("Recall search.")
+    if recalls:
+        out.append("- **Recalls:**")
+        for recall in recalls:
+            summary = recall.get("summary") or "no summary recorded"
+            out.append(f"  - {recall.get('date')}: {summary} ([source]({recall.get('url')}))")
+    elif checked_on:
+        out.append(f"- **Recalls:** none found in the search of {checked_on}")
+    else:
+        out.append("- **Recalls:** not checked yet")
+    out.append("")
+
+    pros = item.get("pros") or []
+    out += ["## Pros", ""]
+    out += [f"- {p}" for p in pros] if pros else ["None recorded yet."]
+    out.append("")
+
+    cons = _ordered_cons(item.get("cons") or [])
+    out += ["## Cons", ""]
+    if cons and cons[0].startswith(f"**{MISUSE_PREFIX}"):
+        out += ["Misuse risks come first.", ""]
+    out += [f"- {c}" for c in cons] if cons else ["None recorded yet."]
+    out.append("")
+
+    out += ["## Fit and compatibility", ""]
+    out += _render_compat(item, items, known)
+    if item.get("status") == "rejected":
+        out += ["Rejected candidates are not fit-checked.", ""]
+    else:
+        checks = [
+            check
+            for group in fit.run(items, household).values()
+            for check in group
+            if item_id in (check.subject, check.against)
+        ]
+        if checks:
+            out += ["| Against | Result | Detail |", "| --- | --- | --- |"]
+            for check in checks:
+                other = check.against if check.subject == item_id else check.subject
+                other_text = _product_link(other, known) if other in known else _cell(other)
+                result = f"**{check.outcome}**" if check.outcome == fit.NO_FIT else check.outcome
+                out.append(f"| {other_text} | {result} | {_cell(check.detail)} |")
+                unknowns += [
+                    f"Fit input: {label}."
+                    for label in check.missing
+                    if not label.startswith(f"{item_id} specs.")  # already listed as a spec
+                ]
+            out += ["", "[FIT.md](../FIT.md) explains the method.", ""]
+        else:
+            out += ["No fit checks apply yet.", ""]
+
+    out += ["## Still unknown", ""]
+    unique = list(dict.fromkeys(unknowns))
+    out += [f"- {u}" for u in unique] if unique else ["Nothing the data can flag."]
+    out += ["", "The notes below and `research/open-questions.md` may list more.", ""]
+
+    if item.get("notes"):
+        out += ["## Notes", "", str(item["notes"]).strip(), ""]
+
+    out += ["## Research notes", ""]
+    research = item.get("research_notes") or []
+    if research:
+        out += [f"- [{name}](../../research/notes/{name})" for name in research]
+    else:
+        out.append("None linked yet. List them in `research_notes` in the item's YAML.")
+    out.append("")
+    return "\n".join(out)
+
+
+def render_products_index(items: list[dict], schema: dict) -> str:
+    """docs/products/README.md: every product page, by category and status."""
+    status_order = {s: i for i, s in enumerate(schema["statuses"])}
+    out = [repo.GENERATED_BANNER, "", "# Products", ""]
+    out += [
+        "One page per candidate, generated from `candidates/items/*.yaml`. "
+        "Each page summarizes the data and links the research notes behind it. "
+        "The side-by-side table is in [COMPARISON.md](../COMPARISON.md).",
+        "",
+    ]
+    for category in schema["categories"]:
+        group = [i for i in items if i.get("category") == category]
+        out += [f"## {category}", ""]
+        if not group:
+            out += ["No products yet.", ""]
+            continue
+        out += ["| Product | Status | Price |", "| --- | --- | --- |"]
+        group.sort(key=lambda i: (status_order.get(i.get("status"), len(status_order)), i["id"]))
+        for item in group:
+            price = item.get("price_usd")
+            price_text = "?" if price is None else f"${price:,.2f}"
+            out.append(
+                f"| [{_cell(item['name'])}]({item['id']}.md) | {item.get('status')} "
+                f"| {price_text} |"
+            )
+        out.append("")
+    return "\n".join(out)
+
+
 def generate() -> dict[Path, str]:
     """The generated files and what they should contain."""
     items = repo.load_candidates()
     schema = repo.load_schema()
     household = repo.load_household()
-    return {
-        repo.DOCS_DIR / "COMPARISON.md": render_comparison(items, schema, repo.load_decisions()),
+    decisions = repo.load_decisions()
+    files = {
+        repo.DOCS_DIR / "COMPARISON.md": render_comparison(items, schema, decisions),
         repo.DOCS_DIR / "FIT.md": fit.render(items, household),
+        repo.PRODUCTS_DIR / "README.md": render_products_index(items, schema),
     }
+    for item in items:
+        page = render_product(item, items, schema, decisions, household)
+        files[repo.PRODUCTS_DIR / f"{item['id']}.md"] = page
+    return files
+
+
+def orphan_pages(expected: dict[Path, str]) -> list[Path]:
+    """Pages in docs/products/ that no candidate generates any more."""
+    return sorted(p for p in repo.PRODUCTS_DIR.glob("*.md") if p not in expected)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -372,8 +670,10 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     expected = generate()
+    orphans = orphan_pages(expected)
     if args.check:
         stale = [path for path, content in expected.items() if repo.is_stale(path, content)]
+        stale += orphans
         if stale:
             print("Generated docs are out of date:", file=sys.stderr)
             for path in stale:
@@ -383,10 +683,14 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Candidates valid ({len(items)} items); generated docs are current.")
         return 0
 
-    for path, content in expected.items():
-        changed = repo.write_if_changed(path, content)
-        state = "updated" if changed else "unchanged"
-        print(f"{path.relative_to(repo.ROOT)}: {state}")
+    changed_paths = [path for path, content in expected.items()
+                     if repo.write_if_changed(path, content)]
+    for path in orphans:
+        path.unlink()
+        print(f"{path.relative_to(repo.ROOT)}: removed (no such candidate)")
+    for path in changed_paths:
+        print(f"{path.relative_to(repo.ROOT)}: updated")
+    print(f"{len(expected) - len(changed_paths)} generated file(s) unchanged.")
     return 0
 
 

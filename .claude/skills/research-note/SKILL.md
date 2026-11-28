@@ -44,13 +44,18 @@ the candidates with no note behind it is a claim nobody can check later.
 6. **Say what it changes.** The Candidate impact section names the exact
    fields in `candidates/items/*.yaml` or `household/household.yaml` that this
    note justifies changing. Write it even if the answer is "nothing yet".
+   List the candidate ids in the front matter, too. Each of them gets this
+   note in its `research_notes` in step 8.
 
 7. **Update the backlog.** In `research/open-questions.md`, check the box on
    the question you answered and link the note. Add any new questions the
    research raised.
 
-8. **Then change the data** using the `candidate-update` skill, and run
-   `make check`.
+8. **Then change the data** using the `candidate-update` skill. For each
+   candidate the note affects, add the note's filename to that item's
+   `research_notes` list. Do this even when no other field changes. Then run
+   `make docs` and `make check`. The product page in `docs/products/` now
+   links the note.
 
 ## What not to do
 
