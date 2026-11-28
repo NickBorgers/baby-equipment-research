@@ -5,6 +5,18 @@ status: accepted
 date: 2026-11-27
 category: car-seat
 candidates: []
+summary: >-
+  Every car seat must have its maker's claim, in a primary source, that it
+  is certified to FMVSS 213a, the federal side-impact test. The unit we buy
+  must carry that certification too. Side impacts are a common, serious
+  crash type, and seats made before the rule can still be sold without it.
+if_yours_differs:
+  - >-
+    If you accept seats without a 213a claim, many more seats qualify,
+    including the rotating infant seats ruled out in 0003.
+  - >-
+    Many seats advertise their own "side impact tested" claims. These are
+    not the federal test.
 ---
 
 # 0001 — Car seat must be certified to the FMVSS 213a side-impact standard

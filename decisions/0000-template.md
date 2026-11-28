@@ -5,6 +5,15 @@ status: proposed
 date: 2026-11-27
 category: general
 candidates: []
+# The site's home page and the top of this ADR's page show the next two
+# fields. `make check` fails if an accepted ADR lacks either one.
+summary: >-
+  2-4 plain sentences for readers outside the household: what we chose and
+  the main reasons.
+if_yours_differs:
+  - >-
+    When another choice would suit another family better, and why. One
+    bullet per situation.
 ---
 
 # NNNN — Title

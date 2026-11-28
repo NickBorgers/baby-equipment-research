@@ -31,8 +31,19 @@ travel system. Skip it for reversible details; those go in the candidate's
    date: 2026-11-27
    category: car-seat         # a category in candidates/schema.yaml, or "general"
    candidates: []             # candidate ids this decision selects or rules out
+   summary: >-                # required once accepted; shown on the public site
+     2-4 plain sentences: what we chose and the main reasons.
+   if_yours_differs:          # required once accepted; shown on the public site
+     - >-
+       When another choice would suit another family, and why.
    ---
    ```
+
+   `summary` and `if_yours_differs` are for readers outside the household.
+   The site's home page shows them for every accepted ADR (AGENTS.md rule
+   4b). Restate only what the ADR body and its notes already source. Write
+   `if_yours_differs` from the Alternatives considered section: for each
+   alternative, say which family it would suit.
 
 4. **If the ADR selects a product, check the evidence first.** Go through
    the "What to judge" list in the category README. Each row needs a

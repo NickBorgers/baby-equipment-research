@@ -5,6 +5,27 @@ status: accepted
 date: 2026-11-28
 category: car-seat
 candidates: [uppababy-aria-v2, uppababy-mesa-v3, chicco-keyfit-30-cleartex]
+summary: >-
+  We buy the UPPAbaby Aria V2. It is the only seat on our shortlist with a
+  load leg, which a peer-reviewed sled study linked to significant
+  reductions in head injury measures. We install it on LATCH, which avoids
+  its weakest install, and its carrier is the lightest, about 7 lb as used.
+  Its costs: one way to install without the base, a 30 in height limit, and
+  no technician review of the V2 yet.
+if_yours_differs:
+  - >-
+    If you often install without the base, or ride in cars with lap-only
+    belts, the UPPAbaby Mesa V3 allows three baseless methods.
+  - >-
+    If you want the most outside testing, the lowest price, or a seat tested
+    in a Model Y, look at the Chicco KeyFit 30 ClearTex. Check that your car
+    lets its base reach the recline without a towel.
+  - >-
+    If you install the base with the vehicle belt instead of LATCH, the Aria
+    V2's belt lock-off was its weakest point in testing.
+  - >-
+    If you rarely fly, carrier weight matters less, and the Aria V2's lead
+    shrinks.
 ---
 
 # 0004 — Buy the UPPAbaby Aria V2 infant car seat

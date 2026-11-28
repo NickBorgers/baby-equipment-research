@@ -17,4 +17,5 @@ echo "baby-equipment is ready."
 echo "  make check   # validate the candidate data, confirm docs are current, run tests"
 echo "  make docs    # regenerate docs/ after editing any YAML"
 echo "  make fit     # print the compatibility + fit report"
+echo "  make serve   # preview the GitHub Pages site at localhost:8000"
 echo
