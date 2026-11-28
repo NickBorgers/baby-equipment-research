@@ -18,6 +18,8 @@ CANDIDATES_SCHEMA = ROOT / "candidates" / "schema.yaml"
 DECISIONS_DIR = ROOT / "decisions"
 HOUSEHOLD_FILE = ROOT / "household" / "household.yaml"
 DOCS_DIR = ROOT / "docs"
+PRODUCTS_DIR = DOCS_DIR / "products"
+NOTES_DIR = ROOT / "research" / "notes"
 
 GENERATED_BANNER = (
     "<!-- GENERATED FILE — do not edit by hand.\n"
@@ -56,6 +58,11 @@ def load_candidates() -> list[dict]:
             item["_source"] = path.name
             items.append(item)
     return items
+
+
+def list_notes() -> set[str]:
+    """The filenames of every research note, e.g. "2026-11-27-topic.md"."""
+    return {path.name for path in NOTES_DIR.glob("*.md")}
 
 
 def load_decisions() -> dict[str, dict]:

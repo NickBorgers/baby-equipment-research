@@ -49,7 +49,13 @@ tests/             Tests for the data and the checks.
 docs/              GENERATED. Do not edit. `make docs` rebuilds these.
   COMPARISON.md    Side-by-side table for each category.
   FIT.md           Compatibility and fit results.
+  products/        One summary page per candidate, and an index.
 ```
+
+To read about one product, start at
+[`docs/products/`](docs/products/README.md). Each page shows the status,
+price, specs, safety, pros and cons, fit, what is still unknown, and links
+to the research notes behind it.
 
 ## Running it
 

@@ -11,6 +11,7 @@ required_fields:
   - status
 
 optional_fields:
+  - summary
   - brand
   - price_usd
   - vendor_url
@@ -21,12 +22,14 @@ optional_fields:
   - pros
   - cons
   - notes
+  - research_notes
 
 field_types:
   id: str            # kebab-case, unique across every file in candidates/items/
   name: str          # product name including model year if it matters
   category: str      # must be one of `categories` below
   status: str        # must be one of `statuses` below
+  summary: str       # 2-4 plain sentences for the top of the product page; omit if none yet
   brand: str_or_null
   price_usd: number_or_null       # null = not researched yet
   vendor_url: str_or_null
@@ -37,6 +40,8 @@ field_types:
   pros: list_of_str               # each should trace to a research note
   cons: list_of_str
   notes: str
+  research_notes: list_of_str     # note filenames, e.g. "2026-11-27-topic.md"; each must
+                                  # exist in research/notes/. Rendered as links on the page.
 
 categories:
   - stroller     # the stroller itself (a travel-system frame counts)

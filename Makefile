@@ -8,7 +8,7 @@ check: lint
 	python tools/candidates.py --check
 	pytest -q
 
-## docs: regenerate docs/COMPARISON.md and docs/FIT.md from the YAML
+## docs: regenerate docs/ (COMPARISON.md, FIT.md, products/) from the YAML
 docs:
 	python tools/candidates.py
 

@@ -44,6 +44,14 @@ ADR.
 **4. Never hand-edit `docs/`.** Those files are generated. Edit the YAML, run
 `make docs`, commit both.
 
+**4a. Every candidate has a product page.** `make docs` writes one to
+`docs/products/<id>.md` from the item's YAML. The page links the notes
+named in the item's `research_notes` list. When you add or change a
+candidate, list every note behind it there. When a new note affects a
+candidate, add the note's filename to that list. Then run `make docs`. A
+`summary` field (2-4 plain sentences) goes at the top of the page. Leave it
+out until the research supports one.
+
 **5. Run `make check` before you finish.** It lints, validates the data,
 confirms the generated docs are current, and runs the tests. If it fails, the
 work is not done.
@@ -159,6 +167,7 @@ rules say how to find it and weigh it.
 | A question you could not answer | `research/open-questions.md` |
 | A choice that shapes what we buy | a new ADR in `decisions/` |
 | A product, a price, a spec, a pro or con | the right file in `candidates/items/` |
+| The notes behind a product | that item's `research_notes` list |
 | Which car seats click onto which stroller | that stroller's `compat` block |
 | A fact about the cars, the house or the budget | `household/household.yaml` |
 

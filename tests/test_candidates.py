@@ -86,8 +86,8 @@ def _item(**overrides):
     return item
 
 
-def _errors(schema, *items, decisions=None):
-    return candidates.validate(list(items), schema, decisions or {})
+def _errors(schema, *items, decisions=None, notes=None):
+    return candidates.validate(list(items), schema, decisions or {}, notes or set())
 
 
 def _has(errors, text):
@@ -256,8 +256,9 @@ def test_car_seat_table_has_a_213a_column(schema):
     ]
     text = candidates.render_comparison(seats, schema, {})
     assert "| Candidate | Status | Price | 213a |" in text
-    assert "| `a` — Sample | candidate | ? | yes |" in text
-    assert "| `b` — Sample | candidate | ? | ? |" in text  # not recorded is ?, not "no"
+    assert "| [`a`](products/a.md) — Sample | candidate | ? | yes |" in text
+    # not recorded is ?, not "no"
+    assert "| [`b`](products/b.md) — Sample | candidate | ? | ? |" in text
 
 
 # --- rendering --------------------------------------------------------------

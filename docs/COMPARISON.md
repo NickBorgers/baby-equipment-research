@@ -7,6 +7,8 @@
 
 `?` means not researched yet. See `research/open-questions.md`. The car seat `213a` column is decision 0001's side-impact requirement.
 
+Each candidate links to its own page. All pages are listed in [products/README.md](products/README.md).
+
 ## stroller
 
 No candidates yet.
