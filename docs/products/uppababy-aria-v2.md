@@ -13,7 +13,7 @@
 
 ## Summary
 
-Selected under ADR 0004. Its base has a load leg and an anti-rebound panel, and sled tests link a load leg to lower head injury measures. It goes in our Model Y on LATCH, which avoids its weak belt lock-off, and it has the lightest carrier, about 7 lb as used. Its costs: only one way to install without the base, a 30 in limit, an unreliable tightness indicator, and no technician review of the V2 yet.
+Selected under [ADR 0004](../../decisions/0004-buy-the-uppababy-aria-v2.md). Its base has a load leg and an anti-rebound panel ([market survey](../../research/notes/2026-11-27-infant-car-seat-market-survey.md)), and sled tests link a load leg to lower head injury measures ([load-leg note](../../research/notes/2026-11-28-load-leg-sled-test-evidence.md)). It goes in our Model Y on LATCH, which avoids its weak belt lock-off ([BabyGearLab V2](https://www.babygearlab.com/reviews/vehicle-safety/infant-car-seat/uppababy-aria-v2)), and it has the lightest carrier, about 7 lb as used ([aria-v2 usability note](../../research/notes/2026-11-27-uppababy-aria-v2-usability.md)). Its costs: only one way to install without the base, a 30 in limit, an unreliable tightness indicator, and no technician review of the V2 yet ([hands-on and fit note](../../research/notes/2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md)).
 
 ## Key specs
 
@@ -39,24 +39,24 @@ Selected under ADR 0004. Its base has a load leg and an anti-rebound panel, and 
 
 ## Pros
 
-- Lightest carrier on the shortlist, about 7 lb as used (aria-v2 usability note).
-- Baseless European-routing install was "super stable and firm" with no towel (BabyGearLab V2). The Mesa V3 tested just as stable, so this is not an advantage over it.
-- Base has a load leg and an anti-rebound panel (market survey). A peer-reviewed sled study linked a support leg to significant reductions in head injury measures (load-leg note).
-- Canopy rated "as close to perfect as an infant carrier can get" (BabyGearLab V2).
-- No-rethread harness with 25 headrest positions (maker).
+- Lightest carrier on the shortlist, about 7 lb as used ([aria-v2 usability note](../../research/notes/2026-11-27-uppababy-aria-v2-usability.md)).
+- Baseless European-routing install was "super stable and firm" with no towel ([BabyGearLab V2](https://www.babygearlab.com/reviews/vehicle-safety/infant-car-seat/uppababy-aria-v2)). The Mesa V3 tested just as stable, so this is not an advantage over it.
+- Base has a load leg and an anti-rebound panel ([market survey](../../research/notes/2026-11-27-infant-car-seat-market-survey.md)). A peer-reviewed sled study linked a support leg to significant reductions in head injury measures ([load-leg note](../../research/notes/2026-11-28-load-leg-sled-test-evidence.md)).
+- Canopy rated "as close to perfect as an infant carrier can get" ([BabyGearLab V2](https://www.babygearlab.com/reviews/vehicle-safety/infant-car-seat/uppababy-aria-v2)).
+- No-rethread harness with 25 headrest positions ([maker](https://uppababy.com/car-seats/infant/aria-v2/james/)).
 
 ## Cons
 
 Misuse risks come first.
 
-- **Misuse risk:** the base's tightness indicator turned green before the base was tight, on V1 and on V2 (BabyGearLab); owners also report it falling back to red after driving (low confidence), as Mesa V3 owners do. CR (V1) lists the indicator as a pro, so the labs conflict. Always do the manual's 1-inch movement test.
-- **Misuse risk:** on a vehicle-belt base install, the belt could slip in the lock-off when shaken (BabyGearLab V2). A Texas A&M KidSafe install demo got no movement with it, so V2 evidence conflicts. LATCH install avoids the question.
-- **Misuse risk:** European routing is the only baseless method allowed; if a shoulder belt cannot reach around the shell, the V2 manual offers only customer service, no fallback. A car seat with a lap-only belt cannot take the carrier without its base (V1 allowed it).
-- Inflatable vehicle seat belts are banned for every install, with or without the base (V2 manual p. 27).
-- Outgrown by height sooner than most infant seats (30 in limit; CPST con on Babylist; V1 head-room data; V2 owner reports are mostly from an incentivized testing panel). Low confidence.
-- Harness tightener has more resistance than most; hard to get snug without over-tightening (BabyGearLab V2).
-- Stroller range is UPPAbaby strollers plus Mockingbird adapters (market survey).
-- Not rated by NHTSA ease-of-use in the current feed (nhtsa ease-of-use note).
+- **Misuse risk:** the base's tightness indicator turned green before the base was tight, on V1 and on V2 (BabyGearLab [V1](https://www.babygearlab.com/reviews/vehicle-safety/infant-car-seat/uppababy-aria), [V2](https://www.babygearlab.com/reviews/vehicle-safety/infant-car-seat/uppababy-aria-v2)); owners also report it falling back to red after driving (low confidence), as Mesa V3 owners do. [CR (V1)](https://www.consumerreports.org/babies-kids/car-seats/uppababy-aria/m415804/) lists the indicator as a pro, so the labs conflict. Always do the manual's 1-inch movement test.
+- **Misuse risk:** on a vehicle-belt base install, the belt could slip in the lock-off when shaken ([BabyGearLab V2](https://www.babygearlab.com/reviews/vehicle-safety/infant-car-seat/uppababy-aria-v2)). A [Texas A&M KidSafe install demo](https://www.youtube.com/watch?v=Vnq3Cp1Qxj0) got no movement with it, so V2 evidence conflicts. LATCH install avoids the question.
+- **Misuse risk:** European routing is the only baseless method allowed; if a shoulder belt cannot reach around the shell, the [V2 manual](https://back.prod.uppababy.com/media/4b/51/e9/1794583326/US-EN_1002-ARI_AriaV2Manual_260724.pdf) offers only customer service, no fallback. A car seat with a lap-only belt cannot take the carrier without its base (V1 allowed it).
+- Inflatable vehicle seat belts are banned for every install, with or without the base ([V2 manual](https://back.prod.uppababy.com/media/4b/51/e9/1794583326/US-EN_1002-ARI_AriaV2Manual_260724.pdf) p. 27).
+- Outgrown by height sooner than most infant seats (30 in limit; [CPST con on Babylist](https://www.babylist.com/hello-baby/uppababy-vs-nuna); [V1 head-room data](https://csftl.org/uppababy-aria-rear-facing-only-car-seat-review/); [V2 owner reports](../../research/notes/2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md) are mostly from an incentivized testing panel). Low confidence.
+- Harness tightener has more resistance than most; hard to get snug without over-tightening ([BabyGearLab V2](https://www.babygearlab.com/reviews/vehicle-safety/infant-car-seat/uppababy-aria-v2)).
+- Stroller range is UPPAbaby strollers plus Mockingbird adapters ([market survey](../../research/notes/2026-11-27-infant-car-seat-market-survey.md)).
+- Not rated by NHTSA ease-of-use in the current feed ([nhtsa ease-of-use note](../../research/notes/2026-11-27-nhtsa-ease-of-use-ratings.md)).
 
 ## Fit and compatibility
 
@@ -92,7 +92,17 @@ The notes below and `research/open-questions.md` may list more.
 
 ## Notes
 
-Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs, 213a page claim, price, recalls), 2026-11-27-uppababy-aria-v2-usability.md, 2026-11-27-nhtsa-ease-of-use-ratings.md, 2026-11-28-uppababy-aria-v2-carrier-only-install.md, 2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md, 2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md. The weight is the as-used figure (BabyGearLab 6.8 lb measured, CSFTL 7 lb fully dressed on V1, retailer 7.1 lb); the maker's 6 lb excludes canopy and insert. Recall check 2026-11-28: NHTSA childSeats API record "UPPABABY | ARIA" shows 0 recalls, 0 investigations, 1 complaint (fabric torn by Velcro in the wash). Consumer Reports has not tested V2; its V1 page scored 78 (16th of 46), crash protection "Better" (read through Nick's CR account). No CPST hands-on review of V2 exists yet; fit evidence is V1 or incentivized V2 owner reviews. The aircraft method is lap belt only, carrier only (manual pp. 52-54). Unknown: Model Y recline without a towel (our Model Y always uses the base), fit at 9-12 months, carrier height on a stroller (open question 28), base width. Price seen during Black Friday 2026.
+- The weight is the as-used figure: [BabyGearLab](https://www.babygearlab.com/reviews/vehicle-safety/infant-car-seat/uppababy-aria-v2) 6.8 lb measured, [CSFTL](https://csftl.org/uppababy-aria-rear-facing-only-car-seat-review/) 7 lb fully dressed on V1, [retailer](https://www.modernnursery.com/products/uppababy-aria-v2-infant-car-seat) 7.1 lb.
+- The [maker's](https://uppababy.com/car-seats/infant/aria-v2/james/) 6 lb excludes canopy and insert.
+- Recall check 2026-11-28: [NHTSA childSeats API](https://api.nhtsa.gov/childSeats?dataSet=safetyIssues&max=127&offset=7400) record "UPPABABY | ARIA" shows 0 recalls, 0 investigations, 1 complaint (fabric torn by Velcro in the wash).
+- Consumer Reports has not tested V2; its V1 page scored 78 (16th of 46), crash protection "Better" ([read through Nick's CR account](https://www.consumerreports.org/babies-kids/car-seats/uppababy-aria/m415804/)).
+- No CPST hands-on review of V2 exists yet; fit evidence is V1 or incentivized V2 owner reviews ([hands-on and fit note](../../research/notes/2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md)).
+- The aircraft method is lap belt only, carrier only ([manual](https://back.prod.uppababy.com/media/4b/51/e9/1794583326/US-EN_1002-ARI_AriaV2Manual_260724.pdf) pp. 52-54).
+- Unknown: Model Y recline without a towel; our Model Y always uses the base ([stroller and Model Y note](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)).
+- Unknown: fit at 9-12 months ([hands-on and fit note](../../research/notes/2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md)).
+- Unknown: carrier height on a stroller, open question 28 ([stroller and Model Y note](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)).
+- Unknown: base width ([market survey](../../research/notes/2026-11-27-infant-car-seat-market-survey.md)).
+- Price seen during Black Friday 2026 ([market survey](../../research/notes/2026-11-27-infant-car-seat-market-survey.md)).
 
 ## Research notes
 

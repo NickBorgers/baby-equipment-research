@@ -42,6 +42,15 @@ def _is_str_list(value) -> bool:
     return isinstance(value, list) and all(isinstance(v, str) for v in value)
 
 
+#: A Markdown link: [text](target). Every pro, con, summary and notes field
+#: must cite its source with one, so a reader can click through to it.
+LINK_RE = re.compile(r"\[[^\]]+\]\([^)\s]+\)")
+
+
+def has_link(text: str) -> bool:
+    return bool(LINK_RE.search(str(text)))
+
+
 def validate(
     items: list[dict], schema: dict, decisions: dict, notes: set[str] | None = None
 ) -> list[str]:
@@ -96,10 +105,23 @@ def validate(
             value = item.get(field)
             if value is not None and not _is_str_list(value):
                 errors.append(f"{where}: {field} must be a list of text")
+            elif value:
+                for n, entry in enumerate(value, start=1):
+                    if not has_link(entry):
+                        errors.append(
+                            f"{where}: {field} #{n} cites no source; add a Markdown link "
+                            f"to the source or its research note: {entry[:60]!r}"
+                        )
 
         summary = item.get("summary")
         if summary is not None and not (isinstance(summary, str) and summary.strip()):
             errors.append(f"{where}: summary must be text, or be omitted")
+        elif summary is not None and not has_link(summary):
+            errors.append(f"{where}: summary cites no source; add a Markdown link")
+
+        item_notes = item.get("notes")
+        if isinstance(item_notes, str) and item_notes.strip() and not has_link(item_notes):
+            errors.append(f"{where}: notes cite no source; add Markdown links")
 
         errors.extend(validate_research_notes(item, where, notes))
         errors.extend(validate_decision(item, where, decisions))
@@ -264,9 +286,7 @@ def validate_compat(items: list[dict], schema: dict) -> list[str]:
             if not isinstance(adapters, dict) or not all(
                 isinstance(v, str) and v for v in adapters.values()
             ):
-                errors.append(
-                    f"{where}: compat.needs_adapter must map car-seat id -> adapter name"
-                )
+                errors.append(f"{where}: compat.needs_adapter must map car-seat id -> adapter name")
             else:
                 named.extend(adapters)
 
@@ -423,7 +443,7 @@ def _ordered_cons(cons: list[str]) -> list[str]:
     """Misuse-risk cons first, prefix in bold. Other cons keep their order."""
     misuse = [c for c in cons if c.startswith(MISUSE_PREFIX)]
     other = [c for c in cons if not c.startswith(MISUSE_PREFIX)]
-    return [f"**{MISUSE_PREFIX}**{c[len(MISUSE_PREFIX):]}" for c in misuse] + other
+    return [f"**{MISUSE_PREFIX}**{c[len(MISUSE_PREFIX) :]}" for c in misuse] + other
 
 
 def _render_compat(item: dict, items: list[dict], known: set[str]) -> list[str]:
@@ -683,8 +703,9 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Candidates valid ({len(items)} items); generated docs are current.")
         return 0
 
-    changed_paths = [path for path, content in expected.items()
-                     if repo.write_if_changed(path, content)]
+    changed_paths = [
+        path for path, content in expected.items() if repo.write_if_changed(path, content)
+    ]
     for path in orphans:
         path.unlink()
         print(f"{path.relative_to(repo.ROOT)}: removed (no such candidate)")

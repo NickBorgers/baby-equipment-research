@@ -96,7 +96,10 @@ def test_proposed_adr_may_skip_reader_fields():
 
 
 def test_complete_adr_passes():
-    adr = _adr(summary="We chose X.", if_yours_differs=["If Y, pick Z."])
+    adr = _adr(
+        summary="We chose [X](../research/notes/n.md).",
+        if_yours_differs=["If Y, pick [Z](https://e.com/z)."],
+    )
     assert site.validate_decisions([adr]) == []
 
 
@@ -117,10 +120,14 @@ def test_category_status_comes_from_candidates():
 
 def test_home_page_shows_each_accepted_decision_with_its_fields():
     items = [{"id": "a", "name": "A", "category": "car-seat", "status": "selected"}]
-    adr = _adr(summary="We chose X.", if_yours_differs=["If Y, pick Z."], candidates=["a"])
+    adr = _adr(
+        summary="We chose [X](../research/notes/n.md).",
+        if_yours_differs=["If Y, pick [Z](https://e.com/z)."],
+        candidates=["a"],
+    )
     old = _adr(id="0008", status="superseded-by-0009", title="Old")
-    page = site.home_page([old, adr], items)
-    assert "We chose X." in page
-    assert "- If Y, pick Z." in page
+    page = site.home_page([old, adr], items, {"research/notes/n.md": "research/notes/n.md"})
+    assert "We chose [X](research/notes/n.md)." in page
+    assert "- If Y, pick [Z](https://e.com/z)." in page
     assert "[A](products/a.md)" in page
     assert "Replaced decisions" in page and "Old" in page

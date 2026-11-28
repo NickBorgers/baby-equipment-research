@@ -49,6 +49,7 @@ if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from tools import repo  # noqa: E402
+from tools.candidates import has_link  # noqa: E402
 
 ROOT = repo.ROOT
 BUILD_DIR = ROOT / "build"
@@ -181,15 +182,24 @@ def products_table(ids: list[str], products: dict[str, dict], link_prefix: str) 
     return "| Product | Status | Price |\n| --- | --- | --- |\n" + "\n".join(rows)
 
 
-def decision_boxes(meta: dict, products: dict[str, dict], link_prefix: str) -> str:
-    """The summary, "if yours differs" and products blocks for one ADR."""
+def decision_boxes(
+    meta: dict,
+    products: dict[str, dict],
+    link_prefix: str,
+    fix_links=lambda text: text,
+) -> str:
+    """The summary, "if yours differs" and products blocks for one ADR.
+
+    `fix_links` rewrites the links in the two front matter fields, which are
+    written relative to `decisions/`, for the page they land on.
+    """
     blocks = []
     if meta.get("summary"):
-        blocks.append('!!! abstract "In short"\n' + _indent(" ".join(meta["summary"].split())))
+        summary = fix_links(" ".join(meta["summary"].split()))
+        blocks.append('!!! abstract "In short"\n' + _indent(summary))
     if meta.get("if_yours_differs"):
-        blocks.append(
-            '!!! tip "If your situation differs"\n' + _indent(_bullets(meta["if_yours_differs"]))
-        )
+        differs = fix_links(_bullets(meta["if_yours_differs"]))
+        blocks.append('!!! tip "If your situation differs"\n' + _indent(differs))
     table = products_table(meta.get("candidates") or [], products, link_prefix)
     if table:
         blocks.append("**Products compared:**\n\n" + table)
@@ -342,8 +352,13 @@ def category_status(category: str, items: list[dict]) -> tuple[str, str]:
     return "Not started", "—"
 
 
-def home_page(decisions: list[tuple[Path, dict]], items: list[dict]) -> str:
+def home_page(
+    decisions: list[tuple[Path, dict]],
+    items: list[dict],
+    pages: dict[str, str] | None = None,
+) -> str:
     products = {i["id"]: i for i in items}
+    pages = page_map() if pages is None else pages
     rows = []
     for category in CATEGORIES:
         status, pick = category_status(category, items)
@@ -360,10 +375,14 @@ def home_page(decisions: list[tuple[Path, dict]], items: list[dict]) -> str:
         link = f"decisions/{path.name}"
         status = str(meta.get("status", ""))
         if status == "accepted":
+
+            def fix(text: str, src: str = f"decisions/{path.name}") -> str:
+                return rewrite_links(text, src, "index.md", pages)
+
             section = [
                 f"### {meta.get('id')}: [{title}]({link})",
                 f"Decided {meta.get('date', '?')}.",
-                decision_boxes(meta, products, "products/"),
+                decision_boxes(meta, products, "products/", fix),
             ]
             accepted.append("\n\n".join(s for s in section if s))
         elif status.startswith("superseded"):
@@ -393,6 +412,8 @@ def validate_decisions(decisions: list[tuple[Path, dict]]) -> list[str]:
         summary = meta.get("summary")
         if not isinstance(summary, str) or not summary.strip():
             problems.append(f"{where}: accepted ADR needs a `summary` in its front matter")
+        elif not has_link(summary):
+            problems.append(f"{where}: `summary` cites no source; add Markdown links")
         differs = meta.get("if_yours_differs")
         if (
             not isinstance(differs, list)
@@ -402,6 +423,12 @@ def validate_decisions(decisions: list[tuple[Path, dict]]) -> list[str]:
             problems.append(
                 f"{where}: accepted ADR needs `if_yours_differs`, a list of one or more strings"
             )
+        else:
+            for n, entry in enumerate(differs, start=1):
+                if not has_link(entry):
+                    problems.append(
+                        f"{where}: `if_yours_differs` #{n} cites no source; add a Markdown link"
+                    )
     return problems
 
 
@@ -522,7 +549,7 @@ def build() -> list[str]:
         out = SITE_SRC / dest
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(render_page(src, dest, pages, products=products), encoding="utf-8")
-    (SITE_SRC / "index.md").write_text(home_page(decisions, items), encoding="utf-8")
+    (SITE_SRC / "index.md").write_text(home_page(decisions, items, pages), encoding="utf-8")
     (SITE_SRC / "decisions" / "index.md").write_text(decisions_index(), encoding="utf-8")
     (SITE_SRC / "research" / "notes" / "index.md").write_text(notes_index(), encoding="utf-8")
 

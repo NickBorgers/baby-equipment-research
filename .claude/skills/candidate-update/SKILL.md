@@ -44,13 +44,23 @@ summary.
     accepts_car_seats: []       # car-seat ids that click on directly
     needs_adapter: {}           # {car-seat-id: "Adapter product name"}
     incompatible: []            # confirmed: no adapter exists
-  pros: []
-  cons: []
-  notes: >-
-    What a future reader needs to know, especially what is still unknown.
+  pros:                         # each cites its source with a Markdown link
+    - Folds with one hand ([BabyGearLab](https://www.babygearlab.com/...)).
+  cons:
+    - Basket is small ([specs note](../../research/notes/2026-11-27-example-stroller-specs.md)).
+  notes: |                      # a Markdown bullet list, one fact per bullet
+    - What a future reader needs to know, with a link to its source.
+    - What is still unknown ([open questions](../../research/open-questions.md)).
   research_notes:               # filenames in research/notes/; each must exist
     - 2026-11-27-example-stroller-specs.md
 ```
+
+**Every pro, con, `summary` and `notes` field links its source**
+(AGENTS.md rule 1a). The text renders in `docs/products/<id>.md`, so
+relative links start `../../`. Take each URL from the research note's
+Sources section; never invent one. Link the note itself when the claim is
+the note's synthesis or has no URL. `make check` fails on an entry with no
+link. The `...` URLs above are placeholders, not real sources.
 
 ## Status lifecycle
 

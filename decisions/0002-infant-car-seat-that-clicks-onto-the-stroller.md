@@ -8,29 +8,32 @@ candidates: []
 summary: >-
   The newborn rides in an infant car seat. Its carrier clicks into a base in
   the car and onto the stroller. A convertible seat follows when the infant
-  seat is outgrown. We fly in the first year, and in an independent test an
-  infant seat fit a Model Y easily, while a rear-facing convertible "just
-  barely fit". Infant seats that meet 213a are being capped at 30 lb, so we
-  will buy a convertible either way. The infant seat is an extra seat that
+  seat is outgrown. We fly in the first year, and in an
+  [independent test](https://www.cars.com/articles/how-do-car-seats-fit-in-a-2021-tesla-model-y-436721/) an infant seat fit a Model Y easily, while a
+  rear-facing convertible "just barely fit". Infant seats that meet 213a
+  are [being capped at 30 lb](../research/notes/2026-11-27-fmvss-213a-status-and-infant-seats.md), so we will buy a convertible either
+  way. The infant seat is an extra seat that
   buys about a year of a portable carrier.
 if_yours_differs:
   - >-
-    If you rarely fly, the main reason for an infant seat weakens. A
-    convertible from birth is one seat for years, and saves buying the
-    extra infant seat.
+    If you rarely [fly](../research/notes/2026-11-27-faa-car-seat-use-on-aircraft.md),
+    the main reason for an infant seat weakens. A convertible from birth is
+    one seat for years, and saves buying the extra infant seat.
   - >-
-    If your back seat is roomier than a Model Y's, the space reason weakens
-    too.
+    If your back seat is roomier than a Model Y's, the
+    [space reason](https://www.cars.com/articles/how-do-car-seats-fit-in-a-2021-tesla-model-y-436721/) weakens too.
   - >-
-    How well a small newborn fits varies a lot between convertibles. Check
-    newborn fit for any convertible you consider.
+    We did not research convertible seats. If you consider one, check how
+    well a newborn fits it. Our reasons against a convertible are under
+    [Alternatives considered](0002-infant-car-seat-that-clicks-onto-the-stroller.md#alternatives-considered).
 ---
 
 # 0002 — Start with an infant car seat that clicks onto the stroller
 
 ## Context
 
-There are two ways to carry a newborn in the car (open question 9):
+There are two ways to carry a newborn in the car
+([open question 9](../research/open-questions.md)):
 
 - **An infant seat**: rear-facing only, with a carry handle. The carrier
   clicks into a base that stays in the car, and onto a compatible stroller.
@@ -43,10 +46,11 @@ What decides it for us:
 
 - We fly in the first year, mostly Delta and American
   ([note](../research/notes/2026-11-27-delta-american-stroller-car-seat-policy.md)).
-- The car is a 2022 Model Y. In an independent test, an infant seat fit
-  easily, while a rear-facing convertible "just barely fit"
+- The car is a 2022 Model Y. In an independent test
+  ([Cars.com](https://www.cars.com/articles/how-do-car-seats-fit-in-a-2021-tesla-model-y-436721/)), an infant seat fit easily, while a rear-facing convertible "just barely fit"
   ([note](../research/notes/2026-11-27-model-y-2022-cargo-and-rear-seat.md)).
-- The stroller is for travel from the start, not jogging (open question 8).
+- The stroller is for travel from the start, not jogging
+  ([open question 8](../research/open-questions.md)).
 - Infant seats that meet 213a are being capped at 30 lb, because a higher
   rating brings in an extra test with a 3-year-old crash dummy
   ([note](../research/notes/2026-11-27-fmvss-213a-status-and-infant-seats.md)).
@@ -70,14 +74,15 @@ A bundle is acceptable only if it is the best pairing anyway.
 
 - **Flying.** A carrier (most weigh roughly 6-10 lb) rolls through the
   airport on the stroller. The stroller is gate-checked free on both
-  airlines, and the carrier is installed on the plane, often without its
-  base (FAA InFO 15013; each seat's manual decides —
+  airlines ([note](../research/notes/2026-11-27-delta-american-stroller-car-seat-policy.md)), and the carrier is installed on the plane, often without its
+  base ([FAA InFO 15013](https://www.faa.gov/sites/faa.gov/files/other_visit/aviation_industry/airline_operators/airline_safety/InFO15013.pdf); each seat's manual decides —
   [note](../research/notes/2026-11-27-faa-car-seat-use-on-aircraft.md)).
   A convertible has to be carried separately through the airport, and the
   whole seat installed. The weight figures here are a rough guide, not
   sourced per seat; each candidate records its own.
 - **The car.** An infant seat fits the Model Y's rear seat more easily than a
-  rear-facing convertible, on the one independent test available.
+  rear-facing convertible, on the one independent test available
+  ([Cars.com](https://www.cars.com/articles/how-do-car-seats-fit-in-a-2021-tesla-model-y-436721/)).
 - **A sleeping baby** can go from car to stroller to house without being
   unbuckled.
 - **The cost was accepted knowingly.** Nick, 2026-11-27: "I accept the
@@ -91,7 +96,8 @@ A bundle is acceptable only if it is the best pairing anyway.
   It lost on flying (heavy, carried separately) and on the Model Y's rear
   space. How well a small newborn fits also varies a lot between
   convertibles.
-- **A car seat with built-in stroller wheels (e.g. Doona).** This is a kind
+- **A car seat with built-in stroller wheels (e.g.
+  [Doona](https://www.doona.com/en-us/support/safety-features)).** This is a kind
   of infant seat, so this decision does not rule it out. It is assessed as a
   car seat candidate. It still needs its own stroller once outgrown.
 
@@ -99,10 +105,12 @@ A bundle is acceptable only if it is the best pairing anyway.
 
 - **The car seat is chosen first. It limits the strollers.** A stroller
   candidate must accept the chosen seat according to a manufacturer's chart
-  or manual, recorded in its `compat` block (open question 18). A stroller
+  or manual, recorded in its `compat` block
+  ([open question 18](../research/open-questions.md)). A stroller
   that accepts no seat on the shortlist is out.
 - **Criteria for the infant seat**, besides 0001: carrier weight; carrier
-  width against the FAA's 16 in guideline and airline seat widths; aircraft
+  width against the [FAA's 16 in guideline](https://www.federalregister.gov/documents/2015/09/30/2015-24720/disclosure-of-seat-dimensions-to-facilitate-use-of-child-safety-seats-on-airplanes-during) and
+  [airline seat widths](../research/notes/2026-11-27-airline-seat-width-vs-infant-carriers.md); aircraft
   install method (base or no base); fit in the Model Y's outboard seats;
   and the range of strollers it clicks onto.
 - **Criteria for the pairing:** how high the carrier sits on the stroller
@@ -115,8 +123,8 @@ A bundle is acceptable only if it is the best pairing anyway.
   0001 or its successor, is bought when the infant seat is outgrown. It is
   not shortlisted now.
 - The infant seat can be kept for a later child until it expires. It is not
-  resold unless its history is known, and never reused after a crash (open
-  question 12).
+  resold unless its history is known, and never reused after a crash
+  ([open question 12](../research/open-questions.md)).
 
 ## Open questions
 

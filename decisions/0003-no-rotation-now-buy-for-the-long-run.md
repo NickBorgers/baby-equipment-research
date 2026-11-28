@@ -6,20 +6,23 @@ date: 2026-11-27
 category: general
 candidates: []
 summary: >-
-  The infant seat does not rotate. No rotating infant seat had a clean 213a
-  claim, and a swivel helps most with a seat that stays in the car. The
+  The infant seat does not rotate. [No rotating infant seat had a clean
+  213a claim](../research/notes/2026-11-27-rotating-infant-car-seats.md), and a swivel helps most with a seat that stays in the
+  car. The
   next seat, bought when the infant seat is outgrown, must rotate. The
   stroller must outlast the infant seat: it works for a newborn on its own,
   carries a toddler to about 50 lb, and takes the infant seat by adapter.
 if_yours_differs:
   - >-
-    If rotation matters more to you than a 213a claim, four rotating infant
-    seats are sold in the US. All rotate in the base, so the carrier still
-    flies without it and clicks onto the same strollers. Check recalls:
-    Graco's was recalled in April 2026.
+    If rotation matters more to you than a 213a claim,
+    [four rotating infant seats](../research/notes/2026-11-27-rotating-infant-car-seats.md) are sold in the US. All rotate in the
+    base, so the carrier still flies without it and clicks onto the same
+    strollers. Check recalls: Graco's was
+    [recalled in April 2026](../research/notes/2026-11-27-rotating-infant-car-seats.md).
   - >-
     If you accept buying a second stroller later, a frame stroller or a car
-    seat with built-in wheels (such as the Doona) becomes an option.
+    seat with built-in wheels (such as the [Doona](https://www.doona.com/en-us/support/safety-features)) becomes an
+    option.
 ---
 
 # 0003 — No rotating infant seat; rotation goes in the next seat, and the stroller outlasts the infant seat
@@ -39,8 +42,9 @@ The research
 [market survey](../research/notes/2026-11-27-infant-car-seat-market-survey.md))
 found:
 
-- All four rotating infant seats on the US market (Cybex Aton G2 Swivel,
-  Maxi-Cosi Peri 180, Joie Rue LX Spin, Graco SnugRide Turn & Slide) rotate
+- All four rotating infant seats on the US market
+  ([Cybex Aton G2 Swivel](https://www.cybex-online.com/en/us/p/10106022.html), [Maxi-Cosi Peri 180](https://maxicosi.com/pages/rotating-car-seats),
+  [Joie Rue LX Spin](https://joiebaby.com/us/rue-lx-spin-rotating-infant-car-seat), [Graco SnugRide Turn & Slide](https://www.placera.se/pressmeddelanden/newell-brands-graco-snugride-turn-slide-brings-unique-turn-and-slide-innovation-to-families-20261109)) rotate
   in the **base**. The carrier weighs the same or nearly the same as the
   fixed version, flies without the base, and clicks onto the same strollers.
   So rotation does **not** conflict with portability.
@@ -48,7 +52,8 @@ found:
   $90-150 more per seat, and works only in our own car.
 - **No rotating infant seat has a clean explicit FMVSS 213a claim**, which
   [0001](0001-car-seat-must-meet-fmvss-213a.md) requires. Graco's was
-  recalled in April 2026 because its carrier could detach from the base.
+  [recalled in April 2026](../research/notes/2026-11-27-rotating-infant-car-seats.md) because its carrier could detach from the
+  base.
 - Most rotating seats are convertibles or all-in-ones, which stay in the car.
 
 ## Decision
@@ -70,8 +75,8 @@ found:
   sourced finding. With a carrier, the baby is usually buckled in outside
   the car, and the swivel only eases clicking the carrier into the base.
   With a seat that stays in the car, the child is lifted in and buckled
-  there on every trip, for years. That is also where the market puts its
-  rotating seats.
+  there on every trip, for years. That is also
+  [where the market puts its rotating seats](../research/notes/2026-11-27-rotating-infant-car-seats.md).
 - **It removes a conflict with 0001.** No rotating infant seat qualifies
   cleanly today, so wanting one would mean relaxing 0001 or waiting on makers.
 - **It keeps the rebuy to the car seat.** With 2 and 3, the whole run is two
@@ -97,19 +102,21 @@ found:
 
 ## Consequences
 
-- **Infant seat:** rotating seats come off the shortlist. Open question 33
+- **Infant seat:** rotating seats come off the shortlist.
+  [Open question 33](../research/open-questions.md)
   (missing rotating seat specs) no longer blocks anything now.
 - **Stroller:** a candidate must be newborn-capable without the car seat,
   rated to about 50 lb, and take the chosen infant seat. Frame strollers are
   out. This favors infant seats that fit many strollers (the Peg Perego Primo
-  Viaggio fits the widest range in the survey), so the stroller can be
+  Viaggio fits the widest range in the [survey](../research/notes/2026-11-27-infant-car-seat-market-survey.md)), so the stroller can
+  be
   chosen on its own merits.
 - **Follow-on seat:** must rotate, meet 0001, and fit the Model Y.
   Its expiry should cover the years it is meant for. It is not researched
-  now. It is researched when the infant seat is close to outgrown (open
-  question 27).
-- **Model Y room for rotation** moves to the follow-on seat (open question
-  30): a rotating convertible needs room to swing in the outboard seat.
+  now. It is researched when the infant seat is close to outgrown
+  ([open question 27](../research/open-questions.md)).
+- **Model Y room for rotation** moves to the follow-on seat
+  ([open question 30](../research/open-questions.md)): a rotating convertible needs room to swing in the outboard seat.
 
 ## Open questions
 

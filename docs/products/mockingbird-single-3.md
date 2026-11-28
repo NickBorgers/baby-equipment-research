@@ -33,14 +33,14 @@
 
 ## Pros
 
-- Maker chart names the Aria V2 explicitly (November 2026).
-- Lowest price of the full-size strollers found, $475 ($520 with newborn insert).
+- [Maker chart](https://help.hellomockingbird.com/en_us/which-car-seat-brands-and-models-are-compatible-with-the-mockingbird-car-seat-adapter-HyD29EBic) names the Aria V2 explicitly (November 2026).
+- Lowest price of the full-size strollers found, $475 ($520 with newborn insert) ([strollers note](../../research/notes/2026-11-28-non-uppababy-strollers-for-aria-v2.md)).
 
 ## Cons
 
-- Seat is from 3 months only; from birth it needs the Infant Seat Insert, Bassinet or Carriage, sold separately or in the $520 bundle (maker).
-- Does not fit the overhead bin; 27 lb.
-- Earlier Mockingbird Single and Single-to-Double lots were recalled in 2022-23 because the lower frame could crack (CPSC 23-042, 23-161). Current models are not named.
+- Seat is from 3 months only; from birth it needs the Infant Seat Insert, Bassinet or Carriage, sold separately or in the $520 bundle ([maker](https://hellomockingbird.com/products/mockingbird-stroller)).
+- Does not fit the overhead bin; 27 lb ([strollers note](../../research/notes/2026-11-28-non-uppababy-strollers-for-aria-v2.md)).
+- Earlier Mockingbird Single and Single-to-Double lots were recalled in 2022-23 because the lower frame could crack (CPSC [23-042](https://www.cpsc.gov/Recalls/2023/Mockingbird-Recalls-Single-to-Double-Strollers-Due-to-Fall-Hazard), [23-161](https://www.cpsc.gov/Recalls/2023/Mockingbird-Expands-Recall-to-Include-Single-Strollers-Due-to-Fall-Hazard)). Current models are not named.
 
 ## Fit and compatibility
 
@@ -69,7 +69,9 @@ The notes below and `research/open-questions.md` may list more.
 
 ## Notes
 
-The Single-to-Double 3.0 uses the same adapter but not in twin setups; not a candidate since a double is not needed. Unknown: recline, open width, fold, wheels, carrier height, usability.
+- The Single-to-Double 3.0 uses the same adapter but not in twin setups ([strollers note](../../research/notes/2026-11-28-non-uppababy-strollers-for-aria-v2.md)).
+- The Single-to-Double 3.0 is not a candidate, since a double is not needed ([strollers note](../../research/notes/2026-11-28-non-uppababy-strollers-for-aria-v2.md)).
+- Unknown: recline, open width, fold, wheels, carrier height, usability ([strollers note](../../research/notes/2026-11-28-non-uppababy-strollers-for-aria-v2.md)).
 
 ## Research notes
 
