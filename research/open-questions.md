@@ -38,10 +38,13 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   thin to use. Tape-measure the outboard seat. Blocks the car seat width
   screen. (`vehicles[].rear_seat_width_in`)
 
-- [ ] **5. Narrowest doorway, stairs, and stroller storage spot** — does the
+- [x] **5. Narrowest doorway, stairs, and stroller storage spot** — does the
   stroller need carrying up steps, and where will it live folded?
   (`home.narrowest_doorway_in`, `home.stairs_to_entry`,
   `home.stroller_storage_in`)
+  **Answered 2026-11-28 (Nick):** narrowest doorway 30 in; no steps inside
+  the house; storage is "a non issue", so `home.stroller_storage_limited:
+  false` drops the storage check. Steps at the entry were not stated.
 
 - [ ] **6. Bedside floor space and mattress-top height** — for the
   bassinet. Known 2026-11-27: a queen mattress on an upholstered platform
@@ -54,6 +57,8 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   `home.bed_ledge_top_height_in`, `home.bed_frame_floor_gap_in`)
 
 - [ ] **7. Budget for each category** — or a total. (`budget_usd`)
+  Stroller, 2026-11-28 (Nick): budget is "largely a non-issue", so price
+  does not decide the stroller. Car seat and bassinet: not asked.
 
 - [x] **8. How will the stroller be used?** Answered 2026-11-27 (Nick):
   used for travel right away, from the start; never for running or
@@ -76,8 +81,14 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   seat ↔ stroller compatibility matters at all.
 
 - [ ] **10. Full-size, compact, or travel stroller — or more than one?**
+  **One stroller** (Nick, 2026-11-28), for daily use and travel. Still open:
+  which size class that one stroller is; the usability round decides it.
   Depends on items 3, 5, 8 and 20. Item 8's answer (travel from the start,
   no jogging) points toward compact or travel, but that is not decided.
+  Found 2026-11-28: no stroller that takes the Aria V2 fits the 22 × 14 × 9
+  in bin on published size, so every option is a gate check. The compact
+  ones (Minu V3, Mockingbird Travel, Zoe Tour V3) weigh 14.5-17.7 lb; the
+  full-size ones 22-30 lb.
 
 - [ ] **11. Basic bassinet or a smart (responsive) bassinet — and buy, rent,
   or used?** Smart bassinets are much more expensive and are often rented.
@@ -107,8 +118,14 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   ASTM F2194), what it covers for bedside sleepers, and AAP safe-sleep
   guidance that applies to bassinet choice.
 
-- [ ] **16. Strollers: the stroller standard.** Confirm the mandatory CPSC
+- [x] **16. Strollers: the stroller standard.** Confirm the mandatory CPSC
   stroller/carriage standard (16 CFR 1227 / ASTM F833) and what it covers.
+  **Answered 2026-11-28**
+  ([note](notes/2026-11-28-stroller-standard-astm-f833.md)): ASTM F833-21,
+  mandatory since 2022-02-15. A car seat on a stroller must pass latching,
+  brakes, static load, stability and impact. No newborn recline rule was
+  found, so "from birth" is the maker's claim. Current test figures are
+  behind ASTM's paywall (item 47).
 
 - [ ] **17. How to check recalls.** Record the exact NHTSA (car seat) and
   CPSC (stroller, bassinet) recall search process, so each candidate's
@@ -117,8 +134,11 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   and api.nhtsa.gov block scripts, but NHTSA's static recall flat file
   (`static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip`, child-restraint
   records have type `C`) downloads and can be searched by make and model.
-  Still open: the CPSC side, and whether a flat-file search is accepted as
-  equal to the official per-model lookup.
+  CPSC side answered 2026-11-28
+  ([note](notes/2026-11-28-stroller-recall-check-method.md)): the CPSC
+  Recalls API, queried in six fields, plus the cpsc.gov listing for the
+  days the API lags. Still open: whether the flat-file and API searches are
+  accepted as equal to the official per-model lookups.
 
 - [ ] **18. Travel-system compatibility sources.** Find where each
   manufacturer publishes its car seat compatibility and adapter charts, so
@@ -132,6 +152,12 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   Third-party charts seen: Thule (lists no Mesa V3 or KeyFit Max),
   Mockingbird, Bugaboo (Chicco KeyFit), Silver Cross. UPPAbaby's support
   site returned 403.
+  Stroller side, 2026-11-28
+  ([UPPAbaby](notes/2026-11-28-uppababy-strollers-specs-and-gates.md),
+  [other brands](notes/2026-11-28-non-uppababy-strollers-for-aria-v2.md)):
+  for the Aria V2, Mockingbird (November 2026 chart) and Zoe (Tour V3)
+  name the V2; Thule and Veer name only "Aria" in lists that predate it;
+  BOB names only the Mesa; Bumbleride has no UPPAbaby adapter.
 
 ## Raised by household facts (2026-11-27)
 
@@ -265,6 +291,11 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   manual gives a handlebar limit in pounds; basket limits are 20 lb (Minu
   V3, Ridge V2) and 30 lb (Vista V3, Cruz V3). No tip-over reports found
   (Reddit blocked). Still open: a tape measure in a store.
+  Standard, 2026-11-28
+  ([note](notes/2026-11-28-stroller-standard-astm-f833.md)): F833 sets no
+  limit on carrier height. One unverified 2024 report says a Minu V2 with
+  Mesa adapters released the seat going downhill
+  ([note](notes/2026-11-28-stroller-recall-check-method.md)).
 
 ## Raised by the infant car seat survey (2026-11-27)
 
@@ -438,3 +469,57 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   listed it as "Review Coming Soon" on 2026-11-24. Most V2 fit evidence is
   incentivized panel reviews. See the
   [fit update](notes/2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md).
+
+## Raised by the stroller search (2026-11-28)
+
+- [ ] **44. Does the Kona take the Aria V2?** UPPAbaby's Kona page, help
+  centre and 2026 comparison chart say UPPAbaby seats attach directly. The
+  Aria V2 manual (rev. 260724) does not list the Kona. Ask UPPAbaby, or
+  check a newer manual. Until then the Kona's compat stays unknown
+  ([note](notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
+  Progress 2026-11-28
+  ([note](notes/2026-11-28-uppababy-full-size-usability.md)): UPPAbaby
+  sells a Kona + Aria V2 bundle that "attaches directly", so the Aria V2
+  is now in the Kona's compat. Still no manual: the Kona manual has no car
+  seat section and the Aria V2 manual (260724) omits the Kona. Also ask
+  whether the carrier may face outward, as the bundle page says.
+
+- [ ] **45. Do Thule and Veer adapters take the Aria V2?** Their lists name
+  "Aria" and predate the V2. Thule's UG3 adapter is also approved only to
+  a 20 lb child. Low priority: both need an extra newborn accessory
+  ([note](notes/2026-11-28-non-uppababy-strollers-for-aria-v2.md)).
+
+- [ ] **46. Prices, measured weights and usability for the travel
+  strollers.** Mockingbird Travel Stroller and Zoe Tour V3: no price read,
+  maker figures only, no hands-on review read yet. The Kona has no
+  hands-on review either. As-used weight (canopy, bumper bar, adapters) is
+  missing for all candidates.
+
+- [ ] **47. The current ASTM F833-21 test figures.** Stability with a car
+  seat attached (dummy, load, angle) is only known from the 2008 edition.
+  The text costs $109, or is free to read in ASTM's Reading Library after
+  registering ([note](notes/2026-11-28-stroller-standard-astm-f833.md)).
+
+- [ ] **48. Is the Mockingbird Single 3.0 frame redesigned since the
+  2022-23 frame-crack recalls?** The recalls name older lots only
+  ([note](notes/2026-11-28-stroller-recall-check-method.md)).
+
+- [ ] **49. How does the Aria V2 sit on each stroller, hands-on?** No
+  reviewer tested any UPPAbaby seat on any stroller candidate: lock feel,
+  carrier height, wobble, basket access. A store visit with the Aria V2
+  would settle it for the UPPAbaby strollers. For the Mockingbird Travel
+  and Zoe Tour V3, ask the makers whether they tested the Aria V2. Notes:
+  [Minu V3](notes/2026-11-28-uppababy-minu-v3-usability.md),
+  [full-size](notes/2026-11-28-uppababy-full-size-usability.md),
+  [Mockingbird](notes/2026-11-28-mockingbird-travel-stroller-usability.md),
+  [Zoe](notes/2026-11-28-zoe-tour-v3-usability.md).
+
+- [ ] **50. Our gravel driveway: packed or loose, and how far?** Nick,
+  2026-11-28: the house has a gravel driveway. Reviewers found small gravel
+  "an effort" for the Cruz V3 and poor for the Minu V3; the Zoe Tour V3
+  manual bans "rough roads"
+  ([full-size note](notes/2026-11-28-uppababy-full-size-usability.md),
+  [Minu note](notes/2026-11-28-uppababy-minu-v3-usability.md)). Household
+  to supply: packed or loose/deep, and whether it is a short car-to-door
+  stretch or a walking route. Then, if it matters, a narrow search for
+  gravel reports on the finalists, or a store test.

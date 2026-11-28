@@ -37,9 +37,12 @@ future_vehicles:
       2026-11-27). Do not let it drive choices now.
 
 home:
-  narrowest_doorway_in: null     # the narrowest door a stroller must pass, open
-  stairs_to_entry: null          # bool: must the stroller be carried up steps?
+  narrowest_doorway_in: 30       # Nick, 2026-11-28
+  stairs_to_entry: null          # bool: must the stroller be carried up steps? No steps
+                                 # INSIDE the house (Nick, 2026-11-28); entry not stated
   stroller_storage_in: null      # [l, w, h] of where the folded stroller will live
+  stroller_storage_limited: false  # storage is "a non issue" (Nick, 2026-11-28); drops
+                                   # the storage fit check. Unset or null still asks it.
   bedside_space_in: null         # [l, w] floor space next to the adult bed
   bed_top_height_in: null        # floor to mattress top, for bedside bassinets
   # The bed frame is an upholstered PLATFORM that sticks out past the
@@ -61,6 +64,8 @@ home:
     of a design that specifically accommodates a platform ledge — a lead,
     not yet evaluated. See open question 19.
 
+# Budget is "largely a non-issue" (Nick, 2026-11-28): price does not decide
+# between candidates. Left null because no figure was given.
 budget_usd:
   stroller: null
   car-seat: null
@@ -70,7 +75,8 @@ lifestyle:
   notes: >-
     The stroller will be used for travel right away, from the start,
     including flying. It will not be used for running or jogging (Nick,
-    2026-11-27).
+    2026-11-27). One stroller for everything, daily use and travel, not a
+    full-size plus a travel stroller (Nick, 2026-11-28).
 
 travel:
   flies: true                    # Nick, 2026-11-27

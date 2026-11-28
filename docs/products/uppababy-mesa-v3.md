@@ -62,10 +62,23 @@ Misuse risks come first.
 
 ## Fit and compatibility
 
-- No stroller lists this seat in its compat yet.
+- **Clicks onto** [`uppababy-minu-v3`](uppababy-minu-v3.md) with Adapters for Minu V3 (Aria & Mesa), 0904-MMA-WW.
+- **Clicks onto** [`uppababy-cruz-v3`](uppababy-cruz-v3.md) directly.
+- **Clicks onto** [`uppababy-vista-v3`](uppababy-vista-v3.md) directly.
+- **Clicks onto** [`uppababy-ridge-v2`](uppababy-ridge-v2.md) with Adapters for Ridge (Aria, Mesa & Bassinet), 0901-RMA-WW.
+- **Clicks onto** [`zoe-tour-v3`](zoe-tour-v3.md) with Tour V3 UPPAbaby Car Seat Adapter, model 810033595783 ($55).
+- **Clicks onto** [`mockingbird-single-3`](mockingbird-single-3.md) with Mockingbird Car Seat Adapter, Uppababy option ($50).
 
 | Against | Result | Detail |
 | --- | --- | --- |
+| [`uppababy-minu-v3`](uppababy-minu-v3.md) | fits | with adapter: Adapters for Minu V3 (Aria & Mesa), 0904-MMA-WW |
+| [`uppababy-kona`](uppababy-kona.md) | insufficient data | not listed in the stroller's compat |
+| [`uppababy-cruz-v3`](uppababy-cruz-v3.md) | fits | direct, no adapter |
+| [`uppababy-vista-v3`](uppababy-vista-v3.md) | fits | direct, no adapter |
+| [`uppababy-ridge-v2`](uppababy-ridge-v2.md) | fits | with adapter: Adapters for Ridge (Aria, Mesa & Bassinet), 0901-RMA-WW |
+| [`mockingbird-travel-stroller`](mockingbird-travel-stroller.md) | insufficient data | not listed in the stroller's compat |
+| [`zoe-tour-v3`](zoe-tour-v3.md) | fits | with adapter: Tour V3 UPPAbaby Car Seat Adapter, model 810033595783 ($55) |
+| [`mockingbird-single-3`](mockingbird-single-3.md) | fits | with adapter: Mockingbird Car Seat Adapter, Uppababy option ($50) |
 | 2022 Tesla Model Y rear seat | insufficient data | rough screen only — the vehicle and seat manuals decide |
 
 [FIT.md](../FIT.md) explains the method.
@@ -73,6 +86,8 @@ Misuse risks come first.
 ## Still unknown
 
 - Spec `base_width_in`.
+- Fit input: uppababy-kona compat for uppababy-mesa-v3.
+- Fit input: mockingbird-travel-stroller compat for uppababy-mesa-v3.
 - Fit input: household vehicle '2022 Tesla Model Y' rear_seat_width_in.
 
 The notes below and `research/open-questions.md` may list more.

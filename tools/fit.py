@@ -246,6 +246,8 @@ def run(items: list[dict], household: dict) -> dict[str, list[Check]]:
     home = household.get("home") or {}
     travel = household.get("travel") or {}
     flies = travel.get("flies") is not False  # unknown still asks the question
+    # Only an explicit `false` drops the storage check; unknown still asks it.
+    storage_limited = home.get("stroller_storage_limited") is not False
 
     bed_checks = [bassinet_bed_height(b, home) for b in bassinets]
     return {
@@ -254,7 +256,9 @@ def run(items: list[dict], household: dict) -> dict[str, list[Check]]:
         ],
         "Stroller in the trunk": [trunk(s, v) for s in strollers for v in vehicles],
         "Stroller through the door": [doorway(s, home) for s in strollers],
-        "Stroller in its storage spot": [storage(s, home) for s in strollers],
+        "Stroller in its storage spot": [storage(s, home) for s in strollers]
+        if storage_limited
+        else [],
         "Stroller in an overhead bin": [overhead_bin(s, travel) for s in strollers]
         if flies
         else [],
