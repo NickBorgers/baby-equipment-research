@@ -64,7 +64,7 @@ The notes below and `research/open-questions.md` may list more.
 
 ## Notes
 
-- UPPAbaby says not to jog with an infant car seat attached.
+- UPPAbaby says you "should not jog with an infant car seat attached to the Ridge" ([support FAQ](https://support.uppababy.com/hc/en-us/articles/4403595638039-Can-I-jog-with-an-infant-car-seat-on-the-Ridge)).
 - Kept on the record as a gate check; unlikely to suit travel use ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
 
 ## Research notes
@@ -72,3 +72,4 @@ The notes below and `research/open-questions.md` may list more.
 - [2026-11-28-stroller-recall-check-method.md](../../research/notes/2026-11-28-stroller-recall-check-method.md)
 - [2026-11-28-uppababy-strollers-specs-and-gates.md](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)
 - [2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)
+- [2026-11-28-sources-for-unsourced-claims.md](../../research/notes/2026-11-28-sources-for-unsourced-claims.md)

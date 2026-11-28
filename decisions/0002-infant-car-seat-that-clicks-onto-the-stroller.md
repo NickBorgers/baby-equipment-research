@@ -94,8 +94,12 @@ A bundle is acceptable only if it is the best pairing anyway.
 
 - **A convertible seat from birth.** One seat instead of two, for years.
   It lost on flying (heavy, carried separately) and on the Model Y's rear
-  space. How well a small newborn fits also varies a lot between
-  convertibles.
+  space. How well a small newborn fits also varies between convertibles.
+  [Car Seats For The Littles](https://csftl.org/choosing-a-convertible-car-seat-for-a-newborn/),
+  a group of child passenger safety technicians, found that some fit a
+  newborn well and others "will not fit a newborn or young infant", mainly
+  because their lowest harness slots sit too high. Its seat list is older
+  than the current models.
 - **A car seat with built-in stroller wheels (e.g.
   [Doona](https://www.doona.com/en-us/support/safety-features)).** This is a kind
   of infant seat, so this decision does not rule it out. It is assessed as a
