@@ -94,7 +94,10 @@ def test_validate_reads_real_notes_when_none_are_given(schema):
 def test_summary_must_be_text(schema):
     assert _has(_errors(schema, _item(summary=["a"])), "summary must be text")
     assert _has(_errors(schema, _item(summary="  ")), "summary must be text")
-    assert _errors(schema, _item(summary="Two plain sentences. Like this.")) == []
+    assert (
+        _errors(schema, _item(summary="Two plain sentences. Like [this](https://example.com)."))
+        == []
+    )
 
 
 # --- one product page -------------------------------------------------------

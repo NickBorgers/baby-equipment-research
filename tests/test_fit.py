@@ -21,8 +21,13 @@ def stroller(**specs):
 
 
 def seat(seat_id="c", **specs):
-    return {"id": seat_id, "name": "C", "category": "car-seat", "status": "candidate",
-            "specs": specs}
+    return {
+        "id": seat_id,
+        "name": "C",
+        "category": "car-seat",
+        "status": "candidate",
+        "specs": specs,
+    }
 
 
 def bassinet(**specs):

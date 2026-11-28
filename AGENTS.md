@@ -14,6 +14,15 @@ from.
 `candidates/items/*.yaml` should have a note under `research/notes/` saying
 where it came from, with a URL and the date read. No note, no number.
 
+**1a. Cite with a hyperlink, everywhere.** The repo is published as a
+website, and a reader must be able to click through to the source of every
+claim. Wherever a source is named — in an ADR, a pro or con, a summary, an
+item's `notes` — make the name a Markdown link to the source's URL, taken
+from the research note that cites it. If the claim is the note's own
+synthesis, or no URL exists, link the note. Never invent a URL.
+`make check` fails if a pro, con, summary, `notes` field, ADR `summary` or
+`if_yours_differs` entry has no link.
+
 Model memory is not a source. Nick trusts an agent's reasoning, not what a
 language model remembers about products, prices, standards or companies.
 Every fact must come from a source read during the work. Memory may

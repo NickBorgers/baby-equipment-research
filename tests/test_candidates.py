@@ -105,8 +105,8 @@ def test_a_complete_valid_set_passes(schema):
             "recalls": [{"date": "2025-01-02", "url": "https://example.com", "summary": "x"}],
             "checked_on": "2026-11-27",
         },
-        pros=["light"],
-        cons=["pricey"],
+        pros=["light ([lab](https://example.com/a))"],
+        cons=["pricey ([note](../../research/notes/x.md))"],
     )
     stroller = _item(
         id="stroller-a",
@@ -153,6 +153,16 @@ def test_negative_price_is_rejected(schema):
 
 def test_pros_must_be_a_list(schema):
     assert _has(_errors(schema, _item(pros="light")), "pros must be a list")
+
+
+def test_pros_and_cons_must_cite_a_source_with_a_link(schema):
+    errors = _errors(schema, _item(pros=["light (BabyGearLab)"], cons=["heavy ([n](x.md))"]))
+    assert _has(errors, "pros #1 cites no source")
+    assert not _has(errors, "cons #1 cites no source")
+
+
+def test_notes_must_cite_with_links(schema):
+    assert _has(_errors(schema, _item(notes="Weight from BabyGearLab.")), "notes cite no source")
 
 
 def test_missing_adr_is_rejected(schema):

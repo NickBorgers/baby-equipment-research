@@ -33,20 +33,20 @@
 
 ## Pros
 
-- Aria V2 attaches directly, no adapter (Aria V2 manual).
-- Toddler seat approved from birth to 50 lb; infant insert included (US manual 250711). With the insert the reclined seat "forms a nest-like structure" (The Bump, 2-month-old).
-- CR maneuverability 5/5; colour-coded single-action brake; 30 lb basket easy to reach (CR, BabyGearLab).
+- Aria V2 attaches directly, no adapter ([Aria V2 manual](https://back.prod.uppababy.com/media/4b/51/e9/1794583326/US-EN_1002-ARI_AriaV2Manual_260724.pdf)).
+- Toddler seat approved from birth to 50 lb; infant insert included ([US manual 250711](https://back.prod.uppababy.com/media/d4/ec/95/1755268188/NA_0403-CRZ_CruzV3Manual_250711_a11y.pdf)). With the insert the reclined seat "forms a nest-like structure" ([The Bump](https://www.thebump.com/a/uppababy-cruz-v3-review), 2-month-old).
+- CR maneuverability 5/5; colour-coded single-action brake; 30 lb basket easy to reach ([CR](https://www.consumerreports.org/babies-kids/strollers/uppababy-cruz-v3/m419563/), [BabyGearLab](https://www.babygearlab.com/reviews/getting-around/full-size-stroller/uppababy-cruz-v3)).
 
 ## Cons
 
 Misuse risks come first.
 
-- **Misuse risk:** the manual says never lift by the bumper bar, but reviewers find no other clear handhold when lifting it folded (The Bump, BabyGearLab).
-- **Misuse risk:** the carrier lock has only a click and a lift check, no visual indicator (Aria V2 manual).
-- Bulky to lift into a trunk alone (The Bump); stiff suspension on cracks and bumps (BabyGearLab).
-- No hands-on test of an Aria or Mesa on it; carrier height unknown.
-- Does not fit the 22 x 14 x 9 in overhead bin; gate check only.
-- Fold needs two hands (BabyGearLab, CR).
+- **Misuse risk:** the [manual](https://back.prod.uppababy.com/media/d4/ec/95/1755268188/NA_0403-CRZ_CruzV3Manual_250711_a11y.pdf) says never lift by the bumper bar, but reviewers find no other clear handhold when lifting it folded ([The Bump](https://www.thebump.com/a/uppababy-cruz-v3-review), [BabyGearLab](https://www.babygearlab.com/reviews/getting-around/full-size-stroller/uppababy-cruz-v3)).
+- **Misuse risk:** the carrier lock has only a click and a lift check, no visual indicator ([Aria V2 manual](https://back.prod.uppababy.com/media/4b/51/e9/1794583326/US-EN_1002-ARI_AriaV2Manual_260724.pdf)).
+- Bulky to lift into a trunk alone ([The Bump](https://www.thebump.com/a/uppababy-cruz-v3-review)); stiff suspension on cracks and bumps ([BabyGearLab](https://www.babygearlab.com/reviews/getting-around/full-size-stroller/uppababy-cruz-v3)).
+- No hands-on test of an Aria or Mesa on it; carrier height unknown ([usability note](../../research/notes/2026-11-28-uppababy-full-size-usability.md)).
+- Does not fit the 22 x 14 x 9 in overhead bin; gate check only ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
+- Fold needs two hands ([BabyGearLab](https://www.babygearlab.com/reviews/getting-around/full-size-stroller/uppababy-cruz-v3), [CR](https://www.consumerreports.org/babies-kids/strollers/uppababy-cruz-v3/m419563/)).
 
 ## Fit and compatibility
 
@@ -70,7 +70,9 @@ The notes below and `research/open-questions.md` may list more.
 
 ## Notes
 
-Unknown: as-used weight with canopy and bumper; carrier height on the stroller (open question 28); usability not yet researched.
+- Unknown: as-used weight with canopy and bumper ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
+- Unknown: carrier height on the stroller, open question 28 ([Aria V2 stroller note](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)).
+- Usability not yet researched.
 
 ## Research notes
 

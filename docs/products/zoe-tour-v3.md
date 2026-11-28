@@ -33,21 +33,21 @@
 
 ## Pros
 
-- Lightest stroller found that takes the Aria V2, 14.5 lb (maker).
-- Newborn cocoon included; seat rated to 60 lb; handlebar has three heights (maker).
-- Adapter clicks in, with a pull-up check (adapter sheet).
+- Lightest stroller found that takes the Aria V2, 14.5 lb ([maker](https://zoebaby.com/products/zoe-tour-single-stroller)).
+- Newborn cocoon included; seat rated to 60 lb; handlebar has three heights ([maker](https://zoebaby.com/products/zoe-tour-single-stroller)).
+- Adapter clicks in, with a pull-up check ([adapter sheet](https://cdn.shopify.com/s/files/1/0251/0749/6994/files/Tour_V3_UPPAbaby_Adapter_Manual.pdf?v=1781483081)).
 
 ## Cons
 
 Misuse risks come first.
 
-- **Misuse risk:** two brake pedals, one per side; a V3 reviewer and a V3 owner flag it, and a V2 tester had the stroller roll when half-set.
-- **Misuse risk:** the newborn wrap must be fastened or the leg-opening strangulation warning applies; the manual names two different fastening points.
-- The manual bans use on "rough roads", which conflicts with daily walks on rough ground.
-- Does not stand when folded; carry strap is a $20 extra; basket only 10 lb.
-- No reviewer has tested an UPPAbaby seat on it; the canopy may need to come off one side with the car seat on (adapter sheet).
-- Usability evidence is thin; the fuller reviews are of the Tour V2, a different version.
-- Does not fit the 22 x 14 x 9 in overhead bin on published size; maker says only "some overhead bins".
+- **Misuse risk:** two brake pedals, one per side; a [V3 reviewer](https://strollermom.com/stroller/zoe-strollers) and a [V3 owner](https://zoebaby.com/products/zoe-tour-single-stroller) flag it, and a [V2 tester](https://www.lucieslist.com/review/zoe-the-tour-stroller-review/) had the stroller roll when half-set.
+- **Misuse risk:** the newborn wrap must be fastened or the leg-opening strangulation warning applies; the [manual](https://cdn.shopify.com/s/files/1/0251/0749/6994/files/Tour_V3_Manual.pdf?v=1781285525) names two different fastening points.
+- The [manual](https://cdn.shopify.com/s/files/1/0251/0749/6994/files/Tour_V3_Manual.pdf?v=1781285525) bans use on "rough roads", which conflicts with daily walks on rough ground.
+- Does not stand when folded; carry strap is a $20 extra; basket only 10 lb ([usability note](../../research/notes/2026-11-28-zoe-tour-v3-usability.md)).
+- No reviewer has tested an UPPAbaby seat on it; the canopy may need to come off one side with the car seat on ([adapter sheet](https://cdn.shopify.com/s/files/1/0251/0749/6994/files/Tour_V3_UPPAbaby_Adapter_Manual.pdf?v=1781483081)).
+- Usability evidence is thin; the fuller reviews are of the Tour V2, a different version ([usability note](../../research/notes/2026-11-28-zoe-tour-v3-usability.md)).
+- Does not fit the 22 x 14 x 9 in overhead bin on published size; maker says only "some overhead bins" ([strollers note](../../research/notes/2026-11-28-non-uppababy-strollers-for-aria-v2.md)).
 
 ## Fit and compatibility
 
@@ -72,7 +72,10 @@ The notes below and `research/open-questions.md` may list more.
 
 ## Notes
 
-Adapter must come off before folding. CR rated a different Zoe model (the Traveler) "Do Not Buy" for tipping backward in 2026; the Tour V3 was not tested. Unknown: measured weight, carrier height, stability, flight experience.
+- Adapter must come off before folding ([adapter sheet](https://cdn.shopify.com/s/files/1/0251/0749/6994/files/Tour_V3_UPPAbaby_Adapter_Manual.pdf?v=1781483081)).
+- CR rated a different Zoe model (the Traveler) "Do Not Buy" for tipping backward in 2026 ([usability note](../../research/notes/2026-11-28-zoe-tour-v3-usability.md)).
+- CR did not test the Tour V3 ([usability note](../../research/notes/2026-11-28-zoe-tour-v3-usability.md)).
+- Unknown: measured weight, carrier height, stability, flight experience ([usability note](../../research/notes/2026-11-28-zoe-tour-v3-usability.md)).
 
 ## Research notes
 

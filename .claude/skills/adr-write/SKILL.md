@@ -52,14 +52,21 @@ travel system. Skip it for reversible details; those go in the candidate's
    is not ready for an ADR (AGENTS.md rules 8 and 9). If a row is missing,
    research it or ask Nick before writing the ADR.
 
-5. **Write the body.** It has these sections: Context, Decision, Rationale,
+5. **Link every source** (AGENTS.md rule 1a). Wherever the ADR names a
+   source (a lab, a reviewer, NHTSA, a manual), make the name a Markdown
+   link to the URL in the research note that cites it. Link the note for
+   claims with no URL. `summary` and each `if_yours_differs` entry need at
+   least one link; `make check` fails otherwise. Paths are relative to
+   `decisions/`, e.g. `../research/notes/...`.
+
+6. **Write the body.** It has these sections: Context, Decision, Rationale,
    Alternatives considered, Consequences, Open questions. People often skip
    two of these, and they are the two most useful later:
    - **Alternatives considered**: say why each one lost.
    - **Consequences**: what this commits us to. Include what it rules out
      in other categories.
 
-6. **Point the candidates at it.** Set `decision: "0001"` on each affected
+7. **Point the candidates at it.** Set `decision: "0001"` on each affected
    candidate in `candidates/items/*.yaml`. Then run `make docs` and
    `make check`.
 

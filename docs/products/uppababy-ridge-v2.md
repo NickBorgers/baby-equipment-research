@@ -33,13 +33,13 @@
 
 ## Pros
 
-- Highest child limit of the line, 55 lb (US manual 251216).
+- Highest child limit of the line, 55 lb ([US manual 251216](https://back.prod.uppababy.com/media/6b/04/ab/1772548603/NA_1403-RDG-NA_RidgeV2Manual_251216.pdf)).
 
 ## Cons
 
-- Toddler seat is from 3 months only; newborn use without the car seat needs the Bassinet V3 ($279.99) plus Ridge adapters ($39.99).
-- Heaviest (29.9 lb measured) and largest folded; built as a jogger, and we will not jog.
-- Needs a $39.99 adapter for the Aria V2.
+- Toddler seat is from 3 months only; newborn use without the car seat needs the Bassinet V3 ($279.99) plus Ridge adapters ($39.99) ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
+- Heaviest (29.9 lb measured) and largest folded; built as a jogger, and we will not jog ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
+- Needs a $39.99 adapter for the Aria V2 ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
 
 ## Fit and compatibility
 
@@ -64,7 +64,8 @@ The notes below and `research/open-questions.md` may list more.
 
 ## Notes
 
-UPPAbaby says not to jog with an infant car seat attached. Kept on the record as a gate check; unlikely to suit travel use.
+- UPPAbaby says not to jog with an infant car seat attached.
+- Kept on the record as a gate check; unlikely to suit travel use ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
 
 ## Research notes
 
