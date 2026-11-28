@@ -5,6 +5,21 @@ status: accepted
 date: 2026-11-27
 category: general
 candidates: []
+summary: >-
+  The infant seat does not rotate. No rotating infant seat had a clean 213a
+  claim, and a swivel helps most with a seat that stays in the car. The
+  next seat, bought when the infant seat is outgrown, must rotate. The
+  stroller must outlast the infant seat: it works for a newborn on its own,
+  carries a toddler to about 50 lb, and takes the infant seat by adapter.
+if_yours_differs:
+  - >-
+    If rotation matters more to you than a 213a claim, four rotating infant
+    seats are sold in the US. All rotate in the base, so the carrier still
+    flies without it and clicks onto the same strollers. Check recalls:
+    Graco's was recalled in April 2026.
+  - >-
+    If you accept buying a second stroller later, a frame stroller or a car
+    seat with built-in wheels (such as the Doona) becomes an option.
 ---
 
 # 0003 — No rotating infant seat; rotation goes in the next seat, and the stroller outlasts the infant seat

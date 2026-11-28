@@ -5,6 +5,11 @@ repos: every claim is sourced, every decision is recorded, and every unknown
 is tracked. It starts with three categories: a **stroller**, a **car seat**,
 and a **standalone sleep bassinet**.
 
+**To read it, use the site:** <https://nickborgers.github.io/baby-equipment-research/>.
+It shows each decision, why we made it, and when another choice would suit
+another family, with links to the evidence. It is generated from this repo
+on every push to `main`. No page on it is written by hand.
+
 **Status: scaffolded, not researched.** No candidates are recorded yet. The
 backlog in [`research/open-questions.md`](research/open-questions.md) lists
 what to find out first: the household facts (cars, trunk, doorways, bedroom
@@ -50,6 +55,7 @@ docs/              GENERATED. Do not edit. `make docs` rebuilds these.
   COMPARISON.md    Side-by-side table for each category.
   FIT.md           Compatibility and fit results.
   products/        One summary page per candidate, and an index.
+tools/site.py      Assembles the GitHub Pages site into build/ (not committed).
 ```
 
 To read about one product, start at
@@ -68,10 +74,12 @@ agent CLIs and credentials get injected from `~/code/util`; this repo's
 make check    # validate the data, confirm docs are current, run the tests
 make docs     # regenerate docs/ after editing any YAML
 make fit      # print the compatibility + fit report without writing anything
+make serve    # preview the site at http://localhost:8000
 ```
 
 Without a devcontainer: `pip install -r requirements.txt` on Python 3.12,
-then the same commands. CI runs `make check` on every push.
+then the same commands. CI runs `make check` on every push. `make check`
+also builds the site, and fails on a broken link.
 
 ## What the fit check does
 

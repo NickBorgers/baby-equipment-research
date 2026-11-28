@@ -5,6 +5,25 @@ status: accepted
 date: 2026-11-27
 category: car-seat
 candidates: []
+summary: >-
+  The newborn rides in an infant car seat. Its carrier clicks into a base in
+  the car and onto the stroller. A convertible seat follows when the infant
+  seat is outgrown. We fly in the first year, and in an independent test an
+  infant seat fit a Model Y easily, while a rear-facing convertible "just
+  barely fit". Infant seats that meet 213a are being capped at 30 lb, so we
+  will buy a convertible either way. The infant seat is an extra seat that
+  buys about a year of a portable carrier.
+if_yours_differs:
+  - >-
+    If you rarely fly, the main reason for an infant seat weakens. A
+    convertible from birth is one seat for years, and saves buying the
+    extra infant seat.
+  - >-
+    If your back seat is roomier than a Model Y's, the space reason weakens
+    too.
+  - >-
+    How well a small newborn fits varies a lot between convertibles. Check
+    newborn fit for any convertible you consider.
 ---
 
 # 0002 — Start with an infant car seat that clicks onto the stroller

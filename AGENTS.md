@@ -61,6 +61,14 @@ candidate, add the note's filename to that list. Then run `make docs`. A
 `summary` field (2-4 plain sentences) goes at the top of the page. Leave it
 out until the research supports one.
 
+**4b. Every accepted ADR speaks to outside readers.** The public site
+(GitHub Pages) is generated from the repo on every push to `main`. No page
+on it is written by hand. Its home page shows each accepted ADR's
+`summary` and `if_yours_differs` front matter, so other families can see
+what we chose and when a different choice would suit them. Write both
+fields when an ADR is accepted. Restate only what the ADR and its notes
+already source. `make check` fails if an accepted ADR lacks either field.
+
 **5. Run `make check` before you finish.** It lints, validates the data,
 confirms the generated docs are current, and runs the tests. If it fails, the
 work is not done.
@@ -182,6 +190,7 @@ rules say how to find it and weigh it.
 | The notes behind a product | that item's `research_notes` list |
 | Which car seats click onto which stroller | that stroller's `compat` block |
 | A fact about the cars, the house or the budget | `household/household.yaml` |
+| A decision, explained for outside readers | that ADR's `summary` and `if_yours_differs` front matter |
 
 ## Skills
 
