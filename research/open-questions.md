@@ -407,6 +407,22 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   methods, and whether "buckle after wrapping" is allowed. See the
   [install note](notes/2026-11-28-uppababy-aria-v2-carrier-only-install.md).
 
+- [ ] **42. Do the UPPAbaby SmartSecure bases lose tightness while
+  driving?** Owners of both the Aria V2 and the Mesa V3 report the base
+  indicator going from green back to red after driving
+  ([Aria V2](notes/2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md),
+  [Mesa V3](notes/2026-11-28-infant-seats-firecrawl-retry.md)). Consumer
+  Reports lists the indicator as a pro
+  ([CR note](notes/2026-11-28-consumer-reports-infant-seats.md)). Unknown:
+  whether the base loosens or the indicator misreads. Recheck with the
+  1-inch test after driving, if we buy either.
+
+- [ ] **43. Which KeyFit 30 did Consumer Reports test, and does the
+  ClearTex base have a LATCH tensioner?** CR's page names no model number
+  or 213a claim. The Bump (2020) describes a "SuperCinch" tightener;
+  BabyGearLab says there is none. The current 213a manual would settle
+  the tensioner question.
+
 - [ ] **41. Has the 4-30 Primo Viaggio Nido fixed the 4-35's problems?**
   Checked 2026-11-28
   ([note](notes/2026-11-28-primo-viaggio-nido-4-30-fixes.md)): no hands-on

@@ -43,6 +43,7 @@ The cheapest and narrowest seat on the shortlist, and the only one tested in a M
 - Narrowest carrier in the survey, 16.75 in by the maker (market survey).
 - Lowest price on the shortlist, $229.99; extra base $134.99 (market survey).
 - Easy base install with a readable recline foot and bubble levels (CSFTL, BabyGearLab, CR agree; base shared across versions).
+- Consumer Reports overall 86, 6th of 46 infant seats, with 5/5 fit for both LATCH and seat belt installs; the version CR tested is not stated (read through Nick's CR account).
 - Widest third-party adapter coverage of the shortlist (Thule, Bugaboo Fox/Buffalo, Mockingbird, all Chicco strollers but two) (market survey).
 
 ## Cons
@@ -55,6 +56,7 @@ Misuse risks come first.
 - **Misuse risk:** harness height needs rethreading at the splitter plate; a strap can be left twisted or unhooked (manual warning; NHTSA notes the rethread).
 - Baseless install is American or lap-only, no European routing, and felt "wobbly in both test cars" (BabyGearLab); CR carrier-only 3/5.
 - No towel or noodle allowed under the base; if the foot cannot reach the angle, the base cannot be used in that seat (manual).
+- LATCH tightening "takes a fair amount of effort" (The Bump, one parent, 2020 unit before ClearTex). Low confidence.
 - Small canopy (several reviewers agree); one crotch position, three harness heights.
 - 30 in height limit; 6-year expiry, the shortest on the shortlist.
 
@@ -88,3 +90,5 @@ Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs, 213a
 - [2026-11-27-airline-seat-width-vs-infant-carriers.md](../../research/notes/2026-11-27-airline-seat-width-vs-infant-carriers.md)
 - [2026-11-27-model-y-infant-seat-fit-and-load-leg.md](../../research/notes/2026-11-27-model-y-infant-seat-fit-and-load-leg.md)
 - [2026-11-27-model-y-2022-cargo-and-rear-seat.md](../../research/notes/2026-11-27-model-y-2022-cargo-and-rear-seat.md)
+- [2026-11-28-consumer-reports-infant-seats.md](../../research/notes/2026-11-28-consumer-reports-infant-seats.md)
+- [2026-11-28-infant-seats-firecrawl-retry.md](../../research/notes/2026-11-28-infant-seats-firecrawl-retry.md)

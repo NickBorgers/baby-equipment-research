@@ -51,7 +51,10 @@ Fits the same UPPAbaby strollers as the Aria V2, with a 32 in height limit and t
 Misuse risks come first.
 
 - **Misuse risk:** a CPST saw the base's tightness indicator show green while the base was "still way too loose" (The Car Seat Lady, original Mesa base; same base family, not retested on V3). Always do the manual's 1-inch movement test.
+- **Misuse risk:** two owners report the base indicator going from green back to red while driving (Babylist, 2026-09-29), the same symptom Aria V2 owners report. Low confidence.
 - **Misuse risk:** the lock-off does little to hold the base on a vehicle belt; it "rocked fairly easily" under force (BabyGearLab V3). LATCH install avoids this.
+- Several owners report a newborn's head falling chin to chest; one baby failed a car seat test with the newborn insert and passed without it (Babylist owner reviews). Low confidence.
+- Consumer Reports has not tested V3; the Mesa V2 scored 68 (24th of 46) and is not CR Recommended (read through Nick's CR account).
 - Carrier measured 10.9 lb on V3, against the maker's 9.9 lb (BabyGearLab).
 - Buckle is stiff to press; the latch plates must be pulled out (BabyGearLab V3).
 - Manual mixes a "bubble" instruction with its green/red level marker (V2 and V3 manuals).
@@ -87,3 +90,5 @@ Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs, 213a
 - [2026-11-27-faa-car-seat-use-on-aircraft.md](../../research/notes/2026-11-27-faa-car-seat-use-on-aircraft.md)
 - [2026-11-27-airline-seat-width-vs-infant-carriers.md](../../research/notes/2026-11-27-airline-seat-width-vs-infant-carriers.md)
 - [2026-11-27-model-y-infant-seat-fit-and-load-leg.md](../../research/notes/2026-11-27-model-y-infant-seat-fit-and-load-leg.md)
+- [2026-11-28-consumer-reports-infant-seats.md](../../research/notes/2026-11-28-consumer-reports-infant-seats.md)
+- [2026-11-28-infant-seats-firecrawl-retry.md](../../research/notes/2026-11-28-infant-seats-firecrawl-retry.md)
