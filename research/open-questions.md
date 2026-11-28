@@ -301,9 +301,10 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   of each seat, and a test install in our car.
   Aria V2, 2026-11-28
   ([note](notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)):
-  no Model Y report for any Aria. Also unknown: whether the Model Y's rear
-  shoulder belt is long enough to wrap the V2 shell for European routing
-  ([note](notes/2026-11-28-uppababy-aria-v2-carrier-only-install.md)).
+  no Model Y report for any Aria. Nick, 2026-11-28: the Model Y always
+  uses the base, so baseless fit there (e.g. whether its shoulder belt
+  wraps the V2 shell) does not matter. What matters is the base install:
+  LATCH or belt, load leg, recline and front legroom.
 
 - [ ] **31. Is Joie actually in stock in the US, and what is "Baby Safety
   Alliance certified"?** Joie's Rue, Mint Latch and Rue LX Spin pages carry

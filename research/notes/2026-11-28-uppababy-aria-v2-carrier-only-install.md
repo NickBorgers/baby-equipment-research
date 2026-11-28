@@ -190,8 +190,9 @@ in the manual, not an instruction conflict.
 
 ## Open questions
 
-- Is the Model Y's rear shoulder belt long enough to wrap the V2 shell? A
-  test install in our car settles it.
+- Is the Model Y's rear shoulder belt long enough to wrap the V2 shell?
+  Moot: Nick said on 2026-11-28 that the Model Y always uses the base.
+  Baseless installs matter for travel and other cars only.
 - What UPPAbaby Customer Service advises when the belt will not reach.
 - Why V2 dropped the other methods.
 - Whether the tipping trick or buckling last is allowed on the V2.
