@@ -5,11 +5,11 @@
 
 - **Id:** `chicco-keyfit-30-cleartex`
 - **Category:** car-seat
-- **Status:** shortlisted
+- **Status:** rejected
 - **Price:** $229.99
 - **Brand:** Chicco
 - **Maker's page:** <https://www.chiccousa.com/shop-our-products/car-seats/infant/keyfit-30-cleartex-infant-car-seat---pewter/05087002560070.html>
-- **Decision:** none yet
+- **Decision:** [ADR 0004: Buy the UPPAbaby Aria V2 infant car seat](../../decisions/0004-buy-the-uppababy-aria-v2.md)
 
 ## Summary
 
@@ -64,22 +64,17 @@ Misuse risks come first.
 
 - No stroller lists this seat in its compat yet.
 
-| Against | Result | Detail |
-| --- | --- | --- |
-| 2022 Tesla Model Y rear seat | insufficient data | rough screen only — the vehicle and seat manuals decide |
-
-[FIT.md](../FIT.md) explains the method.
+Rejected candidates are not fit-checked.
 
 ## Still unknown
 
 - Spec `base_width_in`.
-- Fit input: household vehicle '2022 Tesla Model Y' rear_seat_width_in.
 
 The notes below and `research/open-questions.md` may list more.
 
 ## Notes
 
-Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs, 213a page claim, price, recalls, Cars.com), 2026-11-27-chicco-keyfit-30-usability.md, 2026-11-27-nhtsa-ease-of-use-ratings.md. The 213a claim is on the product page only; the manual is dated 03-2020. No review tested the current 213a-labeled unit; physical changes for 213a not found. Reviewers conflict on whether the base has a tensioner (SuperCinch). Width for airline seats: CSFTL measured 17.5 in at the handle hubs. Unknown: as-used weight with canopy and insert, fit at 4 and 7 months, carrier height on a stroller (open question 28), base width. Price seen during Black Friday 2026.
+Rejected under ADR 0004: no load leg, no towel allowed under the base, wobbly without the base, rethread harness, 6-year expiry. Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs, 213a page claim, price, recalls, Cars.com), 2026-11-27-chicco-keyfit-30-usability.md, 2026-11-27-nhtsa-ease-of-use-ratings.md. The 213a claim is on the product page only; the manual is dated 03-2020. No review tested the current 213a-labeled unit; physical changes for 213a not found. Reviewers conflict on whether the base has a tensioner (SuperCinch). Width for airline seats: CSFTL measured 17.5 in at the handle hubs. Unknown: as-used weight with canopy and insert, fit at 4 and 7 months, carrier height on a stroller (open question 28), base width. Price seen during Black Friday 2026.
 
 ## Research notes
 
@@ -92,3 +87,4 @@ Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs, 213a
 - [2026-11-27-model-y-2022-cargo-and-rear-seat.md](../../research/notes/2026-11-27-model-y-2022-cargo-and-rear-seat.md)
 - [2026-11-28-consumer-reports-infant-seats.md](../../research/notes/2026-11-28-consumer-reports-infant-seats.md)
 - [2026-11-28-infant-seats-firecrawl-retry.md](../../research/notes/2026-11-28-infant-seats-firecrawl-retry.md)
+- [2026-11-28-load-leg-sled-test-evidence.md](../../research/notes/2026-11-28-load-leg-sled-test-evidence.md)

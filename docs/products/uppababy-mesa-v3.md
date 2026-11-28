@@ -9,7 +9,7 @@
 - **Price:** $349.99
 - **Brand:** UPPAbaby
 - **Maker's page:** <https://uppababy.com/car-seats/infant/mesa-v3/james/>
-- **Decision:** none yet
+- **Decision:** [ADR 0004: Buy the UPPAbaby Aria V2 infant car seat](../../decisions/0004-buy-the-uppababy-aria-v2.md)
 
 ## Summary
 
@@ -79,7 +79,7 @@ The notes below and `research/open-questions.md` may list more.
 
 ## Notes
 
-Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs, 213a page claim, price, recalls), 2026-11-27-uppababy-mesa-v3-usability.md, 2026-11-27-nhtsa-ease-of-use-ratings.md. Expiry depends on the manual revision printed for the unit: 7 years (rev. 250529) or 10 years (rev. 251226); check the label. BabyGearLab's 2023 V2 test found the level indicator narrow and hard to read; its 2026 V3 test found it forgiving. No CPST hands-on review of V3 daily use exists. Recall check is a text search of NHTSA's flat file. Unknown: Model Y recline without a towel, fit at 4 and 7 months, durability, carrier height on a stroller (open question 28), base width. Price seen during Black Friday 2026.
+Fallback under ADR 0004 if the Aria V2 fails the Model Y test install. Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs, 213a page claim, price, recalls), 2026-11-27-uppababy-mesa-v3-usability.md, 2026-11-27-nhtsa-ease-of-use-ratings.md. Expiry depends on the manual revision printed for the unit: 7 years (rev. 250529) or 10 years (rev. 251226); check the label. BabyGearLab's 2023 V2 test found the level indicator narrow and hard to read; its 2026 V3 test found it forgiving. No CPST hands-on review of V3 daily use exists. Recall check is a text search of NHTSA's flat file. Unknown: Model Y recline without a towel, fit at 4 and 7 months, durability, carrier height on a stroller (open question 28), base width. Price seen during Black Friday 2026.
 
 ## Research notes
 
@@ -92,3 +92,4 @@ Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs, 213a
 - [2026-11-27-model-y-infant-seat-fit-and-load-leg.md](../../research/notes/2026-11-27-model-y-infant-seat-fit-and-load-leg.md)
 - [2026-11-28-consumer-reports-infant-seats.md](../../research/notes/2026-11-28-consumer-reports-infant-seats.md)
 - [2026-11-28-infant-seats-firecrawl-retry.md](../../research/notes/2026-11-28-infant-seats-firecrawl-retry.md)
+- [2026-11-28-load-leg-sled-test-evidence.md](../../research/notes/2026-11-28-load-leg-sled-test-evidence.md)

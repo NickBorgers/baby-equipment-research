@@ -382,7 +382,10 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
 
 ## Raised by the infant seat shortlist (2026-11-27)
 
-- [ ] **38. Which shortlisted infant seat do we buy?** Nick picks one of
+- [x] **38. Which shortlisted infant seat do we buy?** Decided
+  2026-11-28: the Aria V2, in
+  [ADR 0004](../decisions/0004-buy-the-uppababy-aria-v2.md), with the Mesa
+  V3 as fallback. Original question: Nick picks one of
   `uppababy-aria-v2`, `uppababy-mesa-v3` or `chicco-keyfit-30-cleartex`
   (see `docs/COMPARISON.md` and the usability notes of 2026-11-27). The
   agent leaned toward the Aria V2 for travel: the lightest carrier and a

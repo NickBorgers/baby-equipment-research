@@ -6,17 +6,18 @@
 - id: uppababy-aria-v2
   name: UPPAbaby Aria V2 (1002-ARI, US)
   category: car-seat
-  status: shortlisted
+  status: selected
   summary: >-
-    The lightest carrier on the shortlist, about 7 lb as used. Its base has
-    a load leg and an anti-rebound panel, but its tightness indicator is
-    unreliable, so always do the 1-inch movement test. Without the base it
-    allows only European routing, so it cannot go on a lap-only or
-    inflatable belt. No technician has reviewed the V2 by hand yet.
+    Selected under ADR 0004. Its base has a load leg and an anti-rebound
+    panel, and sled tests link a load leg to lower head injury measures. It
+    goes in our Model Y on LATCH, which avoids its weak belt lock-off, and
+    it has the lightest carrier, about 7 lb as used. Its costs: only one way
+    to install without the base, a 30 in limit, an unreliable tightness
+    indicator, and no technician review of the V2 yet.
   brand: UPPAbaby
   price_usd: 399.99
   vendor_url: https://uppababy.com/car-seats/infant/aria-v2/james/
-  decision: null
+  decision: "0004"
   specs:
     weight_lb: 7          # as used, about 7 lb; maker's 6 lb leaves out canopy and insert
     child_weight_lb: [4, 30]
@@ -32,8 +33,8 @@
     checked_on: "2026-11-28"
   pros:
     - Lightest carrier on the shortlist, about 7 lb as used (aria-v2 usability note).
-    - Baseless European-routing install was "super stable and firm" with no towel (BabyGearLab V2, aria-v2 usability note).
-    - Base has a load leg and an anti-rebound panel (market survey).
+    - Baseless European-routing install was "super stable and firm" with no towel (BabyGearLab V2). The Mesa V3 tested just as stable, so this is not an advantage over it.
+    - Base has a load leg and an anti-rebound panel (market survey). A peer-reviewed sled study linked a support leg to significant reductions in head injury measures (load-leg note).
     - Canopy rated "as close to perfect as an infant carrier can get" (BabyGearLab V2).
     - No-rethread harness with 25 headrest positions (maker).
   cons:
@@ -72,6 +73,7 @@
     - 2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md
     - 2026-11-28-consumer-reports-infant-seats.md
     - 2026-11-28-infant-seats-firecrawl-retry.md
+    - 2026-11-28-load-leg-sled-test-evidence.md
 - id: uppababy-mesa-v3
   name: UPPAbaby Mesa V3 (US)
   category: car-seat
@@ -85,7 +87,7 @@
   brand: UPPAbaby
   price_usd: 349.99
   vendor_url: https://uppababy.com/car-seats/infant/mesa-v3/james/
-  decision: null
+  decision: "0004"
   specs:
     weight_lb: 10.9       # BabyGearLab measured on V3; maker says 9.9
     child_weight_lb: [4, 30]
@@ -117,6 +119,7 @@
     - Manual mixes a "bubble" instruction with its green/red level marker (V2 and V3 manuals).
     - Stroller range is UPPAbaby strollers plus Mockingbird adapters; not on Thule's chart (market survey).
   notes: >-
+    Fallback under ADR 0004 if the Aria V2 fails the Model Y test install.
     Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs,
     213a page claim, price, recalls), 2026-11-27-uppababy-mesa-v3-usability.md,
     2026-11-27-nhtsa-ease-of-use-ratings.md. Expiry depends on the manual
@@ -137,10 +140,11 @@
     - 2026-11-27-model-y-infant-seat-fit-and-load-leg.md
     - 2026-11-28-consumer-reports-infant-seats.md
     - 2026-11-28-infant-seats-firecrawl-retry.md
+    - 2026-11-28-load-leg-sled-test-evidence.md
 - id: chicco-keyfit-30-cleartex
   name: Chicco KeyFit 30 ClearTex (US)
   category: car-seat
-  status: shortlisted
+  status: rejected
   summary: >-
     The cheapest and narrowest seat on the shortlist, and the only one
     tested in a Model Y (Cars.com, 2021 car, grade A). Its base has no load
@@ -150,7 +154,7 @@
   brand: Chicco
   price_usd: 229.99
   vendor_url: https://www.chiccousa.com/shop-our-products/car-seats/infant/keyfit-30-cleartex-infant-car-seat---pewter/05087002560070.html
-  decision: null
+  decision: "0004"
   specs:
     weight_lb: 9.5        # maker; reviewer figures 9.0-9.8 lb, none states canopy/insert
     child_weight_lb: [4, 30]
@@ -182,6 +186,8 @@
     - Small canopy (several reviewers agree); one crotch position, three harness heights.
     - 30 in height limit; 6-year expiry, the shortest on the shortlist.
   notes: >-
+    Rejected under ADR 0004: no load leg, no towel allowed under the base,
+    wobbly without the base, rethread harness, 6-year expiry.
     Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs,
     213a page claim, price, recalls, Cars.com), 2026-11-27-chicco-keyfit-30-usability.md,
     2026-11-27-nhtsa-ease-of-use-ratings.md. The 213a claim is on the product
@@ -201,3 +207,4 @@
     - 2026-11-27-model-y-2022-cargo-and-rear-seat.md
     - 2026-11-28-consumer-reports-infant-seats.md
     - 2026-11-28-infant-seats-firecrawl-retry.md
+    - 2026-11-28-load-leg-sled-test-evidence.md

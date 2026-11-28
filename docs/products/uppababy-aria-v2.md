@@ -5,15 +5,15 @@
 
 - **Id:** `uppababy-aria-v2`
 - **Category:** car-seat
-- **Status:** shortlisted
+- **Status:** selected
 - **Price:** $399.99
 - **Brand:** UPPAbaby
 - **Maker's page:** <https://uppababy.com/car-seats/infant/aria-v2/james/>
-- **Decision:** none yet
+- **Decision:** [ADR 0004: Buy the UPPAbaby Aria V2 infant car seat](../../decisions/0004-buy-the-uppababy-aria-v2.md)
 
 ## Summary
 
-The lightest carrier on the shortlist, about 7 lb as used. Its base has a load leg and an anti-rebound panel, but its tightness indicator is unreliable, so always do the 1-inch movement test. Without the base it allows only European routing, so it cannot go on a lap-only or inflatable belt. No technician has reviewed the V2 by hand yet.
+Selected under ADR 0004. Its base has a load leg and an anti-rebound panel, and sled tests link a load leg to lower head injury measures. It goes in our Model Y on LATCH, which avoids its weak belt lock-off, and it has the lightest carrier, about 7 lb as used. Its costs: only one way to install without the base, a 30 in limit, an unreliable tightness indicator, and no technician review of the V2 yet.
 
 ## Key specs
 
@@ -40,8 +40,8 @@ The lightest carrier on the shortlist, about 7 lb as used. Its base has a load l
 ## Pros
 
 - Lightest carrier on the shortlist, about 7 lb as used (aria-v2 usability note).
-- Baseless European-routing install was "super stable and firm" with no towel (BabyGearLab V2, aria-v2 usability note).
-- Base has a load leg and an anti-rebound panel (market survey).
+- Baseless European-routing install was "super stable and firm" with no towel (BabyGearLab V2). The Mesa V3 tested just as stable, so this is not an advantage over it.
+- Base has a load leg and an anti-rebound panel (market survey). A peer-reviewed sled study linked a support leg to significant reductions in head injury measures (load-leg note).
 - Canopy rated "as close to perfect as an infant carrier can get" (BabyGearLab V2).
 - No-rethread harness with 25 headrest positions (maker).
 
@@ -90,3 +90,4 @@ Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs, 213a
 - [2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)
 - [2026-11-28-consumer-reports-infant-seats.md](../../research/notes/2026-11-28-consumer-reports-infant-seats.md)
 - [2026-11-28-infant-seats-firecrawl-retry.md](../../research/notes/2026-11-28-infant-seats-firecrawl-retry.md)
+- [2026-11-28-load-leg-sled-test-evidence.md](../../research/notes/2026-11-28-load-leg-sled-test-evidence.md)

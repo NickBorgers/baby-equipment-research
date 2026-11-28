@@ -3,7 +3,7 @@
 
 # Candidate comparison
 
-3 candidates. 0 are decided (selected, ordered or owned); 0 still have no price.
+3 candidates. 1 are decided (selected, ordered or owned); 0 still have no price.
 
 `?` means not researched yet. See `research/open-questions.md`. The car seat `213a` column is decision 0001's side-impact requirement.
 
@@ -17,9 +17,9 @@ No candidates yet.
 
 | Candidate | Status | Price | 213a | weight_lb | child_weight_lb | expiry_years | faa_approved | Pros | Cons | ADR |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [`chicco-keyfit-30-cleartex`](products/chicco-keyfit-30-cleartex.md) — Chicco KeyFit 30 ClearTex (US) | shortlisted | $229.99 | yes | 9.5 | 4–30 | 6 | yes | 6 | 9 | — |
-| [`uppababy-aria-v2`](products/uppababy-aria-v2.md) — UPPAbaby Aria V2 (1002-ARI, US) | shortlisted | $399.99 | yes | 7 | 4–30 | 10 | yes | 5 | 8 | — |
-| [`uppababy-mesa-v3`](products/uppababy-mesa-v3.md) — UPPAbaby Mesa V3 (US) | shortlisted | $349.99 | yes | 10.9 | 4–30 | 10 | yes | 6 | 9 | — |
+| [`uppababy-aria-v2`](products/uppababy-aria-v2.md) — UPPAbaby Aria V2 (1002-ARI, US) | selected | $399.99 | yes | 7 | 4–30 | 10 | yes | 5 | 8 | [0004](../decisions/0004-buy-the-uppababy-aria-v2.md) |
+| [`uppababy-mesa-v3`](products/uppababy-mesa-v3.md) — UPPAbaby Mesa V3 (US) | shortlisted | $349.99 | yes | 10.9 | 4–30 | 10 | yes | 6 | 9 | [0004](../decisions/0004-buy-the-uppababy-aria-v2.md) |
+| [`chicco-keyfit-30-cleartex`](products/chicco-keyfit-30-cleartex.md) — Chicco KeyFit 30 ClearTex (US) | rejected | $229.99 | yes | 9.5 | 4–30 | 6 | yes | 6 | 9 | [0004](../decisions/0004-buy-the-uppababy-aria-v2.md) |
 
 ## bassinet
 
@@ -27,4 +27,4 @@ No candidates yet.
 
 ## Cost of decided items
 
-Known so far: **$0.00** across 0 priced, decided items.
+Known so far: **$399.99** across 1 priced, decided items.
