@@ -7,7 +7,16 @@ One page per candidate, generated from `candidates/items/*.yaml`. Each page summ
 
 ## stroller
 
-No products yet.
+| Product | Status | Price |
+| --- | --- | --- |
+| [Mockingbird Single Stroller 3.0](mockingbird-single-3.md) | candidate | $475.00 |
+| [Mockingbird Travel Stroller (2026)](mockingbird-travel-stroller.md) | candidate | $399.00 |
+| [UPPAbaby Cruz V3 (0403-CRZ, US)](uppababy-cruz-v3.md) | candidate | $899.99 |
+| [UPPAbaby Kona (2201-KNA, US)](uppababy-kona.md) | candidate | $649.99 |
+| [UPPAbaby Minu V3 (0803-MIN, US)](uppababy-minu-v3.md) | candidate | $499.99 |
+| [UPPAbaby Ridge V2 (1403-RDG, US)](uppababy-ridge-v2.md) | candidate | $699.99 |
+| [UPPAbaby Vista V3 (0303-VSO, US)](uppababy-vista-v3.md) | candidate | $999.99 |
+| [Zoe Tour V3](zoe-tour-v3.md) | candidate | $299.00 |
 
 ## car-seat
 

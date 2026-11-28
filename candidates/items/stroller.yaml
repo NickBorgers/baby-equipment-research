@@ -1,3 +1,360 @@
 # Stroller candidates. See categories/stroller/README.md and candidates/schema.yaml.
-# Empty until the first research round — every entry needs a research note first.
-[]
+# First round 2026-11-28: strollers that take the Aria V2 (ADR 0004), checked
+# against the 0003 gates (newborn-capable alone, about 50 lb, maker-listed
+# adapter). Specs only so far; usability is not yet judged (AGENTS.md rule 8).
+
+- id: uppababy-minu-v3
+  name: UPPAbaby Minu V3 (0803-MIN, US)
+  category: stroller
+  status: candidate
+  brand: UPPAbaby
+  price_usd: 499.99
+  vendor_url: https://uppababy.com/strollers/lightweight/minu-v3/james/
+  specs:
+    weight_lb: 16.7          # maker "True weight"; BabyGearLab measured 16.7
+    folded_in: [21.5, 18, 10]  # maker; BabyGearLab measured 21.6 x 17.6 x 9.2
+    open_width_in: 18
+    seat_recline: infinite; BabyGearLab measured 157.7°, not fully flat
+    max_child_lb: 50
+    one_hand_fold: null      # maker says one-handed; BabyGearLab "Maybe for some"
+    wheels: polyurethane, all-wheel suspension
+  safety:
+    standards: []
+    recalls: []
+    checked_on: "2026-11-28"
+  compat:
+    accepts_car_seats: []
+    needs_adapter:
+      uppababy-aria-v2: Adapters for Minu V3 (Aria & Mesa), 0904-MMA-WW
+      uppababy-mesa-v3: Adapters for Minu V3 (Aria & Mesa), 0904-MMA-WW
+    incompatible: []
+  pros:
+    - Toddler seat approved from birth to 50 lb with no add-on (US manual 250127).
+    - Lightest and smallest folded of the UPPAbaby line, 16.7 lb (maker and BabyGearLab).
+    - Smooth on pavement and up curbs; CR maneuverability 5/5 (usability note).
+    - Canopy is large with a mesh window and UPF 50+; stands when folded (BabyGearLab, CR).
+    - The $99.99 travel bag includes TravelSafe, covering air-travel damage for 4 years (maker).
+  cons:
+    - "Misuse risk: the adapter's colour dots show it is on the frame, not that the carrier is latched. Lift the carrier every time (maker; Aria V2 manual)."
+    - "Misuse risk: newborn use needs the full recline and the rear crotch slot; the seat is not fully flat (157.7°, BabyGearLab), and two reviewers would hesitate with a tiny newborn."
+    - "Misuse risk: one owner says the brake held only one wheel (snippet only). Check both wheels."
+    - No hands-on test of any Aria or Mesa on the Minu V3 found; lock feel, wobble and carrier height unknown.
+    - Small wheels struggle on gravel, cobbles and grass (CR, MadeForMums, BabyGearLab).
+    - Handlebar does not adjust; fold is one-handed for some testers but not others.
+    - Needs a $39.99 adapter for the Aria V2.
+    - Does not fit the 22 x 14 x 9 in overhead bin on published or measured size, despite the maker's "fits in any overhead bin" claim.
+    - No bassinet or newborn insert made for it.
+    - Bumper bar is a $39.99 extra.
+    - One unverified consumer report (SaferProducts.gov, 2024) says a Minu V2 with Mesa adapters released the car seat going downhill. Older model; lift the carrier to check the latch every time.
+  notes: >-
+    The car seat attaches with the seat fully reclined (adapter page).
+    Unknown: as-used weight with canopy, bumper bar and adapters; folded
+    size with adapters on; carrier height on the stroller (open question
+    28); usability not yet researched.
+  research_notes:
+    - 2026-11-28-stroller-recall-check-method.md
+    - 2026-11-28-uppababy-strollers-specs-and-gates.md
+    - 2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md
+    - 2026-11-28-uppababy-minu-v3-usability.md
+
+- id: uppababy-kona
+  name: UPPAbaby Kona (2201-KNA, US)
+  category: stroller
+  status: candidate
+  brand: UPPAbaby
+  price_usd: 649.99
+  vendor_url: https://uppababy.com/strollers/full-size/kona/james/
+  specs:
+    weight_lb: 22            # maker "Frame & seat"; bundle page says 21.2; not measured
+    folded_in: [25.8, 21, 13.4]  # maker, with seat
+    open_width_in: 21
+    seat_recline: 4 positions; maker says "lay-flat" and "near-flat"
+    max_child_lb: 50
+    one_hand_fold: null      # Babylist says one hand; owners say it sticks
+    wheels: never-flat tires, all-wheel suspension
+  safety:
+    standards: []
+    recalls: []
+    checked_on: "2026-11-28"
+  compat:
+    accepts_car_seats: [uppababy-aria-v2]
+    needs_adapter: {}
+    incompatible: []
+  pros:
+    - Toddler seat approved from birth to 50 lb with no add-on (US manual 260710).
+    - UPPAbaby sells it as a Kona + Aria V2 bundle; the seat "attaches directly" (bundle page, help centre 2026-09-25).
+    - Lighter than the Cruz V3 and Vista V3 (22 lb, maker); folds with the seat on either way; travel bag needs no wheel removal ($149.99).
+  cons:
+    - "Misuse risk: no manual describes attaching the Aria V2 to the Kona or checking it. The Kona manual has no car seat section, and the Aria V2 manual (rev. 260724) does not list the Kona."
+    - "Misuse risk: UPPAbaby's bundle page says the carrier can face outward on the Kona; the Aria V2 manual allows parent-facing only."
+    - Ride over bumps is "good, but not great", rougher than the Cruz and Vista (Babylist); seat sits low and the handlebar wobbles when fully extended.
+    - Fold gets stuck for some owners (low confidence); no measured weight or fold; only one hands-on write-up.
+    - Does not fit the 22 x 14 x 9 in overhead bin.
+  notes: >-
+    New in 2026. Aria V2 compat is recorded from UPPAbaby's bundle page and
+    help centre, not a manual (open question 44). The Mesa V3 is left
+    unknown. Unknown: carrier height and stability, measured weight and
+    fold, gate-check durability.
+  research_notes:
+    - 2026-11-28-stroller-recall-check-method.md
+    - 2026-11-28-uppababy-strollers-specs-and-gates.md
+    - 2026-11-28-uppababy-full-size-usability.md
+
+- id: uppababy-cruz-v3
+  name: UPPAbaby Cruz V3 (0403-CRZ, US)
+  category: stroller
+  status: candidate
+  brand: UPPAbaby
+  price_usd: 899.99
+  vendor_url: https://uppababy.com/strollers/full-size/cruz-v3/james/
+  specs:
+    weight_lb: 26.5          # maker "Frame & Seat"; BabyGearLab table 26.5
+    folded_in: [32.5, 22.5, 17]  # maker, with seat; 30.3 x 22.5 x 13.5 without
+    open_width_in: 22.5
+    seat_recline: 4 positions, lay-flat
+    max_child_lb: 50
+    one_hand_fold: false     # BabyGearLab: "requires two hands"; maker says "one-step"
+    wheels: foam-filled, all-wheel suspension
+  safety:
+    standards: []
+    recalls: []
+    checked_on: "2026-11-28"
+  compat:
+    accepts_car_seats: [uppababy-aria-v2, uppababy-mesa-v3]
+    needs_adapter: {}
+    incompatible: []
+  pros:
+    - Aria V2 attaches directly, no adapter (Aria V2 manual).
+    - Toddler seat approved from birth to 50 lb; infant insert included (US manual 250711). With the insert the reclined seat "forms a nest-like structure" (The Bump, 2-month-old).
+    - CR maneuverability 5/5; colour-coded single-action brake; 30 lb basket easy to reach (CR, BabyGearLab).
+  cons:
+    - "Misuse risk: the manual says never lift by the bumper bar, but reviewers find no other clear handhold when lifting it folded (The Bump, BabyGearLab)."
+    - "Misuse risk: the carrier lock has only a click and a lift check, no visual indicator (Aria V2 manual)."
+    - Bulky to lift into a trunk alone (The Bump); stiff suspension on cracks and bumps (BabyGearLab).
+    - No hands-on test of an Aria or Mesa on it; carrier height unknown.
+    - Does not fit the 22 x 14 x 9 in overhead bin; gate check only.
+    - Fold needs two hands (BabyGearLab, CR).
+  notes: >-
+    Unknown: as-used weight with canopy and bumper; carrier height on the
+    stroller (open question 28); usability not yet researched.
+  research_notes:
+    - 2026-11-28-stroller-recall-check-method.md
+    - 2026-11-28-uppababy-strollers-specs-and-gates.md
+    - 2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md
+    - 2026-11-28-uppababy-full-size-usability.md
+
+- id: uppababy-vista-v3
+  name: UPPAbaby Vista V3 (0303-VSO, US)
+  category: stroller
+  status: candidate
+  brand: UPPAbaby
+  price_usd: 999.99
+  vendor_url: https://uppababy.com/strollers/full-size/vista-v3/james/
+  specs:
+    weight_lb: 27.9          # BabyGearLab measured; maker 27.6 "Frame & Seat"
+    folded_in: [33.8, 25.7, 16.3]  # maker, with seat; 32.3 x 25.7 x 11.3 without
+    open_width_in: 25.7
+    seat_recline: 6 positions
+    max_child_lb: 50
+    one_hand_fold: false     # BabyGearLab: "requires two hands"
+    wheels: foam-filled, all-wheel suspension
+  safety:
+    standards: []
+    recalls: []
+    checked_on: "2026-11-28"
+  compat:
+    accepts_car_seats: [uppababy-aria-v2, uppababy-mesa-v3]
+    needs_adapter: {}
+    incompatible: []
+  pros:
+    - Aria V2 attaches directly, no adapter (Aria V2 manual).
+    - Canopy called "the best canopy I've ever used on a stroller" (CR); CR maneuverability 5/5; 30 lb basket.
+  cons:
+    - Toddler seat is from 3 months only; from birth it needs the Infant SnugSeat ($69.99) or Bassinet V3 ($279.99), neither included (US manual 251118).
+    - Heaviest and widest folded of the strollers that pass 0003 alone, apart from Ridge V2; does not fit the overhead bin.
+    - Fold needs two hands and several set-up steps (BabyGearLab, CR, help centre); pinches fingers when lifted folded (BabyGearLab).
+    - Reviews conflict on rough ground; CR's tester found it "rattly, almost rickety" on cobblestones.
+    - No hands-on test of the SnugSeat, or of an Aria or Mesa on it.
+    - Highest price of the line, $999.99.
+  notes: >-
+    Can convert to a double; not needed now. Unknown: carrier height on the
+    stroller; usability not yet researched.
+  research_notes:
+    - 2026-11-28-stroller-recall-check-method.md
+    - 2026-11-28-uppababy-strollers-specs-and-gates.md
+    - 2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md
+    - 2026-11-28-uppababy-full-size-usability.md
+
+- id: uppababy-ridge-v2
+  name: UPPAbaby Ridge V2 (1403-RDG, US)
+  category: stroller
+  status: candidate
+  brand: UPPAbaby
+  price_usd: 699.99
+  vendor_url: https://uppababy.com/insiders/ridge-v2/james/
+  specs:
+    weight_lb: 29.9          # BabyGearLab measured; maker 29.2 or 30
+    folded_in: [36, 25.6, 19.5]  # maker
+    open_width_in: 25.6
+    seat_recline: infinite
+    max_child_lb: 55
+    one_hand_fold: true      # maker and BabyGearLab; start button "temperamental"
+    wheels: foam-filled rubber, 11.5 in front / 15.25 in rear; two-stage suspension
+  safety:
+    standards: []
+    recalls: []
+    checked_on: "2026-11-28"
+  compat:
+    accepts_car_seats: []
+    needs_adapter:
+      uppababy-aria-v2: Adapters for Ridge (Aria, Mesa & Bassinet), 0901-RMA-WW
+      uppababy-mesa-v3: Adapters for Ridge (Aria, Mesa & Bassinet), 0901-RMA-WW
+    incompatible: []
+  pros:
+    - Highest child limit of the line, 55 lb (US manual 251216).
+  cons:
+    - Toddler seat is from 3 months only; newborn use without the car seat needs the Bassinet V3 ($279.99) plus Ridge adapters ($39.99).
+    - Heaviest (29.9 lb measured) and largest folded; built as a jogger, and we will not jog.
+    - Needs a $39.99 adapter for the Aria V2.
+  notes: >-
+    UPPAbaby says not to jog with an infant car seat attached. Kept on the
+    record as a gate check; unlikely to suit travel use.
+  research_notes:
+    - 2026-11-28-stroller-recall-check-method.md
+    - 2026-11-28-uppababy-strollers-specs-and-gates.md
+    - 2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md
+
+- id: mockingbird-travel-stroller
+  name: Mockingbird Travel Stroller (2026)
+  category: stroller
+  status: candidate
+  brand: Mockingbird
+  price_usd: 399            # regular; $349 Black Friday 2026
+  vendor_url: https://hellomockingbird.com/products/mockingbird-travel-stroller
+  specs:
+    weight_lb: 17.7          # maker; page's own table says 17.6; not measured
+    folded_in: [21.5, 18, 10]  # maker
+    open_width_in: 18
+    seat_recline: lie-flat ("Infant Nest Mode", maker); not measured
+    max_child_lb: 50
+    one_hand_fold: true      # auto-fold; manual and several reviews
+    wheels: airless, 5 in front / 6 in rear, all-wheel suspension
+  safety:
+    standards: []
+    recalls: []
+    checked_on: "2026-11-28"
+  compat:
+    accepts_car_seats: []
+    needs_adapter:
+      uppababy-aria-v2: FlexConnect strap adapter (included), or QuickConnect UPPAbaby Adapter ($50)
+    incompatible: []
+  pros:
+    - Newborn mode built in and included ("Infant Nest Mode"), to 50 lb (maker); a CPST reviewer called it "so flat" (sponsored, not measured).
+    - One-hand auto-fold that stands on its own (manual; Babylist, Stroller Mom).
+    - Handled cobblestones, gravel and uneven streets well (Stroller Mom, sponsored; Babylist).
+    - Maker chart names the Aria V2 explicitly (November 2026); a strap adapter is included. Lifetime frame warranty.
+  cons:
+    - "Misuse risk: the FlexConnect strap is tightened by hand with no tension indicator; a loose, twisted or mis-routed strap gives no cue. The only check is pulling up on the carrier (FlexConnect manual)."
+    - "Misuse risk: the adapter has a wrong peg (the Nest Mode peg) right beside the right one, and setup needs full recline, leg rest up, brake on and harness fastened (manual)."
+    - "Misuse risk: straps left on the stroller are a strangulation hazard; remove them when not in use (manual)."
+    - No reviewer has used an UPPAbaby seat on it; carrier stability and height unknown.
+    - New in autumn 2026; no measured weight, no gate-check or durability reports yet. Main hands-on review is sponsored.
+    - Does not fit the 22 x 14 x 9 in overhead bin on published size, despite the maker's "IATA-compliant" claim.
+    - Earlier Mockingbird Single and Single-to-Double lots were recalled in 2022-23 because the lower frame could crack (CPSC 23-042, 23-161). Current models are not named.
+  notes: >-
+    The full-size Mockingbird adapter does not fit this stroller; it uses
+    FlexConnect or QuickConnect. The QuickConnect ($50) may give a click-in
+    lock; its manual was not read. Handlebar fixed at 41.5 in. Basket 20 lb.
+    Cannot fold in Nest Mode. Unknown: as-used weight, carrier height,
+    gate-check durability.
+  research_notes:
+    - 2026-11-28-stroller-recall-check-method.md
+    - 2026-11-28-non-uppababy-strollers-for-aria-v2.md
+    - 2026-11-28-mockingbird-travel-stroller-usability.md
+
+- id: zoe-tour-v3
+  name: Zoe Tour V3
+  category: stroller
+  status: candidate
+  brand: Zoe
+  price_usd: 299
+  vendor_url: https://zoebaby.com/products/zoe-tour-single-stroller
+  specs:
+    weight_lb: 14.5          # maker; same page also says "Only 13 pounds"; not measured
+    folded_in: [26.75, 21.75, 10]  # maker, without belly bar
+    open_width_in: 21.75
+    seat_recline: 155° with included newborn cocoon (maker)
+    max_child_lb: 60
+    one_hand_fold: true      # one review and one owner; low confidence
+    wheels: 6 in front / 6.25 in rear
+  safety:
+    standards: []
+    recalls: []
+    checked_on: "2026-11-28"
+  compat:
+    accepts_car_seats: []
+    needs_adapter:
+      uppababy-aria-v2: Tour V3 UPPAbaby Car Seat Adapter, model 810033595783 ($55)
+      uppababy-mesa-v3: Tour V3 UPPAbaby Car Seat Adapter, model 810033595783 ($55)
+    incompatible: []
+  pros:
+    - Lightest stroller found that takes the Aria V2, 14.5 lb (maker).
+    - Newborn cocoon included; seat rated to 60 lb; handlebar has three heights (maker).
+    - Adapter clicks in, with a pull-up check (adapter sheet).
+  cons:
+    - "Misuse risk: two brake pedals, one per side; a V3 reviewer and a V3 owner flag it, and a V2 tester had the stroller roll when half-set."
+    - "Misuse risk: the newborn wrap must be fastened or the leg-opening strangulation warning applies; the manual names two different fastening points."
+    - The manual bans use on "rough roads", which conflicts with daily walks on rough ground.
+    - Does not stand when folded; carry strap is a $20 extra; basket only 10 lb.
+    - No reviewer has tested an UPPAbaby seat on it; the canopy may need to come off one side with the car seat on (adapter sheet).
+    - Usability evidence is thin; the fuller reviews are of the Tour V2, a different version.
+    - Does not fit the 22 x 14 x 9 in overhead bin on published size; maker says only "some overhead bins".
+  notes: >-
+    Adapter must come off before folding. CR rated a different Zoe model
+    (the Traveler) "Do Not Buy" for tipping backward in 2026; the Tour V3
+    was not tested. Unknown: measured weight, carrier height, stability,
+    flight experience.
+  research_notes:
+    - 2026-11-28-stroller-recall-check-method.md
+    - 2026-11-28-non-uppababy-strollers-for-aria-v2.md
+    - 2026-11-28-zoe-tour-v3-usability.md
+
+- id: mockingbird-single-3
+  name: Mockingbird Single Stroller 3.0
+  category: stroller
+  status: candidate
+  brand: Mockingbird
+  price_usd: 475
+  vendor_url: https://hellomockingbird.com/products/mockingbird-stroller
+  specs:
+    weight_lb: 27            # maker
+    folded_in: [34, 26, 16]  # maker spec list; FAQ says 33.5 x 25.5 x 16
+    open_width_in: null
+    seat_recline: null
+    max_child_lb: 50
+    one_hand_fold: null
+    wheels: null
+  safety:
+    standards: []
+    recalls: []
+    checked_on: "2026-11-28"
+  compat:
+    accepts_car_seats: []
+    needs_adapter:
+      uppababy-aria-v2: Mockingbird Car Seat Adapter, Uppababy option ($50)
+      uppababy-mesa-v3: Mockingbird Car Seat Adapter, Uppababy option ($50)
+    incompatible: []
+  pros:
+    - Maker chart names the Aria V2 explicitly (November 2026).
+    - Lowest price of the full-size strollers found, $475 ($520 with newborn insert).
+  cons:
+    - Seat is from 3 months only; from birth it needs the Infant Seat Insert, Bassinet or Carriage, sold separately or in the $520 bundle (maker).
+    - Does not fit the overhead bin; 27 lb.
+    - Earlier Mockingbird Single and Single-to-Double lots were recalled in 2022-23 because the lower frame could crack (CPSC 23-042, 23-161). Current models are not named.
+  notes: >-
+    The Single-to-Double 3.0 uses the same adapter but not in twin setups;
+    not a candidate since a double is not needed. Unknown: recline, open
+    width, fold, wheels, carrier height, usability.
+  research_notes:
+    - 2026-11-28-stroller-recall-check-method.md
+    - 2026-11-28-non-uppababy-strollers-for-aria-v2.md

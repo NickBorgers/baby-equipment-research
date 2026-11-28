@@ -197,3 +197,11 @@ def test_render_lists_blockers_and_never_claims_a_fit_on_unknowns():
     assert "## What blocks a real answer" in text
     assert "- s specs.folded_in" in text
     assert "- household vehicle 'Car' trunk_in" in text
+
+
+def test_storage_check_dropped_only_when_household_says_unlimited():
+    items = [{"id": "s", "category": "stroller", "status": "candidate", "specs": {}}]
+    asked = fit.run(items, {"home": {}})["Stroller in its storage spot"]
+    assert [c.outcome for c in asked] == [fit.UNKNOWN]
+    dropped = fit.run(items, {"home": {"stroller_storage_limited": False}})
+    assert dropped["Stroller in its storage spot"] == []

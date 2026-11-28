@@ -8,6 +8,8 @@ car seat.
 - [0002](../../decisions/0002-infant-car-seat-that-clicks-onto-the-stroller.md) —
   **accepted.** The stroller must accept the chosen infant car seat, per a
   manufacturer's chart or manual. The car seat is chosen first.
+- [0004](../../decisions/0004-buy-the-uppababy-aria-v2.md) — **accepted.**
+  The car seat is the UPPAbaby Aria V2, so the stroller must take it.
 - [0003](../../decisions/0003-no-rotation-now-buy-for-the-long-run.md) —
   **accepted.** The stroller outlasts the infant seat: newborn-capable on
   its own, rated to about 50 lb, and takes the infant seat by adapter.
@@ -18,7 +20,10 @@ Open question 10 (full-size, compact or travel) is still open — see
 
 ## Candidates
 
-None yet. See [`candidates/items/stroller.yaml`](../../candidates/items/stroller.yaml)
+Eight candidates from the first round (2026-11-28), all of which take the
+Aria V2 or may: five UPPAbaby strollers, the Mockingbird Travel and Single
+3.0, and the Zoe Tour V3. Specs only so far; usability is not yet judged.
+See [`candidates/items/stroller.yaml`](../../candidates/items/stroller.yaml)
 and the generated [`docs/COMPARISON.md`](../../docs/COMPARISON.md).
 
 ## What to judge
@@ -49,5 +54,6 @@ skill.
 
 ## Open questions
 
-See `research/open-questions.md` items 3, 5, 10, 12, 13, 16, 18, 22 and 28.
+See `research/open-questions.md` items 3, 5, 10, 12, 13, 18, 22, 28 and
+44-48.
 Known use: travel from the start, including flying; no jogging (items 8 and 20).
