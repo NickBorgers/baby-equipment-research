@@ -29,6 +29,15 @@ suggest where to look. It never fills a gap. These rules also apply:
 Use the `researcher` agent (`.claude/agents/researcher.md`) for lookups.
 It carries these rules.
 
+Read web pages with the Firecrawl tools (`firecrawl_scrape`,
+`firecrawl_search`, `firecrawl_map`), set up in `.mcp.json`. They return
+the page text word for word, and they get past many sites that block
+scripts. WebFetch rewords pages through a summarizer, so re-read its
+quotes. Never read reddit.com or amazon.com with any automated tool;
+their terms forbid it. Read Consumer Reports only through Nick's
+signed-in proxy, a few pages at a time, and cite it as "read through
+Nick's CR account". `researcher.md` has the details and limits.
+
 **2. Unknown is `null`, never a pass.** A `null` means "not researched yet".
 The fit check reports it as *insufficient data*, never as *fits*. Never fill a
 `null` with a plausible guess to make a check pass — that is exactly the
