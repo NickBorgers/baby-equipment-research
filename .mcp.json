@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "firecrawl": {
+      "type": "http",
+      "url": "http://dockergeneric.featherback-mermaid.ts.net:8791/mcp",
+      "headersHelper": "f=/run/util/firecrawl-mcp-token; [ -r \"$f\" ] || f=\"$HOME/.config/util/firecrawl-mcp-token-baby-equipment\"; printf '{\"Authorization\": \"Bearer %s\"}' \"$(cat \"$f\")\""
+    }
+  }
+}
