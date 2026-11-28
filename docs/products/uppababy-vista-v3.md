@@ -69,7 +69,6 @@ The notes below and `research/open-questions.md` may list more.
 
 - Can convert to a double; not needed now ([Aria V2 stroller note](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)).
 - Unknown: carrier height on the stroller ([Aria V2 stroller note](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)).
-- Usability not yet researched.
 
 ## Research notes
 

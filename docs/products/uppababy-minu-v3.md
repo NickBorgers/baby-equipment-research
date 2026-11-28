@@ -83,7 +83,6 @@ The notes below and `research/open-questions.md` may list more.
 - Unknown: as-used weight with canopy, bumper bar and adapters ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
 - Unknown: folded size with adapters on ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
 - Unknown: carrier height on the stroller, open question 28 ([Aria V2 stroller note](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)).
-- Usability not yet researched.
 
 ## Research notes
 

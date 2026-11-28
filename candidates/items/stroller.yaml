@@ -51,7 +51,6 @@
     - Unknown: as-used weight with canopy, bumper bar and adapters ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
     - Unknown: folded size with adapters on ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
     - Unknown: carrier height on the stroller, open question 28 ([Aria V2 stroller note](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)).
-    - Usability not yet researched.
   research_notes:
     - 2026-11-28-stroller-recall-check-method.md
     - 2026-11-28-uppababy-strollers-specs-and-gates.md
@@ -140,7 +139,6 @@
   notes: |
     - Unknown: as-used weight with canopy and bumper ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
     - Unknown: carrier height on the stroller, open question 28 ([Aria V2 stroller note](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)).
-    - Usability not yet researched.
   research_notes:
     - 2026-11-28-stroller-recall-check-method.md
     - 2026-11-28-uppababy-strollers-specs-and-gates.md
@@ -183,7 +181,6 @@
   notes: |
     - Can convert to a double; not needed now ([Aria V2 stroller note](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)).
     - Unknown: carrier height on the stroller ([Aria V2 stroller note](../../research/notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)).
-    - Usability not yet researched.
   research_notes:
     - 2026-11-28-stroller-recall-check-method.md
     - 2026-11-28-uppababy-strollers-specs-and-gates.md
@@ -222,12 +219,13 @@
     - "Heaviest (29.9 lb measured) and largest folded; built as a jogger, and we will not jog ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md))."
     - "Needs a $39.99 adapter for the Aria V2 ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md))."
   notes: |
-    - UPPAbaby says not to jog with an infant car seat attached.
+    - UPPAbaby says you "should not jog with an infant car seat attached to the Ridge" ([support FAQ](https://support.uppababy.com/hc/en-us/articles/4403595638039-Can-I-jog-with-an-infant-car-seat-on-the-Ridge)).
     - Kept on the record as a gate check; unlikely to suit travel use ([specs note](../../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md)).
   research_notes:
     - 2026-11-28-stroller-recall-check-method.md
     - 2026-11-28-uppababy-strollers-specs-and-gates.md
     - 2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md
+    - 2026-11-28-sources-for-unsourced-claims.md
 
 - id: mockingbird-travel-stroller
   name: Mockingbird Travel Stroller (2026)

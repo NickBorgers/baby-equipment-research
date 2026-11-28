@@ -81,7 +81,13 @@ found:
   cleanly today, so wanting one would mean relaxing 0001 or waiting on makers.
 - **It keeps the rebuy to the car seat.** With 2 and 3, the whole run is two
   car seats and one stroller. What is thrown away when the infant stage ends
-  is the infant base and the stroller adapters, roughly $150-250 of parts.
+  is the infant base and any stroller adapters. Bought separately, the
+  [Aria V2 base](https://uppababy.com/accessories/car-seats-accessories/base-for-aria/)
+  costs $229.99 and adapters cost $39.99-55
+  ([specs note](../research/notes/2026-11-28-uppababy-strollers-specs-and-gates.md),
+  [other strollers](../research/notes/2026-11-28-non-uppababy-strollers-for-aria-v2.md)),
+  so roughly $230-285 of parts at list price (checked 2026-11-28). The base
+  comes in the seat's box, so the real cost is lower.
   The infant seat and base can be kept for a later child until they expire.
 
 ## Alternatives considered

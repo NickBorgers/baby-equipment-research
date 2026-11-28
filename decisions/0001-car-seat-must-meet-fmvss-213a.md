@@ -8,8 +8,9 @@ candidates: []
 summary: >-
   Every car seat must have its maker's claim, in a primary source, that it
   is certified to [FMVSS 213a](https://www.ecfr.gov/current/title-49/part-571/section-571.213a), the federal side-impact test. The unit
-  we buy must carry that certification too. Side impacts are a common,
-  serious crash type, and [seats made before the rule can still be sold
+  we buy must carry that certification too. NHTSA says side impacts [rank
+  almost equal to frontal crashes](https://www.govinfo.gov/content/pkg/FR-2022-06-30/html/2022-13658.htm)
+  as a cause of child deaths and serious injuries, and [seats made before the rule can still be sold
   without it](../research/notes/2026-11-27-fmvss-213a-status-and-infant-seats.md).
 if_yours_differs:
   - >-
@@ -47,8 +48,13 @@ carry that certification too: check its manufacture date and its label.
 ## Rationale
 
 Nick's requirement (2026-11-27): "For the car seat I would like to be
-looking for FMVSS 213a". Side impacts are a common, serious crash type, and
-[213a](https://www.ecfr.gov/current/title-49/part-571/section-571.213a) is the federal test for them. Buying a seat made before the rule, just
+looking for FMVSS 213a". In
+[NHTSA's words](https://www.govinfo.gov/content/pkg/FR-2022-06-30/html/2022-13658.htm),
+side impacts "rank almost equal to frontal crashes as a source of occupant
+fatalities and serious injuries to children ages 0 to 12 years". In the
+rule's data, 25 percent of deaths among restrained children in the rear
+seat were in side crashes (31 percent were frontal). The data come from
+older studies, not current crash rates. [213a](https://www.ecfr.gov/current/title-49/part-571/section-571.213a) is the federal test for them. Buying a seat made before the rule, just
 as it takes effect, would mean buying to an older standard than the one in
 force.
 
