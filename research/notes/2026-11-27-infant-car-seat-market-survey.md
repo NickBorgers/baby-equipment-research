@@ -350,3 +350,17 @@ item with:
   than 6 years old. Check manufacturer's label on underside of Child
   Restraint for the "Do Not Use After" date." So the 6 years run from
   manufacture. Confidence: high.
+- **Joie Rue baseless routing.** The table row above says "lap/shoulder and
+  lap-only (American)". The Rue manual (IS-2024-07-11) p.21/58 makes
+  European routing "Option 1 (suggested)", with American routing and
+  lap-only as options. See the
+  [Rue usability note](2026-11-27-joie-rue-usability.md). Confidence: high.
+- **Expiry depends on the manual revision.** Mesa V3 rev 250529 says 7
+  years from manufacture; rev 251226 says 10 years. Mint Latch rev F says 7
+  years from manufacture; rev G (2025-06) says 7 years from purchase. See
+  the [Mesa V3](2026-11-27-uppababy-mesa-v3-usability.md) and
+  [Mint Latch](2026-11-27-joie-mint-latch-usability.md) usability notes.
+  Confidence: high.
+- **Joie Base AR has no named tensioner.** The table's "belt tensioner"
+  came from retail copy. The Base AR manual (IM-001719C) names only a
+  lock-off bar and an anti-rebound bar. Confidence: high.

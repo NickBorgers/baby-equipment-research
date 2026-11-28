@@ -23,7 +23,10 @@ vehicles:
       research/notes/2026-11-27-model-y-2022-cargo-and-rear-seat.md.
       Replace them once measured. Lower LATCH anchors are on the second-row
       outboard seats only; the center seat is seat-belt install only (Tesla
-      manual 2022.40).
+      manual 2022.40). The infant seat base stays installed in this car; a
+      carrier-only (baseless) install is for travel and other cars only
+      (Nick, 2026-11-28). The base goes in an outboard rear seat, installed
+      with the lower LATCH anchors, not the vehicle belt (Nick, 2026-11-28).
 
 # Cars that may come later. NOT checked by tools/fit.py — we are buying for
 # `vehicles` above. Kept so a later purchase can be re-checked quickly.

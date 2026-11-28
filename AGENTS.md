@@ -109,8 +109,11 @@ rules say how to find it and weigh it.
   recall, expiry or safe-sleep claim (see "Safety claims need a primary
   source" below).
 - **Use the right sources, in this order:**
-  1. NHTSA ease-of-use ratings, for car seats. Not yet verified as
-     available or readable; see open question 26.
+  1. NHTSA ease-of-use ratings, for car seats. They rate labels,
+     instructions, securing the child and installation, not crash
+     safety. Read them from `api.nhtsa.gov/childSeats?dataSet=ratings`
+     with a browser User-Agent; see the
+     [ratings note](research/notes/2026-11-27-nhtsa-ease-of-use-ratings.md).
   2. Hands-on reviews by child passenger safety technicians (CPSTs). The
      best ones test with real babies or weighted dolls at several ages.
   3. Lab reviews with a published scoring method. Each lab scores

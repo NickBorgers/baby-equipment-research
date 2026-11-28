@@ -3,7 +3,7 @@
 
 # Compatibility and fit
 
-0 checks: 0 fit, 0 do not fit, 0 have insufficient data.
+2 checks: 0 fit, 0 do not fit, 2 have insufficient data.
 
 An unknown never counts as a fit. See `tools/fit.py` for the method and the `fit-check` skill for how to read this.
 
@@ -29,7 +29,10 @@ Nothing to check yet.
 
 ## Car seat in the back seat
 
-Nothing to check yet.
+| Candidate | Against | Result | Detail |
+| --- | --- | --- | --- |
+| `uppababy-aria-v2` | 2022 Tesla Model Y rear seat | insufficient data | rough screen only — the vehicle and seat manuals decide |
+| `uppababy-mesa-v3` | 2022 Tesla Model Y rear seat | insufficient data | rough screen only — the vehicle and seat manuals decide |
 
 ## Bassinet beside the bed
 
@@ -37,4 +40,6 @@ Nothing to check yet.
 
 ## What blocks a real answer
 
-No checks ran yet — there are no candidates to check.
+- household vehicle '2022 Tesla Model Y' rear_seat_width_in
+- uppababy-aria-v2 specs.base_width_in
+- uppababy-mesa-v3 specs.base_width_in

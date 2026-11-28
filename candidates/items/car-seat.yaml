@@ -1,3 +1,210 @@
 # Infant car seat candidates. See categories/car-seat/README.md and candidates/schema.yaml.
-# Empty until the first research round — every entry needs a research note first.
-[]
+# Shortlist of 2026-11-27, built from the market survey (0001 gate) and the
+# usability notes of the same date (AGENTS.md rule 8). The seats it beat are
+# in research/notes/; they are not listed here.
+
+- id: uppababy-aria-v2
+  name: UPPAbaby Aria V2 (1002-ARI, US)
+  category: car-seat
+  status: selected
+  summary: >-
+    Selected under ADR 0004. Its base has a load leg and an anti-rebound
+    panel, and sled tests link a load leg to lower head injury measures. It
+    goes in our Model Y on LATCH, which avoids its weak belt lock-off, and
+    it has the lightest carrier, about 7 lb as used. Its costs: only one way
+    to install without the base, a 30 in limit, an unreliable tightness
+    indicator, and no technician review of the V2 yet.
+  brand: UPPAbaby
+  price_usd: 399.99
+  vendor_url: https://uppababy.com/car-seats/infant/aria-v2/james/
+  decision: "0004"
+  specs:
+    weight_lb: 7          # as used, about 7 lb; maker's 6 lb leaves out canopy and insert
+    child_weight_lb: [4, 30]
+    child_height_in_max: 30
+    base_width_in: null
+    expiry_years: 10      # manual rev. 260724; V1 was 7
+    faa_approved: true
+    aircraft_install: carrier only, without the base
+    carrier_width_in: 17
+  safety:
+    standards: [FMVSS 213, FMVSS 213a]
+    recalls: []
+    checked_on: "2026-11-28"
+  pros:
+    - Lightest carrier on the shortlist, about 7 lb as used (aria-v2 usability note).
+    - Baseless European-routing install was "super stable and firm" with no towel (BabyGearLab V2). The Mesa V3 tested just as stable, so this is not an advantage over it.
+    - Base has a load leg and an anti-rebound panel (market survey). A peer-reviewed sled study linked a support leg to significant reductions in head injury measures (load-leg note).
+    - Canopy rated "as close to perfect as an infant carrier can get" (BabyGearLab V2).
+    - No-rethread harness with 25 headrest positions (maker).
+  cons:
+    - "Misuse risk: the base's tightness indicator turned green before the base was tight, on V1 and on V2 (BabyGearLab); owners also report it falling back to red after driving (low confidence), as Mesa V3 owners do. CR (V1) lists the indicator as a pro, so the labs conflict. Always do the manual's 1-inch movement test."
+    - "Misuse risk: on a vehicle-belt base install, the belt could slip in the lock-off when shaken (BabyGearLab V2). A Texas A&M KidSafe install demo got no movement with it, so V2 evidence conflicts. LATCH install avoids the question."
+    - "Misuse risk: European routing is the only baseless method allowed; if a shoulder belt cannot reach around the shell, the V2 manual offers only customer service, no fallback. A car seat with a lap-only belt cannot take the carrier without its base (V1 allowed it)."
+    - "Inflatable vehicle seat belts are banned for every install, with or without the base (V2 manual p. 27)."
+    - Outgrown by height sooner than most infant seats (30 in limit; CPST con on Babylist; V1 head-room data; V2 owner reports are mostly from an incentivized testing panel). Low confidence.
+    - Harness tightener has more resistance than most; hard to get snug without over-tightening (BabyGearLab V2).
+    - Stroller range is UPPAbaby strollers plus Mockingbird adapters (market survey).
+    - Not rated by NHTSA ease-of-use in the current feed (nhtsa ease-of-use note).
+  notes: >-
+    Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs,
+    213a page claim, price, recalls), 2026-11-27-uppababy-aria-v2-usability.md,
+    2026-11-27-nhtsa-ease-of-use-ratings.md,
+    2026-11-28-uppababy-aria-v2-carrier-only-install.md,
+    2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md,
+    2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md. The weight is the as-used figure
+    (BabyGearLab 6.8 lb measured, CSFTL 7 lb fully dressed on V1, retailer 7.1
+    lb); the maker's 6 lb excludes canopy and insert. Recall check
+    2026-11-28: NHTSA childSeats API record "UPPABABY | ARIA" shows 0
+    recalls, 0 investigations, 1 complaint (fabric torn by Velcro in the
+    wash). Consumer Reports has not tested V2; its V1 page scored 78 (16th of 46), crash protection "Better" (read through Nick's CR account). No CPST hands-on review of V2 exists yet; fit evidence is V1 or
+    incentivized V2 owner reviews. The aircraft method is lap belt only,
+    carrier only (manual pp. 52-54). Unknown: Model Y recline without a
+    towel (our Model Y always uses the base), fit at 9-12
+    months, carrier height on a stroller (open question 28), base width. Price seen during
+    Black Friday 2026.
+  research_notes:
+    - 2026-11-27-infant-car-seat-market-survey.md
+    - 2026-11-27-fmvss-213a-status-and-infant-seats.md
+    - 2026-11-27-nhtsa-ease-of-use-ratings.md
+    - 2026-11-27-uppababy-aria-v2-usability.md
+    - 2026-11-28-uppababy-aria-v2-carrier-only-install.md
+    - 2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md
+    - 2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md
+    - 2026-11-28-consumer-reports-infant-seats.md
+    - 2026-11-28-infant-seats-firecrawl-retry.md
+    - 2026-11-28-load-leg-sled-test-evidence.md
+- id: uppababy-mesa-v3
+  name: UPPAbaby Mesa V3 (US)
+  category: car-seat
+  status: shortlisted
+  summary: >-
+    Fits the same UPPAbaby strollers as the Aria V2, with a 32 in height
+    limit and three ways to install without the base. Its base has no load
+    leg, and BabyGearLab found its LATCH install not the most stable in the
+    group. The carrier weighs about 10.9 lb (measured). NHTSA rated the
+    older V2 5 stars for ease of use; the V3 is not rated.
+  brand: UPPAbaby
+  price_usd: 349.99
+  vendor_url: https://uppababy.com/car-seats/infant/mesa-v3/james/
+  decision: "0004"
+  specs:
+    weight_lb: 10.9       # BabyGearLab measured on V3; maker says 9.9
+    child_weight_lb: [4, 30]
+    child_height_in_max: 32
+    base_width_in: null
+    expiry_years: 10      # manual rev. 251226; rev. 250529 said 7
+    faa_approved: true
+    aircraft_install: carrier only, without the base
+    carrier_width_in: 17
+  safety:
+    standards: [FMVSS 213, FMVSS 213a]
+    recalls: []
+    checked_on: "2026-11-27"
+  pros:
+    - Baseless European-routing install "remarkably stable compared to competitors", no towel (BabyGearLab V3).
+    - Three baseless methods allowed (European, optional lap/shoulder, lap-only), so it has a fallback in taxis (V3 manual).
+    - 32 in height limit, longer than the Aria V2 and KeyFit 30 (manual).
+    - NHTSA ease-of-use rated the Mesa V2 5 stars in every category; V3 not rated (older version).
+    - Canopy "one of the best in the group" and never hits the handle (BabyGearLab V3).
+    - No-rethread harness with 25 headrest positions (maker).
+  cons:
+    - "Misuse risk: a CPST saw the base's tightness indicator show green while the base was \"still way too loose\" (The Car Seat Lady, original Mesa base; same base family, not retested on V3). Always do the manual's 1-inch movement test."
+    - "Misuse risk: two owners report the base indicator going from green back to red while driving (Babylist, 2026-09-29), the same symptom Aria V2 owners report. Low confidence."
+    - "Misuse risk: the lock-off does little to hold the base on a vehicle belt; it \"rocked fairly easily\" under force (BabyGearLab V3). LATCH install avoids this."
+    - Several owners report a newborn's head falling chin to chest; one baby failed a car seat test with the newborn insert and passed without it (Babylist owner reviews). Low confidence.
+    - Consumer Reports has not tested V3; the Mesa V2 scored 68 (24th of 46) and is not CR Recommended (read through Nick's CR account).
+    - Carrier measured 10.9 lb on V3, against the maker's 9.9 lb (BabyGearLab).
+    - Buckle is stiff to press; the latch plates must be pulled out (BabyGearLab V3).
+    - Manual mixes a "bubble" instruction with its green/red level marker (V2 and V3 manuals).
+    - Stroller range is UPPAbaby strollers plus Mockingbird adapters; not on Thule's chart (market survey).
+  notes: >-
+    Fallback under ADR 0004 if the Aria V2 fails the Model Y test install.
+    Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs,
+    213a page claim, price, recalls), 2026-11-27-uppababy-mesa-v3-usability.md,
+    2026-11-27-nhtsa-ease-of-use-ratings.md. Expiry depends on the manual
+    revision printed for the unit: 7 years (rev. 250529) or 10 years (rev.
+    251226); check the label. BabyGearLab's 2023 V2 test found the level
+    indicator narrow and hard to read; its 2026 V3 test found it forgiving.
+    No CPST hands-on review of V3 daily use exists. Recall check is a text
+    search of NHTSA's flat file. Unknown: Model Y recline without a towel,
+    fit at 4 and 7 months, durability, carrier height on a stroller (open
+    question 28), base width. Price seen during Black Friday 2026.
+  research_notes:
+    - 2026-11-27-infant-car-seat-market-survey.md
+    - 2026-11-27-fmvss-213a-status-and-infant-seats.md
+    - 2026-11-27-nhtsa-ease-of-use-ratings.md
+    - 2026-11-27-uppababy-mesa-v3-usability.md
+    - 2026-11-27-faa-car-seat-use-on-aircraft.md
+    - 2026-11-27-airline-seat-width-vs-infant-carriers.md
+    - 2026-11-27-model-y-infant-seat-fit-and-load-leg.md
+    - 2026-11-28-consumer-reports-infant-seats.md
+    - 2026-11-28-infant-seats-firecrawl-retry.md
+    - 2026-11-28-load-leg-sled-test-evidence.md
+- id: chicco-keyfit-30-cleartex
+  name: Chicco KeyFit 30 ClearTex (US)
+  category: car-seat
+  status: rejected
+  summary: >-
+    The cheapest and narrowest seat on the shortlist, and the only one
+    tested in a Model Y (Cars.com, 2021 car, grade A). Its base has no load
+    leg, and the manual allows no towel under the base if the bubble
+    cannot reach the level range. No review tested the current
+    213a-labeled unit.
+  brand: Chicco
+  price_usd: 229.99
+  vendor_url: https://www.chiccousa.com/shop-our-products/car-seats/infant/keyfit-30-cleartex-infant-car-seat---pewter/05087002560070.html
+  decision: "0004"
+  specs:
+    weight_lb: 9.5        # maker; reviewer figures 9.0-9.8 lb, none states canopy/insert
+    child_weight_lb: [4, 30]
+    child_height_in_max: 30
+    base_width_in: null
+    expiry_years: 6       # manual 03-2020 p.8, from manufacture
+    faa_approved: true
+    aircraft_install: carrier only; manual silent on the base
+    carrier_width_in: 16.75   # maker; CSFTL measured 17.5 in at the handle hubs
+  safety:
+    standards: [FMVSS 213, FMVSS 213a, FMVSS 213b]
+    recalls: []
+    checked_on: "2026-11-27"
+  pros:
+    - Only seat with a Model Y test - Cars.com grade A in a 2021 Model Y, "fit easily" (market survey).
+    - Narrowest carrier in the survey, 16.75 in by the maker (market survey).
+    - Lowest price on the shortlist, $229.99; extra base $134.99 (market survey).
+    - Easy base install with a readable recline foot and bubble levels (CSFTL, BabyGearLab, CR agree; base shared across versions).
+    - Consumer Reports overall 86, 6th of 46 infant seats, with 5/5 fit for both LATCH and seat belt installs; the version CR tested is not stated (read through Nick's CR account).
+    - Widest third-party adapter coverage of the shortlist (Thule, Bugaboo Fox/Buffalo, Mockingbird, all Chicco strollers but two) (market survey).
+  cons:
+    - "Misuse risk: NHTSA ease-of-use rates its labels 1 star - no harness slot height marking, no LATCH illustrations (NHTSA, unit made 2026-03-01). Overall 3 stars."
+    - "Misuse risk: no click-in indicator; a correct latch depends on hearing the click and lifting the carrier every time (BabyGearLab, manual)."
+    - "Misuse risk: caregivers often use both lock-offs at once; the manual allows only the one opposite the buckle (CSFTL)."
+    - "Misuse risk: harness height needs rethreading at the splitter plate; a strap can be left twisted or unhooked (manual warning; NHTSA notes the rethread)."
+    - Baseless install is American or lap-only, no European routing, and felt "wobbly in both test cars" (BabyGearLab); CR carrier-only 3/5.
+    - No towel or noodle allowed under the base; if the foot cannot reach the angle, the base cannot be used in that seat (manual).
+    - LATCH tightening "takes a fair amount of effort" (The Bump, one parent, 2020 unit before ClearTex). Low confidence.
+    - Small canopy (several reviewers agree); one crotch position, three harness heights.
+    - 30 in height limit; 6-year expiry, the shortest on the shortlist.
+  notes: >-
+    Rejected under ADR 0004: no load leg, no towel allowed under the base,
+    wobbly without the base, rethread harness, 6-year expiry.
+    Sources: research/notes/2026-11-27-infant-car-seat-market-survey.md (specs,
+    213a page claim, price, recalls, Cars.com), 2026-11-27-chicco-keyfit-30-usability.md,
+    2026-11-27-nhtsa-ease-of-use-ratings.md. The 213a claim is on the product
+    page only; the manual is dated 03-2020. No review tested the current
+    213a-labeled unit; physical changes for 213a not found. Reviewers conflict
+    on whether the base has a tensioner (SuperCinch). Width for airline seats:
+    CSFTL measured 17.5 in at the handle hubs. Unknown: as-used weight with
+    canopy and insert, fit at 4 and 7 months, carrier height on a stroller
+    (open question 28), base width. Price seen during Black Friday 2026.
+  research_notes:
+    - 2026-11-27-infant-car-seat-market-survey.md
+    - 2026-11-27-fmvss-213a-status-and-infant-seats.md
+    - 2026-11-27-nhtsa-ease-of-use-ratings.md
+    - 2026-11-27-chicco-keyfit-30-usability.md
+    - 2026-11-27-airline-seat-width-vs-infant-carriers.md
+    - 2026-11-27-model-y-infant-seat-fit-and-load-leg.md
+    - 2026-11-27-model-y-2022-cargo-and-rear-seat.md
+    - 2026-11-28-consumer-reports-infant-seats.md
+    - 2026-11-28-infant-seats-firecrawl-retry.md
+    - 2026-11-28-load-leg-sled-test-evidence.md

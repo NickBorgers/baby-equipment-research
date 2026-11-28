@@ -230,6 +230,12 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
 - [ ] **26. NHTSA ease-of-use ratings and car seat expiry norms.** Split
   from item 14. nhtsa.gov blocked automated fetches, so it may need a
   browser.
+  **Ease-of-use part answered 2026-11-27:** the program is current and
+  readable through `api.nhtsa.gov/childSeats?dataSet=ratings` with a
+  browser User-Agent. KeyFit 30 ClearTex 3 stars, Rue 4, Mint 4, Mesa V2 5;
+  Mesa V3, Aria V2, KeyFit Max, Primo Viaggio and Juni not rated in the
+  feed. See the [ratings note](notes/2026-11-27-nhtsa-ease-of-use-ratings.md).
+  Expiry norms remain open.
 
 ## Raised by decision 0002 (2026-11-27)
 
@@ -253,6 +259,12 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   from the manual. Also find how ASTM F833 (16 CFR 1227) tests stability
   with a car seat attached: the 2026-11-27 attempt to read the standard
   failed (the iteh.ai sample returned 404).
+  Progress 2026-11-28, Aria V2
+  ([note](notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)):
+  no ground-to-carrier height published for any UPPAbaby stroller. No
+  manual gives a handlebar limit in pounds; basket limits are 20 lb (Minu
+  V3, Ridge V2) and 30 lb (Vista V3, Cruz V3). No tip-over reports found
+  (Reddit blocked). Still open: a tape measure in a store.
 
 ## Raised by the infant car seat survey (2026-11-27)
 
@@ -287,12 +299,30 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   floor is a solid plate over the battery structure, with no hollow
   compartment, so a load leg has a solid floor to stand on. Still open: fit
   of each seat, and a test install in our car.
+  Aria V2, 2026-11-28
+  ([note](notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)):
+  no Model Y report for any Aria. Nick, 2026-11-28: the Model Y always
+  uses the base, so baseless fit there (e.g. whether its shoulder belt
+  wraps the V2 shell) does not matter. The base goes in an outboard seat
+  on LATCH (Nick, 2026-11-28), so belt lock-off findings do not apply in
+  this car. What matters: LATCH tightness, load leg, recline and front
+  legroom.
+  US manual checked 2026-11-28
+  ([note](notes/2026-11-28-model-y-2020-2024-manual-support-leg.md)): the
+  2020-2024 US manual says nothing about support legs; the wording is in
+  the 2025+ manual.
 
 - [ ] **31. Is Joie actually in stock in the US, and what is "Baby Safety
   Alliance certified"?** Joie's Rue, Mint Latch and Rue LX Spin pages carry
   a "coming soon" notify form that may or may not be shown. The Rue LX Spin
   page names the Baby Safety Alliance as a certifier; that is the group
   whose 213a petition is pending (item 24).
+  **Partly answered 2026-11-27:** the Rue is in stock at Babylist (six
+  colors). See the [Rue note](notes/2026-11-27-joie-rue-usability.md).
+  The Mint Latch is "In Stock" at Target ($299.99; $379.99 with Base AR).
+  See the [Mint Latch note](notes/2026-11-27-joie-mint-latch-usability.md).
+  The Baby Safety Alliance question remains open.
+  joiebaby.com now returns 403 to scripts.
 
 - [ ] **32. Which Maxi-Cosi infant seats claim 213a?** Maxi-Cosi says 213a
   seats carry a "new SIP logo on packaging and product pages" but its
@@ -324,7 +354,7 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
 
 ## Raised by the usability review (2026-11-27)
 
-- [ ] **36. Re-check the Primo Viaggio Nido usability findings at their
+- [x] **36. Re-check the Primo Viaggio Nido usability findings at their
   sources.** On 2026-11-27 Nick shared a summary written by another agent.
   It reports a recline indicator that cannot be trusted, poor insert fit,
   a lock-off that does not hold, and a click-in indicator that can show
@@ -334,7 +364,77 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   None of it has been re-read yet. Re-read each source, note which version
   it tested, and write a research note. No seat is shortlisted yet. Any
   seat considered needs the same usability pass (AGENTS.md rule 8).
+  **Answered 2026-11-27:** see the
+  [Primo Viaggio note](notes/2026-11-27-peg-perego-primo-viaggio-usability.md).
+  Every review tested the 4-35 Nido; none tested the current 4-30. Click-in
+  false green, insert fit, stiff buckle and the 10-11 lb carrier are
+  confirmed for older versions. The lock-off finding is disputed. "Recline
+  indicator cannot be trusted" is not supported as worded. Usability notes
+  for the other seats are under `research/notes/` dated 2026-11-27.
 
-- [ ] **37. Does the Romer Juni pass decision 0001?** The same summary
+- [x] **37. Does the Romer Juni pass decision 0001?** The same summary
   ranks it above the Nido. It was never in the market survey. Check its
   213a claim, its stroller range and its Model Y fit.
+  **Answered 2026-11-27: no.** Its page and 01.26 manual claim only
+  general FMVSS conformance. See the
+  [Juni note](notes/2026-11-27-romer-juni-213a-gate.md). Re-check if a
+  manual revision or label after 2026-12-05 adds a 213a claim.
+
+## Raised by the infant seat shortlist (2026-11-27)
+
+- [x] **38. Which shortlisted infant seat do we buy?** Decided
+  2026-11-28: the Aria V2, in
+  [ADR 0004](../decisions/0004-buy-the-uppababy-aria-v2.md), with the Mesa
+  V3 as fallback. Original question: Nick picks one of
+  `uppababy-aria-v2`, `uppababy-mesa-v3` or `chicco-keyfit-30-cleartex`
+  (see `docs/COMPARISON.md` and the usability notes of 2026-11-27). The
+  agent leaned toward the Aria V2 for travel: the lightest carrier and a
+  stable baseless install. The Mesa V3 offers a fallback baseless routing
+  and a 32 in limit. The KeyFit 30 is cheapest and Model Y tested. Then
+  write the ADR with the `adr-write` skill; its step 4 checks every "What
+  to judge" row. Include carrier height on the stroller (item 28). After
+  that, start the stroller search under 0003.
+  Nick, 2026-11-28: resume Aria V2 research before choosing. Done the same
+  day in three notes:
+  [carrier-only install](notes/2026-11-28-uppababy-aria-v2-carrier-only-install.md),
+  [hands-on and fit](notes/2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md),
+  [stroller and Model Y](notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md).
+  Still no CPST hands-on V2 review, measured headrest height, ride height
+  on a stroller or Model Y report.
+
+## Raised by the Aria V2 follow-up (2026-11-28)
+
+- [ ] **39. What does UPPAbaby advise when a shoulder belt will not wrap
+  the Aria V2?** The V2 manual has no fallback routing, only "contact
+  Customer Service". Also ask why V2 dropped the V1's other baseless
+  methods, and whether "buckle after wrapping" is allowed. See the
+  [install note](notes/2026-11-28-uppababy-aria-v2-carrier-only-install.md).
+
+- [ ] **42. Do the UPPAbaby SmartSecure bases lose tightness while
+  driving?** Owners of both the Aria V2 and the Mesa V3 report the base
+  indicator going from green back to red after driving
+  ([Aria V2](notes/2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md),
+  [Mesa V3](notes/2026-11-28-infant-seats-firecrawl-retry.md)). Consumer
+  Reports lists the indicator as a pro
+  ([CR note](notes/2026-11-28-consumer-reports-infant-seats.md)). Unknown:
+  whether the base loosens or the indicator misreads. Recheck with the
+  1-inch test after driving, if we buy either.
+
+- [ ] **43. Which KeyFit 30 did Consumer Reports test, and does the
+  ClearTex base have a LATCH tensioner?** CR's page names no model number
+  or 213a claim. The Bump (2020) describes a "SuperCinch" tightener;
+  BabyGearLab says there is none. The current 213a manual would settle
+  the tensioner question.
+
+- [ ] **41. Has the 4-30 Primo Viaggio Nido fixed the 4-35's problems?**
+  Checked 2026-11-28
+  ([note](notes/2026-11-28-primo-viaggio-nido-4-30-fixes.md)): no hands-on
+  test of the 4-30 exists, and the manuals describe the same base as 2020.
+  The manual still does not say to pull up on the handle, and still allows
+  no towel or noodle under the base. Stays off the shortlist. Still open:
+  the recline zones printed on the 4-30 base, and a hands-on review.
+
+- [ ] **40. Recheck for a CPST hands-on Aria V2 review.** Safe in the Seat
+  listed it as "Review Coming Soon" on 2026-11-24. Most V2 fit evidence is
+  incentivized panel reviews. See the
+  [fit update](notes/2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md).
