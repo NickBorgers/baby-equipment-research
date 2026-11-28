@@ -259,6 +259,12 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   from the manual. Also find how ASTM F833 (16 CFR 1227) tests stability
   with a car seat attached: the 2026-11-27 attempt to read the standard
   failed (the iteh.ai sample returned 404).
+  Progress 2026-11-28, Aria V2
+  ([note](notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)):
+  no ground-to-carrier height published for any UPPAbaby stroller. No
+  manual gives a handlebar limit in pounds; basket limits are 20 lb (Minu
+  V3, Ridge V2) and 30 lb (Vista V3, Cruz V3). No tip-over reports found
+  (Reddit blocked). Still open: a tape measure in a store.
 
 ## Raised by the infant car seat survey (2026-11-27)
 
@@ -293,6 +299,11 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   floor is a solid plate over the battery structure, with no hollow
   compartment, so a load leg has a solid floor to stand on. Still open: fit
   of each seat, and a test install in our car.
+  Aria V2, 2026-11-28
+  ([note](notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md)):
+  no Model Y report for any Aria. Also unknown: whether the Model Y's rear
+  shoulder belt is long enough to wrap the V2 shell for European routing
+  ([note](notes/2026-11-28-uppababy-aria-v2-carrier-only-install.md)).
 
 - [ ] **31. Is Joie actually in stock in the US, and what is "Baby Safety
   Alliance certified"?** Joie's Rue, Mint Latch and Rue LX Spin pages carry
@@ -373,3 +384,23 @@ Seeded 2026-11-27 when the repo was created. No research has been done yet.
   write the ADR with the `adr-write` skill; its step 4 checks every "What
   to judge" row. Include carrier height on the stroller (item 28). After
   that, start the stroller search under 0003.
+  Nick, 2026-11-28: resume Aria V2 research before choosing. Done the same
+  day in three notes:
+  [carrier-only install](notes/2026-11-28-uppababy-aria-v2-carrier-only-install.md),
+  [hands-on and fit](notes/2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md),
+  [stroller and Model Y](notes/2026-11-28-uppababy-aria-v2-on-stroller-and-model-y.md).
+  Still no CPST hands-on V2 review, measured headrest height, ride height
+  on a stroller or Model Y report.
+
+## Raised by the Aria V2 follow-up (2026-11-28)
+
+- [ ] **39. What does UPPAbaby advise when a shoulder belt will not wrap
+  the Aria V2?** The V2 manual has no fallback routing, only "contact
+  Customer Service". Also ask why V2 dropped the V1's other baseless
+  methods, and whether "buckle after wrapping" is allowed. See the
+  [install note](notes/2026-11-28-uppababy-aria-v2-carrier-only-install.md).
+
+- [ ] **40. Recheck for a CPST hands-on Aria V2 review.** Safe in the Seat
+  listed it as "Review Coming Soon" on 2026-11-24. Most V2 fit evidence is
+  incentivized panel reviews. See the
+  [fit update](notes/2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md).

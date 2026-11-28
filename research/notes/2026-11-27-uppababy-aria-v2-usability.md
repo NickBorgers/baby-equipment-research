@@ -82,6 +82,9 @@ As used, it is about 7 lb: still the lightest carrier in this group.
   getting close to the top of the headrest structure."
 - Owners (one feed): a big baby "will probably outgrow this seat by her 9m
   bday"; "there isn't any room to grow."
+  Corrected 2026-11-28: the "9m bday" review is from an incentivized
+  testing panel; the "room to grow" quote is from an unpaid owner. See the
+  [fit update](2026-11-28-uppababy-aria-v2-hands-on-and-fit-update.md).
 - Strolleria: two inches lower height limit than the Mesa V3; both
   "typically" last about the first year.
 - Not found: a measured V2 headrest height, or a head-to-head test against
